@@ -26,9 +26,9 @@ Atomic Layer Deposition:: A layer-by-layer process that results in the depositio
 
 ATX:: Advanced Technology eXtended
 
-BF:: Brian Float
+BF:: Refers to Brain Float or Brain Floating Point, used in BFLOAT16.
 
-BFLOAT16:: Brain float 16 bit--a vector	(V) extension, https://en.wikipedia.org/wiki/Bfloat16_floating-point_format.
+BFLOAT16:: Brain floating point 16 bit--a vector (V) extension representing a wide dynamic range of numeric values by using a floating radix point.  See https://en.wikipedia.org/wiki/Bfloat16_floating-point_format.
 
 BSI:: German Federal Information Security service.
 
@@ -46,9 +46,11 @@ eDRAM:: Embedded DRAM.
 
 ELEN:: Element length.
 
+Flip-flop:: Electronic circuitry with two stable states for use in storing binary data. Data stored in flip-flops is changed by applying specific inputs. Both flip-flops and latches are building blocks that are used in digital computing.
+
 GE:: Gate Equivalent.
 
-Hart:: HARdware Thread--at machine-mode level each hart is a real hardware thread, either one hart per core without hardware multithreading, or multiple harts per core with hardware multithreading, and 'hart' represents the hardware resource. It is possible to emulate harts in software, for example, privileged execution environments can multiplex lesser-privileged harts onto physical hardware using timer interrupts. Note that co-operative multithreading within the same privilege level is not a compliant implementation. Across all implementation choices, we retain the concept of a hart as a resource abstraction representing an independently advancing RISC-V execution context within a RISC-V execution environment.
+Hart:: Hardware Thread--at machine-mode level each hart is a real hardware thread, either one hart per core without hardware multithreading, or multiple harts per core with hardware multithreading, and 'hart' represents the hardware resource. It is possible to emulate harts in software, for example, privileged execution environments can multiplex lesser-privileged harts onto physical hardware using timer interrupts. Note that co-operative multithreading within the same privilege level is not a compliant implementation. Across all implementation choices, we retain the concept of a hart as a resource abstraction representing an independently advancing RISC-V execution context within a RISC-V execution environment.
 
 IC:: Integrated Circuit.
 
@@ -65,6 +67,8 @@ Instruction Set:: A group of commands for a CPU in machine language that can ref
 * Memory--external storage--a larger and more versatile number of locations that are slower to access.
 
 ISA:: Instruction Set Architecture.
+
+Latch:: A circuit that has two stable states that is used to store state information, known as a bistable multivibrator.
 
 MCM:: Multi-Chip Module.
 
@@ -92,15 +96,15 @@ Profile:: An ISA Profile is set of extensions (instructions, state and behaviors
 
 PTE:: Page Table Entry
 
-PTEP:: xxx
+PTEP:: Parallel Telemetry Processor, a high- speed virtual processor architecture.
 
 PTG.2:: A physical random number generator class defined in AIS 31 / CC.
 
-PUD:: xxx
+PUD:: Patch update?
 
 QEMU:: QEMU (Quick EMUlator) is a free and open-source emulator and virtualizer that can perform hardware virtualization.
 
-Register:: vvv
+Register:: A Register is a group of flip-flops with each flip-flop capable of storing one bit of information. The simplest register is one that consists of only flip-flops with no external gates.
 
 RISC:: Reduced Instruction Set Computer architecture. Information processing using any of a family of microprocessors that are designed to execute computing tasks with the simplest instructions in the shortest amount of time possible. RISC-based machines execute one instruction per clock cycle as opposed to CISC (Complex Instruction Set Computer) machines that can have special instructions as well as instructions that take more than one cycle to execute.
 
