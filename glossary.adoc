@@ -32,6 +32,8 @@ BFLOAT16:: Brain floating point 16 bit--a vector (V) extension representing a wi
 
 BSI:: German Federal Information Security service.
 
+CLIC:: Core-Local Interrupt Controller--A low-latency, vectored, pre-emptive interrupt controller for RISC-V systems.
+
 CPL:: Cost Per Load.
 
 CPU Cache:: Many CPUs three kinds of caches to speed up data retrieval: an instruction cache for executable instruction fetch, a data cache for data store and fetch, and a translation lookaside buffer (TLB) for virtual-to-physical address translation for executable instructions and data.
@@ -39,6 +41,10 @@ CPU Cache:: Many CPUs three kinds of caches to speed up data retrieval: an instr
 CMOS:: Complementary Metal Oxide Semiconductor.
 
 Chemical Vapor Deposition:: A chemical deposition process in which the wafer is exposed to one or more volatile precursors, which react and/or decompose on the substrate surface to produce the desired film.
+
+Consistency Model:: A computing system supports a specific consistency model if operations on memory follow specific rules. For example, high level languages like C++ and Java, partially maintain the contract by translating memory operations into low-level operations while preserving memory semantics. To hold to the contract, compilers may reorder some memory instructions, and library calls like `pthread_mutex_lock()` encapsulate required synchronization.
+
+DM:: Deg=bug Module--
 
 DRAM:: Dynamic Random Access Memory.
 
@@ -48,17 +54,28 @@ ELEN:: Element length.
 
 Flip-flop:: Electronic circuitry with two stable states for use in storing binary data. Data stored in flip-flops is changed by applying specific inputs. Both flip-flops and latches are building blocks that are used in digital computing.
 
+FLOPS:: Floating Point Operations per Second--
+
 GE:: Gate Equivalent.
 
-Hart:: Hardware Thread--at machine-mode level each hart is a real hardware thread, either one hart per core without hardware multithreading, or multiple harts per core with hardware multithreading, and 'hart' represents the hardware resource. It is possible to emulate harts in software, for example, privileged execution environments can multiplex lesser-privileged harts onto physical hardware using timer interrupts. Note that co-operative multithreading within the same privilege level is not a compliant implementation. Across all implementation choices, we retain the concept of a hart as a resource abstraction representing an independently advancing RISC-V execution context within a RISC-V execution environment.
+HART:: Hardware Thread--at machine-mode level each hart is a real hardware thread, either one hart per core without hardware multithreading, or multiple harts per core with hardware multithreading, and 'hart' represents the hardware resource. It is possible to emulate harts in software, for example, privileged execution environments can multiplex lesser-privileged harts onto physical hardware using timer interrupts. Note that co-operative multithreading within the same privilege level is not a compliant implementation. Across all implementation choices, we retain the concept of a hart as a resource abstraction representing an independently advancing RISC-V execution context within a RISC-V execution environment.
+
+HBI:: Hypervisor Binary Interface--an interface abstraction for hypervisors to run.
+
+HEE:: hypervisor execution environment--the environmant in which a hypervisor runs.
 
 IC:: Integrated Circuit.
 
-IRC::  The IRC https://tools.ietf.org/html/rfc2812[Internet Relay Chat] protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server.
+ID Synchronization:: The mechanisms by which code generated on a core (e.g., by a JIT compiler) is made visible to other cores.
 
 IIRC:: The International Integrated Reporting Council (IIRC) (previously the International Integrated Reporting Committee). was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organisation about value creation over time.
 
-IMSIC:: (Instruction Memory Set ? ?)
+IMSIC:: International Mobile Subscriber Identity Codes.
+
+
+IRC::  The IRC--https://tools.ietf.org/html/rfc2812[Internet Relay Chat] protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server.
+
+ISA:: Programmer visible state and operations on that state, the boundary between hardware and software.
 
 Instruction Set:: A group of commands for a CPU in machine language that can refer to all possible instructions for a CPU, or a subset of instructions to enhance its performance in specific situations, and includes:
 * Instruction length--which can vary, Opcodes--the command to be carried out.
@@ -66,21 +83,29 @@ Instruction Set:: A group of commands for a CPU in machine language that can ref
 * Registers--internal locations that are limited in number and ability while quick to access.
 * Memory--external storage--a larger and more versatile number of locations that are slower to access.
 
-ISA:: Instruction Set Architecture.
+J Extension:: a RISC-V extension that provides a form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within user mode and the sandboxed code has been checked by the runtime to be unable to change pointer masks.
 
 Latch:: A circuit that has two stable states that is used to store state information, known as a bistable multivibrator.
 
+M:: used to indicate Machine Mode--a mode to which machines boot that allows programmer access to everything. The M is required in all RISC-V implementations.
+
 MCM:: Multi-Chip Module.
 
+MIPS:: Million Point Operations Per Second.
+
 MMU:: Memory Management Unit.
+
+MXLEN:: Machine XLEN.
 
 NAND:: Not-and.
 
 NIST:: Keeps the standard time for America, defines 1 inch, and also cryptographic standards.
 
-Non-Standard Extension:: mmmm
+Non-ISA:: Non-Standard Extension--primarily programmer visible software conventions to ensure interoperability, but also HW protocols not directlly visible to programs, e.g. HW external debug protocols
 
 NOR:: Logical NOR, known as Pierce's Equivalent, Quine's Dagger, the ampcheck (from the Greek for "cutting both ways"),  joint denial, or neither-nor, operates on two logical values, typically from two propositions, that produces a value of true if and only if both operands are false. In other words, it produces a value of false if and only if at least one operand is true.
+
+OS-level Sandboxing:: a form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore the sandbox does not allow modifying pointer masks in user mode.
 
 Photolithography:: In microprocessor maufacturing, a process of using light to transfer a geometric pattern from a photomask (also called an optical mask) pattern parts to a photosensitive substrate on a thin film (substrate or wafer). The process can also make use of chemical photoresist on the substrate.
 
@@ -88,9 +113,12 @@ Platform:: A System Platform is a set of features users can depend on working to
 
 PLIC:: Progressive Lossless Image Coding.
 
+PPO:: Preserved Program Order--strict sequnetial consistency that demands that operations be seen in the order in which they were actually issued.
+// please verify.
+
 PQC:: Post-Quantum Cryptography, due to replace RSA and ECC in NIST cryptography [PQC] as well as military [NSA].
 
-Privileged:: mmmm
+Privileged:: Provides security isolation, and a means to reduce code defects because code does not have to check for illegal values. Privileged contains state, is used promarily to run applications and can be used to debug implementations. It defines CSR address space and content  trap when taken increases privilege mode (say from U to S) trap when taken stays at the current priviledge mode access more than even M mode. Its addresses reserved in ISA. address includes highest mode that access the CSR and if it is `r/w/rw/none` preserve bits already theeree when you change a field.
 
 Profile:: An ISA Profile is set of extensions (instructions, state and behaviors) that users can depend on working together. Extensions are either required, optional, unsupported, or incompatible. RISC-V has defined two Profile types: Application (RVAyy)--appropriate for Linux-class and other embedded designs with more sophisticated ISA needs--and Microcontroller (RVMyy)--appropriate for cost-sensitive application-optimized embedded designs running bare-metal or simple RTOS environments.
 
@@ -112,6 +140,12 @@ Rocket:: Parameterized SoC generator written in Chisel, designed to helps tune t
 
 RV:: Reliability verification is a category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
 
+RVWMO:: RISC-V Weak Memory Ordering--Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).
+
+SBI:: Sytem Binary Interface--abstracts the interfaces that are required to run operating systems.
+
+SEE:: supervisor execution environment--environment in which operating systems run, which can but are not required to be BIOS style interfaces.
+
 SFENCE:: Orders processor execution relative to all memory stores prior to the SFENCE instruction. The processor ensures that every store prior to SFENCE is globally visible before any store after SFENCE becomes globally visible. The SFENCE instruction is ordered with respect to memory stores, other SFENCE instructions, MFENCE instructions, and any serializing instructions (such as the CPUID instruction). It is not ordered with respect to memory loads or the LFENCE instruction.
 
 SFENCE.VMA:: (instruction wrapper?)
@@ -124,9 +158,11 @@ SRAM:: Static Random Access Memory
 
 Standard Extension:: mmm
 
-TLB:: Translation Lookaside Buffer; enhances speed in retrieving a value by storing a memory address.
+TLB:: Translation Lookaside Buffer--a memory buffer that enhances speed in retrieving a value by storing a memory address.
 
-Unpriveleged:: mmm
+TRNG:: True Random NUmber Generator--also known as HRNG, or Harware Random Number Generator--a device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, such as thermal noise, the photoelectric effect, involving a beam splitter, and other quantum phenomena.
+
+Unpriveleged:: User-space--describes
 
 VM:: Virtual Machine
 
@@ -137,4 +173,5 @@ XLEN:: Register width--etymology involves reference to mathematical `X` and abbr
 ZBT:: Zero Bus Turnaround
 
 ZFew:: xxxx
+
 
