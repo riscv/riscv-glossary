@@ -121,12 +121,13 @@ PQC:: Post-Quantum Cryptography, due to replace RSA and ECC in NIST cryptography
 Privileged:: Provides security isolation, and a means to reduce code defects because code does not have to check for illegal values. Privileged contains state, is used promarily to run applications and can be used to debug implementations. It defines CSR address space and content  trap when taken increases privilege mode (say from U to S) trap when taken stays at the current priviledge mode access more than even M mode. Its addresses reserved in ISA. address includes highest mode that access the CSR and if it is `r/w/rw/none` preserve bits already theeree when you change a field.
 
 Profile:: An ISA Profile is set of extensions (instructions, state and behaviors) that users can depend on working together. Extensions are either required, optional, unsupported, or incompatible. RISC-V has defined two Profile types: Application (RVAyy)--appropriate for Linux-class and other embedded designs with more sophisticated ISA needs--and Microcontroller (RVMyy)--appropriate for cost-sensitive application-optimized embedded designs running bare-metal or simple RTOS environments.
+//a comment was made that articulating diffrences between RISC-V profile and ARM profile would be useful. What more needs to be said?
 
-PTE:: Page Table Entry
+PTE:: Page Table Entry.
 
 PTEP:: Parallel Telemetry Processor, a high- speed virtual processor architecture.
 
-PTG.2:: A physical random number generator class defined in AIS 31 / CC.
+PTG.2:: A physical random number generator class defined in AIS 31/CC.
 
 PUD:: Patch update?
 
@@ -146,7 +147,7 @@ SBI:: Sytem Binary Interface--abstracts the interfaces that are required to run 
 
 SEE:: supervisor execution environment--environment in which operating systems run, which can but are not required to be BIOS style interfaces.
 
-SFENCE:: Orders processor execution relative to all memory stores prior to the SFENCE instruction. The processor ensures that every store prior to SFENCE is globally visible before any store after SFENCE becomes globally visible. The SFENCE instruction is ordered with respect to memory stores, other SFENCE instructions, MFENCE instructions, and any serializing instructions (such as the CPUID instruction). It is not ordered with respect to memory loads or the LFENCE instruction.
+SFENCE:: Orders processor execution relative to all memory stores prior to the SFENCE instruction. The processor ensures that every store prior to SFENCE is globally visible before any store after SFENCE becomes globally visible. The SFENCE instruction is ordered with respect to memory stores, other SFENCE instructions, MFENCE instructions, and any serializing instructions (like CPUID instructions), and it is *not* ordered with respect to either memory loads or the LFENCE instruction.
 
 SFENCE.VMA:: (instruction wrapper?)
 
@@ -166,7 +167,10 @@ Unpriveleged:: User-space--describes
 
 VM:: Virtual Machine
 
-VMA:: (..Virtual Memory Allocation ??)
+VMA:: Virtual Memory Allocation--
+
+WARL:: Weighted Average Run Langth--
+//Need a summary statement about pertinence to performance metrics for RISC-V?
 
 XLEN:: Register width--etymology involves reference to mathematical `X` and abbreviation of the word "length."
 
