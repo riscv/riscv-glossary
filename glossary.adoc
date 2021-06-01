@@ -1,5 +1,5 @@
 
-== Glossary of terms
+== RISC-V acronyms and terms
 
 This glossary includes definitions of terms specific to RISC-V in addition to terms that are useful in understanding the architectures and technologies in use by RISC-V contributors and users.
 
