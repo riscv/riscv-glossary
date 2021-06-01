@@ -12,19 +12,19 @@ AIA:: xxx
 
 AIS 31:: Information Security service for Europe and the global finance industry (for bank cards), written by BSI.
 
-ALU:: Arithmetic Logical Unit
+ALU:: Arithmetic Logical Unit.
 
-ASIC:: Application-Specific Integrated Circuit
+ASIC:: Application-Specific Integrated Circuit.
 
 AT:: xxx
 
-ATA:: Advanced Technology Attachment
+ATA:: Advanced Technology Attachment.
 
-ATM:: Asynchronous Transfer Mode
+ATM:: Asynchronous Transfer Mode.
 
 Atomic Layer Deposition:: A layer-by-layer process that results in the deposition of thin films one atomic layer at a time in a highly controlled manner.
 
-ATX:: Advanced Technology eXtended
+ATX:: Advanced Technology eXtended.
 
 BF:: Refers to Brain Float or Brain Floating Point, used in BFLOAT16.
 
@@ -72,7 +72,6 @@ IIRC:: The International Integrated Reporting Council (IIRC) (previously the Int
 
 IMSIC:: International Mobile Subscriber Identity Codes.
 
-
 IRC::  The IRC--https://tools.ietf.org/html/rfc2812[Internet Relay Chat] protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server.
 
 ISA:: Programmer visible state and operations on that state, the boundary between hardware and software.
@@ -91,7 +90,7 @@ M:: used to indicate Machine Mode--a mode to which machines boot that allows pro
 
 MCM:: Multi-Chip Module.
 
-MIPS:: Million Point Operations Per Second.
+MIPS:: Microprocessor without Interlocked Pipelined Stages--a reduced instruction set computer (RISC) instruction set architecture developed by MIPS Computer Systems, now MIPS Technologies, based in the United States, that influenced later RISC architectures.
 
 MMU:: Memory Management Unit.
 
@@ -122,6 +121,8 @@ Privileged:: Provides security isolation, and a means to reduce code defects bec
 
 Profile:: An ISA Profile is set of extensions (instructions, state and behaviors) that users can depend on working together. Extensions are either required, optional, unsupported, or incompatible. RISC-V has defined two Profile types: Application (RVAyy)--appropriate for Linux-class and other embedded designs with more sophisticated ISA needs--and Microcontroller (RVMyy)--appropriate for cost-sensitive application-optimized embedded designs running bare-metal or simple RTOS environments.
 //a comment was made that articulating diffrences between RISC-V profile and ARM profile would be useful. What more needs to be said?
+
+Psuedo INstuctions:: are special commands to the assembler about the positioning of the program, the address the program should presumed to be assembled at, the name of the module, data declarations, the title and printing options for the program, defining and calling macros, macro looping and test, and end of source ...
 
 PTE:: Page Table Entry.
 
@@ -155,17 +156,17 @@ SoC:: System on Chip.
 
 SP 800 90B:: Used in military & USGOV random security evaluations, written by NIST.
 
-SRAM:: Static Random Access Memory
+SRAM:: Static Random Access Memory.
 
 Standard Extension:: mmm
 
 TLB:: Translation Lookaside Buffer--a memory buffer that enhances speed in retrieving a value by storing a memory address.
 
-TRNG:: True Random NUmber Generator--also known as HRNG, or Harware Random Number Generator--a device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, such as thermal noise, the photoelectric effect, involving a beam splitter, and other quantum phenomena.
+TRNG:: True Random Number Generator--also known as HRNG, or Harware Random Number Generator--a device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 
 Unpriveleged:: User-space--describes
 
-VM:: Virtual Machine
+VM:: Virtual Machine.
 
 VMA:: Virtual Memory Allocation--
 
