@@ -68,9 +68,11 @@ IC:: Integrated Circuit.
 
 ID Synchronization:: The mechanisms by which code generated on a core (e.g., by a JIT compiler) is made visible to other cores.
 
+IEEE 754:: a technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers.
+
 IIRC:: The International Integrated Reporting Council (IIRC) (previously the International Integrated Reporting Committee). was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.
 
-IMSIC:: International Mobile Subscriber Identity Codes.
+IMSIC:: International Mobile Subscriber Identity Code.
 
 IRC::  The IRC--https://tools.ietf.org/html/rfc2812[Internet Relay Chat] protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server.
 
@@ -89,6 +91,8 @@ Latch:: A circuit that has two stable states that is used to store state informa
 LL/SC:: Load Link/Store Conditional or Load Locked/Store conditional--see LR/SC.
 
 LR/SC:: Load Reserve/Store Conditional, also LL/SC --a pair of instructions used in multithreading to achieve synchronization. Load-link returns the current value of a memory location, while a subsequent store-conditional to the same memory location will store a new value only if no updates have occurred to that location since the load-link. Together, these implement a lock-free atomic read-modify-write operation.
+
+LSA:: load–store architecture--a design that is architecturally neutral and that uses bit patterns in IEEE 754 floating-point to speed sign extension in ways that simplify the multiplexers in a CPU--by placing most-significant bits at a fixed location.
 
 M:: used to indicate Machine Mode--a mode to which machines boot that allows programmer access to everything. The M is required in all RISC-V implementations.
 
@@ -116,17 +120,17 @@ Platform:: A System Platform is a set of features users can depend on working to
 
 PLIC:: Progressive Lossless Image Coding.
 
-PPO:: Preserved Program Order--strict sequential consistency that demands that operations be seen in the order in which they were actually issued.
+PPO:: Preserved Program Order--strict sequential consistency that demands that operations be seen in the order in which they were issued.
 // please verify.
 
 PQC:: Post-Quantum Cryptography, due to replace RSA and ECC in NIST cryptography [PQC] as well as military [NSA].
 
-Privileged:: Provides security isolation, and a means to reduce code defects because code does not have to check for illegal values. Privileged contains state, is used primarily to run applications and can be used to debug implementations. It defines CSR address space and content  trap when taken increases privilege mode (say from U to S) trap when taken stays at the current privilege mode access more than even M mode. Its addresses reserved in ISA. address includes highest mode that access the CSR and if it is `r/w/rw/none` preserve bits already theeree when you change a field.
+Privileged:: Provides security isolation, and a means to reduce code defects because code does not have to check for illegal values. Privileged contains state, is used primarily to run applications and can be used to debug implementations. It defines CSR address space and content  trap when taken increases privilege mode (say from U to S) trap when taken stays at the current privilege mode access more than even M mode. Its addresses reserved in ISA. address includes highest mode that access the CSR and if it is `r/w/rw/none` preserve bits already there when you change a field.
 
-Profile:: An ISA Profile is set of extensions (instructions, state and behaviors) that users can depend on working together. Extensions are either required, optional, unsupported, or incompatible. RISC-V has defined two Profile types: Application (RVAyy)--appropriate for Linux-class and other embedded designs with more sophisticated ISA needs--and Micro-controller (RVMyy)--appropriate for cost-sensitive application-optimized embedded designs running bare-metal or simple RTOS environments.
+Profile:: (ISA Profile) a set of extensions (instructions, state and behaviors) that users can depend on working together. Extensions are either required, optional, unsupported, or incompatible. RISC-V has defined two Profile types: Application (RVAyy)--appropriate for Linux-class and other embedded designs with more sophisticated ISA needs--and Micro-controller (RVMyy)--appropriate for cost-sensitive application-optimized embedded designs running bare-metal or simple RTOS environments.
 //a comment was made that articulating differences between RISC-V profile and ARM profile would be useful. What more needs to be said?
 
-Psuedo Instructions:: are special commands to the assembler about the positioning of the program, the address the program should presumed to be assembled at, the name of the module, data declarations, the title and printing options for the program, defining and calling macros, macro looping and test, and end of source ...
+Psuedo Instructions:: special commands to the assembler about the positioning of the program, the address the program should presumed to be assembled at, the name of the module, data declarations, the title and printing options for the program, defining and calling macros, macro looping and test, and end of source ...
 
 PTE:: Page Table Entry.
 
@@ -149,6 +153,8 @@ RV:: Reliability verification is a category of physical verification that helps 
 RVWMO:: RISC-V Weak Memory Ordering--Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).
 
 SBI:: Sytem Binary Interface--abstracts the interfaces that are required to run operating systems.
+
+Scala:: a statically-typed, general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, Scala's design aims to address criticisms of Java, and it provides language interoperability with Java so that libraries written in either language can be referenced directly in both Scala and Java code. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM).
 
 SEE:: supervisor execution environment--environment in which operating systems run, which can but are not required to be BIOS style interfaces.
 
