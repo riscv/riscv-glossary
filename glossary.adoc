@@ -52,6 +52,8 @@ eDRAM:: Embedded DRAM.
 
 ELEN:: Element length.
 
+ES:: Entropy Source--an input or a measured characteristic that supplies random bits for an I/O device on a computer, usually used to supply  bits that an attacker cannot know, as part of security.
+
 Flip-flop:: Electronic circuitry with two stable states for use in storing binary data. Data stored in flip-flops is changed by applying specific inputs. Both flip-flops and latches are building blocks that are used in digital computing.
 
 FLOPS:: Floating Point Operations per Second--
@@ -114,6 +116,8 @@ NOR:: Logical NOR, known as Pierce's Equivalent, Quine's Dagger, the ampcheck (f
 
 OS-level Sandboxing:: a form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore the sandbox does not allow modifying pointer masks in user mode.
 
+Page fault:: a type of exception raised by computer hardware when a running program accesses a memory page that is not currently mapped by the memory management unit (MMU) into the virtual address space of a process.
+
 Photolithography:: In microprocessor manufacturing, a process of using light to transfer a geometric pattern from a photomask (also called an optical mask) pattern parts to a photosensitive substrate on a thin film (substrate or wafer). The process can also make use of chemical photoresist on the substrate.
 
 Platform:: A System Platform is a set of features users can depend on working together that includes things like ISA Profiles, software components, hardware system components, standardized hardware/software interfaces, and other features. Currently RISC-V has defined two Platform types--OS/A and M (naming TBD).
@@ -132,7 +136,7 @@ Profile:: (ISA Profile) a set of extensions (instructions, state and behaviors) 
 
 Psuedo Instructions:: special commands to the assembler about the positioning of the program, the address the program should presumed to be assembled at, the name of the module, data declarations, the title and printing options for the program, defining and calling macros, macro looping and test, and end of source ...
 
-PTE:: Page Table Entry.
+PTE:: Page Table Entry--an entry in the data structure used by a virtual memory system in a computer operating system to store the mapping between virtual addresses (used by the program executed by the accessing process) and physical addresses (used by the hardware, or more specifically, by the RAM subsystem), that enables access data in memory.
 
 PTEP:: Parallel Telemetry Processor--a high- speed virtual processor architecture.
 
@@ -158,9 +162,13 @@ Scala:: a statically-typed, general-purpose programming language that supports b
 
 SEE:: supervisor execution environment--environment in which operating systems run, which can but are not required to be BIOS style interfaces.
 
+Segmentation fault:: a failure condition caused by a memory access violation in hardware operating with memory protection. The fault process notifies the operating system (OS) that software has attempted to access a restricted area of memory.
+
 SFENCE:: Orders processor execution relative to all memory stores prior to the SFENCE instruction. The processor ensures that every store prior to SFENCE is globally visible before any store after SFENCE becomes globally visible. The SFENCE instruction is ordered with respect to memory stores, other SFENCE instructions, MFENCE instructions, and any serializing instructions (like CPUID instructions), and it is *not* ordered with respect to either memory loads or the LFENCE instruction.
 
 SFENCE.VMA:: (instruction wrapper?)
+
+SHA:: Secure Hash Algorythms--a family of cryptographic hash functions published by the National Institute of Standards and Technology as a U.S. Federal Information Processing Standard that started with what is now known as SHA-0, a retronym used for the original (1993) 160-bit hash function published under the name "SHA".
 
 SoC:: System on Chip.
 
@@ -168,7 +176,7 @@ SP 800 90B:: Used in military & USGOV random security evaluations, written by NI
 
 SRAM:: Static Random Access Memory.
 
-Standard Extension:: mmm
+Standard Extension:: for RISC-V, ...
 
 TLB:: Translation Lookaside Buffer--a memory buffer that enhances speed in retrieving a value by storing a memory address.
 
@@ -188,5 +196,6 @@ XLEN:: Register width--etymology involves reference to mathematical `X` and abbr
 ZBT:: Zero Bus Turnaround
 
 ZFew:: xxxx
+
 
 
