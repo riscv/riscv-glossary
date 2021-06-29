@@ -4,4 +4,4 @@ This contains an initial draft of a RISC-V glossary.
 
 Over time, this glossary can become a resource for both contributors and for people who are learning about RISC-V and related technologies.
 
-Pleas feel free to suggest additions and modifications.
+Please feel free to suggest additions and modifications by creating issues.
