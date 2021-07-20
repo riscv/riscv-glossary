@@ -3,10 +3,12 @@
 
 This glossary includes definitions of terms specific to RISC-V in addition to terms that are useful in understanding the architectures and technologies in use by RISC-V contributors and users.
 
-ABI:: Application binary interface. Abstractions and interfaces for applications that allow interactions without the need to know the details about what takes place in the lower networking layers. For RISC-V, the ABI provides abstractions of S or M modes.
+ABI:: Application Binary Interface--abstractions and interfaces for applications that allow interactions without the need to know the details about what takes place in the lower networking layers. For RISC-V, the ABI provides abstractions of S or M modes.
 //(I have edited this to be a more generalized definition and still think that S and M modes operate need explanation).
 
-AEE:: Application execution environment--the environment, from bare metal to full operating system, in which an application runs.
+Address field:: Designated as a memory address or a processor register.
+
+AEE:: Application Execution Environment--the environment, from bare metal to full operating system, in which an application runs.
 
 AIA:: xxx
 
@@ -15,6 +17,8 @@ AIS 31:: Information Security service for Europe and the global finance industry
 ALU:: Arithmetic Logical Unit.
 
 ASIC:: Application-Specific Integrated Circuit.
+
+ASID:: Address Space IDentifier.
 
 AT:: xxx
 
@@ -44,7 +48,9 @@ Chemical Vapor Deposition:: A chemical deposition process in which the wafer is 
 
 Consistency Model:: A computing system supports a specific consistency model if operations on memory follow specific rules. For example, high level languages like C++ and Java, partially maintain the contract by translating memory operations into low-level operations while preserving memory semantics. To hold to the contract, compilers may reorder some memory instructions, and library calls like `pthread_mutex_lock()` encapsulate required synchronization.
 
-DM:: Deg=bug Module--
+CSR:: Control and State Register. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs according to privilege level.
+
+DM:: Debug Module--
 
 DRAM:: Dynamic Random Access Memory.
 
@@ -72,11 +78,11 @@ ID Synchronization:: The mechanisms by which code generated on a core (e.g., by 
 
 IEEE 754:: a technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers.
 
-IIRC:: The International Integrated Reporting Council (IIRC) (previously the International Integrated Reporting Committee). was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.
+IIRC:: The International Integrated Reporting Council, previously the International Integrated Reporting Committee), was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.
 
 IMSIC:: International Mobile Subscriber Identity Code.
 
-IRC::  The IRC--https://tools.ietf.org/html/rfc2812[Internet Relay Chat] protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server.
+IRC::  https://tools.ietf.org/html/rfc2812[Internet Relay Chat]--a protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server.
 
 ISA:: Programmer visible state and operations on that state, the boundary between hardware and software.
 
@@ -88,13 +94,13 @@ Instruction Set:: A group of commands for a CPU in machine language that can ref
 
 J Extension:: a RISC-V extension that provides a form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within user mode and the sandboxed code has been checked by the runtime to be unable to change pointer masks.
 
-Latch:: A circuit that has two stable states that is used to store state information, known as a bistable multivibrator.
+Latch:: A circuit that has two stable states that is used to store state information, known as a bi-stable multivibrator.
 
 LL/SC:: Load Link/Store Conditional or Load Locked/Store conditional--see LR/SC.
 
-LR/SC:: Load Reserve/Store Conditional, also LL/SC --a pair of instructions used in multithreading to achieve synchronization. Load-link returns the current value of a memory location, while a subsequent store-conditional to the same memory location will store a new value only if no updates have occurred to that location since the load-link. Together, these implement a lock-free atomic read-modify-write operation.
+LR/SC:: Load Reserve/Store Conditional, also LL/SC--a pair of instructions used in multithreading to achieve synchronization. Load-link returns the current value of a memory location, while a subsequent store-conditional to the same memory location will store a new value only if no updates have occurred to that location since the load-link. Together, these implement a lock-free atomic read-modify-write operation.
 
-LSA:: load–store architecture--a design that is architecturally neutral and that uses bit patterns in IEEE 754 floating-point to speed sign extension in ways that simplify the multiplexers in a CPU--by placing most-significant bits at a fixed location.
+LSA:: Load–Store Architecture--a design that is architecturally neutral and that uses bit patterns in IEEE 754 floating-point to speed sign extension in ways that simplify the multiplexers in a CPU--by placing most-significant bits at a fixed location.
 
 M:: used to indicate Machine Mode--a mode to which machines boot that allows programmer access to everything. The M is required in all RISC-V implementations.
 
@@ -104,15 +110,19 @@ MIPS:: Microprocessor without Interlocked Pipelined Stages--a reduced instructio
 
 MMU:: Memory Management Unit.
 
+MODE::  A field within an instruction or instruction set that specifies the way the operand or the effective address is determined.
+
 MXLEN:: Machine XLEN.
 
 NAND:: Not-and.
 
-NIST:: Keeps the standard time for America, defines 1 inch, and also cryptographic standards.
+NIST:: National Institute of STandards--maintains a set of time and measurment, and cryptographic standards for the USA, includi inch.
 
-Non-ISA:: Non-Standard Extension--primarily programmer visible software conventions to ensure interoperability, but also HW protocols not directly visible to programs, e.g. HW external debug protocols
+Non-ISA:: Non-Standard Extension--primarily programmer visible software conventions to ensure interoperability, also including HW external debug protocols that, while important, are not directly visible to programs.
 
 NOR:: Logical NOR, known as Pierce's Equivalent, Quine's Dagger, the ampcheck (from the Greek for "cutting both ways"),  joint denial, or neither-nor, operates on two logical values, typically from two propositions, that produces a value of true if and only if both operands are false. In other words, it produces a value of false if and only if at least one operand is true.
+
+OCF:: Operation Code Feild--specifies the operation to be performed.
 
 OS-level Sandboxing:: a form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore the sandbox does not allow modifying pointer masks in user mode.
 
@@ -123,6 +133,8 @@ Photolithography:: In microprocessor manufacturing, a process of using light to 
 Platform:: A System Platform is a set of features users can depend on working together that includes things like ISA Profiles, software components, hardware system components, standardized hardware/software interfaces, and other features. Currently RISC-V has defined two Platform types--OS/A and M (naming TBD).
 
 PLIC:: Progressive Lossless Image Coding.
+
+PPN:: Physical Page Number.
 
 PPO:: Preserved Program Order--strict sequential consistency that demands that operations be seen in the order in which they were issued.
 // please verify.
@@ -142,7 +154,7 @@ PTEP:: Parallel Telemetry Processor--a high- speed virtual processor architectur
 
 PTG.2:: A physical random number generator class defined in AIS 31/CC.
 
-PUD:: Patch update?
+PUD:: Patch Update?
 
 QEMU:: QEMU (Quick EMUlator) is a free and open-source emulator and virtualizer that can perform hardware virtualization.
 
@@ -152,15 +164,18 @@ RISC:: Reduced Instruction Set Computer architecture. Information processing usi
 
 Rocket:: Parameterized SoC generator written in Chisel, designed to helps tune the design under different performance, power, area constraints, and diverse technology nodes.
 
-RV:: Reliability verification is a category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
+RV:: Reliability Verification--a category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
 
 RVWMO:: RISC-V Weak Memory Ordering--Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).
+
+SATP:: Supervisor Address Translation and Protection--XLEN-bit read/write register that controls supervisor-mode address translation and protection and holds the physical page number (PPN) of the root page table--an address space identifer (ASID) that facilitates address-translation fences
+on a per-address-space basis, and the MODE field, which selects the current address-translation scheme.
 
 SBI:: Sytem Binary Interface--abstracts the interfaces that are required to run operating systems.
 
 Scala:: a statically-typed, general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, Scala's design aims to address criticisms of Java, and it provides language interoperability with Java so that libraries written in either language can be referenced directly in both Scala and Java code. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM).
 
-SEE:: supervisor execution environment--environment in which operating systems run, which can but are not required to be BIOS style interfaces.
+SEE:: Supervisor Execution Environment--environment in which operating systems run, which can but are not required to be BIOS style interfaces.
 
 Segmentation fault:: a failure condition caused by a memory access violation in hardware operating with memory protection. The fault process notifies the operating system (OS) that software has attempted to access a restricted area of memory.
 
@@ -168,7 +183,7 @@ SFENCE:: Orders processor execution relative to all memory stores prior to the S
 
 SFENCE.VMA:: (instruction wrapper?)
 
-SHA:: Secure Hash Algorythms--a family of cryptographic hash functions published by the National Institute of Standards and Technology as a U.S. Federal Information Processing Standard that started with what is now known as SHA-0, a retronym used for the original (1993) 160-bit hash function published under the name "SHA".
+SHA:: Secure Hash Algorithms--a family of cryptographic hash functions published by the National Institute of Standards and Technology as a U.S. Federal Information Processing Standard that started with what is now known as SHA-0, a retronym used for the original (1993) 160-bit hash function published under the name "SHA".
 
 SoC:: System on Chip.
 
@@ -182,7 +197,7 @@ TLB:: Translation Lookaside Buffer--a memory buffer that enhances speed in retri
 
 TRNG:: True Random Number Generator--also known as HRNG, or Hardware Random Number Generator--a device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 
-Unpriveleged:: User-space--describes
+Unpriveleged:: User-space--describes...
 
 VM:: Virtual Machine.
 
