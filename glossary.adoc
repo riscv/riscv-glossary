@@ -146,6 +146,8 @@ Privileged:: Provides security isolation, and a means to reduce code defects bec
 Profile:: (ISA Profile) a set of extensions (instructions, state and behaviors) that users can depend on working together. Extensions are either required, optional, unsupported, or incompatible. RISC-V has defined two Profile types: Application (RVAyy)--appropriate for Linux-class and other embedded designs with more sophisticated ISA needs--and Micro-controller (RVMyy)--appropriate for cost-sensitive application-optimized embedded designs running bare-metal or simple RTOS environments.
 //a comment was made that articulating differences between RISC-V profile and ARM profile would be useful. What more needs to be said?
 
+psABI:: Processor-specific ABI--Processor-specific part of the RISC-V ABI (e.g. size and alignment of data types, calling convention, etc).
+
 Psuedo Instructions:: In support of a core design goal for RISC-V ISAs--high performance--pseudo instructions often include include special commands to the assembler. The use of pseudo instructions supports a policy of keeping the instruction set as small as possible, while supporting optimiztion and adding clarity to software programming. For example, the use of a pseudo instruction enables loading into memory with a 32-bit offset (called big) that is not directly available, because only 16-bit offsets are permitted.
 
 PTE:: Page Table Entry--an entry in the data structure used by a virtual memory system in a computer operating system to store the mapping between virtual addresses (used by the program executed by the accessing process) and physical addresses (used by the hardware, or more specifically, by the RAM subsystem), that enables access data in memory.
