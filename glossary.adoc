@@ -20,7 +20,7 @@ ASIC:: Application-Specific Integrated Circuit.
 
 ASID:: Address Space IDentifier.
 
-AT:: xxx
+AT:: Advanced Technology.
 
 ATA:: Advanced Technology Attachment.
 
@@ -50,7 +50,7 @@ Consistency Model:: A computing system supports a specific consistency model if 
 
 CSR:: Control and State Register. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs according to privilege level.
 
-DM:: Debug Module--
+DM:: Debug Module.
 
 DRAM:: Dynamic Random Access Memory.
 
@@ -70,13 +70,13 @@ HART:: Hardware Thread--at machine-mode level each hart is a real hardware threa
 
 HBI:: Hypervisor Binary Interface--an interface abstraction for hypervisors to run.
 
-HEE:: hypervisor execution environment--the environment in which a hypervisor runs.
+HEE:: Hypervisor execution environment--the environment in which a hypervisor runs.
 
 IC:: Integrated Circuit.
 
 ID Synchronization:: The mechanisms by which code generated on a core (e.g., by a JIT compiler) is made visible to other cores.
 
-IEEE 754:: a technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers.
+IEEE 754:: A technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers.
 
 IIRC:: The International Integrated Reporting Council, previously the International Integrated Reporting Committee), was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.
 
@@ -92,7 +92,7 @@ Instruction Set:: A group of commands for a CPU in machine language that can ref
 * Registers--internal locations that are limited in number and ability while quick to access.
 * Memory--external storage--a larger and more versatile number of locations that are slower to access.
 
-J Extension:: a RISC-V extension that provides a form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within user mode and the sandboxed code has been checked by the runtime to be unable to change pointer masks.
+J Extension:: A RISC-V extension that provides a form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within user mode and the sandboxed code has been checked by the runtime to be unable to change pointer masks.
 
 Latch:: A circuit that has two stable states that is used to store state information, known as a bi-stable multivibrator.
 
@@ -102,7 +102,7 @@ LR/SC:: Load Reserve/Store Conditional, also LL/SC--a pair of instructions used 
 
 LSA:: Load–Store Architecture--a design that is architecturally neutral and that uses bit patterns in IEEE 754 floating-point to speed sign extension in ways that simplify the multiplexers in a CPU--by placing most-significant bits at a fixed location.
 
-M:: used to indicate Machine Mode--a mode to which machines boot that allows programmer access to everything. The M is required in all RISC-V implementations.
+M:: Machine Mode--a mode to which machines boot that allows programmer access to everything. This mode is required in all RISC-V implementations.
 
 MCM:: Multi-Chip Module.
 
@@ -126,9 +126,9 @@ NOR:: Logical NOR, known as Pierce's Equivalent, Quine's Dagger, the ampcheck (f
 
 OCF:: Operation Code Feild--specifies the operation to be performed.
 
-OS-level Sandboxing:: a form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore the sandbox does not allow modifying pointer masks in user mode.
+OS-level Sandboxing:: A form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore the sandbox does not allow modifying pointer masks in user mode.
 
-Page fault:: a type of exception raised by computer hardware when a running program accesses a memory page that is not currently mapped by the memory management unit (MMU) into the virtual address space of a process.
+Page fault:: A type of exception raised by computer hardware when a running program accesses a memory page that is not currently mapped by the memory management unit (MMU) into the virtual address space of a process.
 
 Photolithography:: In microprocessor manufacturing, a process of using light to transfer a geometric pattern from a photomask (also called an optical mask) pattern parts to a photosensitive substrate on a thin film (substrate or wafer). The process can also make use of chemical photoresist on the substrate.
 
@@ -156,9 +156,9 @@ PTEP:: Parallel Telemetry Processor--a high- speed virtual processor architectur
 
 PTG.2:: A physical random number generator class defined in AIS 31/CC.
 
-PUD:: Patch Update?
+PUD:: Patch Update.
 
-QEMU:: QEMU (Quick EMUlator) is a free and open-source emulator and virtualizer that can perform hardware virtualization.
+QEMU:: Quick EMUlator; is a free and open-source emulator and virtualizer that can perform hardware virtualization.
 
 Register:: A group of flip-flops with each flip-flop capable of storing one bit of information. The simplest register is one that consists of only flip-flops with no external gates.
 
@@ -175,11 +175,11 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 SBI:: Sytem Binary Interface--abstracts the interfaces that are required to run operating systems.
 
-Scala:: a statically-typed, general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, Scala's design aims to address criticisms of Java, and it provides language interoperability with Java so that libraries written in either language can be referenced directly in both Scala and Java code. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM).
+Scala:: A statically-typed, general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, Scala's design aims to address criticisms of Java, and it provides language interoperability with Java so that libraries written in either language can be referenced directly in both Scala and Java code. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM).
 
 SEE:: Supervisor Execution Environment--environment in which operating systems run, which can but are not required to be BIOS style interfaces.
 
-Segmentation fault:: a failure condition caused by a memory access violation in hardware operating with memory protection. The fault process notifies the operating system (OS) that software has attempted to access a restricted area of memory.
+Segmentation fault:: A failure condition caused by a memory access violation in hardware operating with memory protection. The fault process notifies the operating system (OS) that software has attempted to access a restricted area of memory.
 
 SFENCE:: Orders processor execution relative to all memory stores prior to the SFENCE instruction. The processor ensures that every store prior to SFENCE is globally visible before any store after SFENCE becomes globally visible. The SFENCE instruction is ordered with respect to memory stores, other SFENCE instructions, MFENCE instructions, and any serializing instructions (like CPUID instructions), and it is *not* ordered with respect to either memory loads or the LFENCE instruction.
 
@@ -199,20 +199,20 @@ TLB:: Translation Lookaside Buffer--a memory buffer that enhances speed in retri
 
 TRNG:: True Random Number Generator--also known as HRNG, or Hardware Random Number Generator--a device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 
-Unpriveleged:: User-space--describes...
+Unpriveleged:: (User-space--describes...)
 
 VM:: Virtual Machine.
 
-VMA:: Virtual Memory Allocation--
+VMA:: Virtual Memory Allocation;
 
-WARL:: Weighted Average Run Length--
+WARL:: Weighted Average Run Length;
 //Need a summary statement about pertinence to performance metrics for RISC-V?
 
 XLEN:: Register width--etymology involves reference to mathematical `X` and abbreviation of the word "length."
 
 ZBT:: Zero Bus Turnaround
 
-ZFew:: xxxx
+ZFew:: ???
 
 
 
