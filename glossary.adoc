@@ -3,6 +3,7 @@
 
 This glossary includes definitions of terms specific to RISC-V in addition to terms that are useful in understanding the architectures and technologies in use by RISC-V contributors and users.
 
+[glossary]
 ABI:: Application Binary Interface--abstractions and interfaces for applications that allow interactions without the need to know the details about what takes place in the lower networking layers. For RISC-V, the ABI provides abstractions of S or M modes.
 //(I have edited this to be a more generalized definition and still think that S and M modes operate need explanation).
 
