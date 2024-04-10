@@ -1,4 +1,4 @@
-# Makefile for RISC-V Doc Glossary
+# Makefile for RISC-V Glossary
 #
 # This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
 # International License. To view a copy of this license, visit
@@ -10,18 +10,28 @@
 # Description:
 #
 # This Makefile is designed to automate the process of building and packaging
-# the Doc Glossary for RISC-V Extensions.
+# the Doc Template for RISC-V Extensions.
+
+DOCS := \
+	gloss-header.adoc
 
 DATE ?= $(shell date +%Y-%m-%d)
 VERSION ?= v0.0.0
 REVMARK ?= Draft
-DOCKER_RUN := docker run --rm -v ${PWD}:/build -w /build \
-riscvintl/riscv-docs-base-container-image:latest
+ifneq ($(SKIP_DOCKER),true)
+	DOCKER_CMD := docker run --rm -v ${PWD}:/build -w /build \
+	riscvintl/riscv-docs-base-container-image:latest \
+	/bin/sh -c
+	DOCKER_QUOTE := "
+endif
 
 SRC_DIR := src
 BUILD_DIR := build
-HEADER_SOURCE := $(SRC_DIR)/gloss_header.adoc
 
+DOCS_PDF := $(DOCS:%.adoc=%.pdf)
+DOCS_HTML := $(DOCS:%.adoc=%.html)
+
+XTRA_ADOC_OPTS :=
 ASCIIDOCTOR_PDF := asciidoctor-pdf
 ASCIIDOCTOR_HTML := asciidoctor
 OPTIONS := --trace \
@@ -32,15 +42,26 @@ OPTIONS := --trace \
            -a revdate=${DATE} \
            -a pdf-fontsdir=docs-resources/fonts \
            -a pdf-theme=docs-resources/themes/riscv-pdf.yml \
-           -D $(BUILD_DIR) \
+           $(XTRA_ADOC_OPTS) \
+		   -D build \
            --failure-level=ERROR
 REQUIRES := --require=asciidoctor-bibtex \
             --require=asciidoctor-diagram \
             --require=asciidoctor-mathematical
 
-.PHONY: all build clean build-container build-no-container
+.PHONY: all build clean build-container build-no-container build-docs
 
 all: build
+
+build-docs: $(DOCS_PDF) $(DOCS_HTML)
+
+vpath %.adoc $(SRC_DIR)
+
+%.pdf: %.adoc
+	$(DOCKER_CMD) $(DOCKER_QUOTE) $(ASCIIDOCTOR_PDF) $(OPTIONS) $(REQUIRES) $< $(DOCKER_QUOTE)
+
+%.html: %.adoc
+	$(DOCKER_CMD) $(DOCKER_QUOTE) $(ASCIIDOCTOR_HTML) $(OPTIONS) $(REQUIRES) $< $(DOCKER_QUOTE)
 
 build:
 	@echo "Checking if Docker is available..."
@@ -54,14 +75,12 @@ build:
 
 build-container:
 	@echo "Starting build inside Docker container..."
-	$(DOCKER_RUN) /bin/sh -c "$(ASCIIDOCTOR_PDF) $(OPTIONS) $(REQUIRES) $(HEADER_SOURCE)"
-	$(DOCKER_RUN) /bin/sh -c "$(ASCIIDOCTOR_HTML) $(OPTIONS) $(REQUIRES) $(HEADER_SOURCE)"
+	$(MAKE) build-docs
 	@echo "Build completed successfully inside Docker container."
 
 build-no-container:
 	@echo "Starting build..."
-	$(ASCIIDOCTOR_PDF) $(OPTIONS) $(REQUIRES) $(HEADER_SOURCE)
-	$(ASCIIDOCTOR_HTML) $(OPTIONS) $(REQUIRES) $(HEADER_SOURCE)
+	$(MAKE) SKIP_DOCKER=true build-docs
 	@echo "Build completed successfully."
 
 clean:
