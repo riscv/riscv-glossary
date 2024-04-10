@@ -51,6 +51,8 @@ Consistency Model:: A computing system supports a specific consistency model if 
 
 CSR:: Control and State Register. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs according to privilege level.
 
+D:: Debug mode. Provides access to more than M mode. This mode is used to debug implementations.
+
 DM:: Debug Module.
 
 DRAM:: Dynamic Random Access Memory.
@@ -73,6 +75,8 @@ HBI:: Hypervisor Binary Interface--an interface abstraction for hypervisors to r
 
 HEE:: Hypervisor execution environment--the environment in which a hypervisor runs.
 
+Horizontal trap:: A trap that stays at the current priviledge mode when triggered.
+
 IC:: Integrated Circuit.
 
 ID Synchronization:: The mechanisms by which code generated on a core (e.g., by a JIT compiler) is made visible to other cores.
@@ -85,7 +89,7 @@ IMSIC:: International Mobile Subscriber Identity Code.
 
 IRC::  https://tools.ietf.org/html/rfc2812[Internet Relay Chat]--a protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server.
 
-ISA:: Programmer visible state and operations on that state, the boundary between hardware and software.
+ISA:: Instruction set architecture. Programmer visible state and operations on that state, the boundary between hardware and software.
 
 Instruction Set:: A group of commands for a CPU in machine language that can refer to all possible instructions for a CPU, or a subset of instructions to enhance its performance in specific situations, and includes:
 * Instruction length--which can vary, Opcodes--the command to be carried out.
@@ -111,11 +115,15 @@ MIPS:: Microprocessor without Interlocked Pipelined Stages--a reduced instructio
 
 MMU:: Memory Management Unit.
 
+MMWP:: Machine-Mode When-no-PMP-match Policy.
+
 MODE::  A field within an instruction or instruction set that specifies the way the operand or the effective address is determined.
 
 MSI:: Message Signal Interrupt.
 
-MXLEN:: Machine XLEN.
+MXLEN:: Machine XLEN. A native integer width in bits.
+
+MXL:: Machine XLEN field. A field in misa to set MXLEN.
 
 NAND:: Not-and.
 
@@ -171,6 +179,8 @@ RV:: Reliability Verification--a category of physical verification that helps en
 
 RVWMO:: RISC-V Weak Memory Ordering--Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).
 
+S:: Supervisor mode.
+
 SATP:: Supervisor Address Translation and Protection--XLEN-bit read/write register that controls supervisor-mode address translation and protection and holds the physical page number (PPN) of the root page table--an address space identifer (ASID) that facilitates address-translation fences
 on a per-address-space basis, and the MODE field, which selects the current address-translation scheme.
 
@@ -196,11 +206,19 @@ SRAM:: Static Random Access Memory.
 
 Standard Extension:: for RISC-V, ...
 
+STVEC:: Supervisor trap vector base register. This register contains trap vector configuration, base address, and mode.
+
 TLB:: Translation Lookaside Buffer--a memory buffer that enhances speed in retrieving a value by storing a memory address.
 
 TRNG:: True Random Number Generator--also known as HRNG, or Hardware Random Number Generator--a device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 
+U:: User mode.
+
 Unpriveleged:: (User-space--describes...)
+
+User level sandboxing:: A form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within the user mode and the sandboxed code was checked by the runtime to be unable to change pointer masks.
+
+Virtical traps:: A trap that increases privilege mode when triggered. For example, increasing from U to S.
 
 VM:: Virtual Machine.
 
@@ -208,6 +226,12 @@ VMA:: Virtual Memory Allocation;
 
 WARL:: Weighted Average Run Length;
 //Need a summary statement about pertinence to performance metrics for RISC-V?
+
+WARL:: Write Any Read Legal. Meant to reduce code defects because code does not need to check for illegal values.
+
+WLRL:: Write Legal Read Legal. Check on writes, but no exception is required. The value that is read back for illegal written values is deterministic, but up to implementation.
+
+WPRI:: Write Preserve Read Ignore. Preserve bits already theeree when you change a field. ignore value on read
 
 XLEN:: Register width--etymology involves reference to mathematical `X` and abbreviation of the word "length."
 
