@@ -1,5 +1,5 @@
 ---
-name: Create Specification Document
+name: Create Glossary Document
 
 # The workflow is triggered by pull request, push to main, and manual dispatch.
 on:
