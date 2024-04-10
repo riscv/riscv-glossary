@@ -40,7 +40,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@Draft_1
+        uses: actions/checkout@main
         with:
           submodules: recursive
 
