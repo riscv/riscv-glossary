@@ -115,6 +115,8 @@ MIPS:: Microprocessor without Interlocked Pipelined Stages--a reduced instructio
 
 MMU:: Memory Management Unit.
 
+MMWP:: Machine-Mode When-no-PMP-match Policy.
+
 MODE::  A field within an instruction or instruction set that specifies the way the operand or the effective address is determined.
 
 MSI:: Message Signal Interrupt.
