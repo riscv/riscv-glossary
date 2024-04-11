@@ -1,81 +1,85 @@
----
-name: Create RISC-V glossary doc
+# Makefile for RISC-V Doc Template
+#
+# This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+# International License. To view a copy of this license, visit
+# http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to
+# Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+# SPDX-License-Identifier: CC-BY-SA-4.0
+#
+# Description:
+#
+# This Makefile is designed to automate the process of building and packaging
+# the Doc Template for RISC-V Extensions.
 
-# The workflow is triggered by pull request, push to main, and manual dispatch.
-on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Release version, e.g. X.Y.Z:'
-        required: true
-        type: string
-      revision_mark:
-        description: 'Set revision mark as Draft, Release or Stable:'
-        required: true
-        type: choice
-        options:
-          - Draft
-          - Release
-          - Stable
-        default: Draft
-      prerelease:
-        description: Tag as a pre-release?
-        required: false
-        type: boolean
-        default: true
-      draft:
-        description: Create release as a draft?
-        required: false
-        type: boolean
-        default: false
-  pull_request:
-  push:
-    branches:
-      - main
+DOCS := \
+	gloss_header.adoc
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+DATE ?= $(shell date +%Y-%m-%d)
+VERSION ?= v0.0.0
+REVMARK ?= Draft
+ifneq ($(SKIP_DOCKER),true)
+	DOCKER_CMD := docker run --rm -v ${PWD}:/build -w /build \
+	riscvintl/riscv-docs-base-container-image:latest \
+	/bin/sh -c
+	DOCKER_QUOTE := "
+endif
 
-    steps:
-      # Checkout the repository
-      - name: Checkout repository
-        uses: actions/checkout@v1
-        with:
-          submodules: recursive
+SRC_DIR := src
+BUILD_DIR := build
 
-      # Pull the latest RISC-V Docs container image
-      - name: Pull Container
-        run: docker pull riscvintl/riscv-docs-base-container-image:latest
+DOCS_PDF := $(DOCS:%.adoc=%.pdf)
+DOCS_HTML := $(DOCS:%.adoc=%.html)
 
-      # Override VERSION and REVMARK for manual workflow dispatch
-      - name: Update environment variables
-        run: |
-          echo "VERSION=v${{ github.event.inputs.version }}" >> "$GITHUB_ENV"
-          echo "REVMARK=${{ github.event.inputs.revision_mark }}" >> "$GITHUB_ENV"
-        if: github.event_name == 'workflow_dispatch'
+XTRA_ADOC_OPTS :=
+ASCIIDOCTOR_PDF := asciidoctor-pdf
+ASCIIDOCTOR_HTML := asciidoctor
+OPTIONS := --trace \
+           -a compress \
+           -a mathematical-format=svg \
+           -a pdf-fontsdir=docs-resources/fonts \
+           -a pdf-theme=docs-resources/themes/riscv-pdf.yml \
+           $(XTRA_ADOC_OPTS) \
+		       -D build \
+           --failure-level=ERROR
+REQUIRES := --require=asciidoctor-diagram \
+            --require=asciidoctor-mathematical
 
-      # Build Files
-      - name: Build Files
-        run: make
+.PHONY: all build clean build-container build-no-container build-docs
 
-      # Upload the built PDF files as a single artifact
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: Build Artifacts
-          path: ${{ github.workspace }}/build/glossary.pdf
+all: build
 
-      # Create Release
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: ${{ github.workspace }}/build/glossary.pdf
-          tag_name: v${{ github.event.inputs.version }}
-          name: Release ${{ github.event.inputs.version }}
-          draft: ${{ github.event.inputs.draft }}
-          prerelease: ${{ github.event.inputs.prerelease }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GHTOKEN }}
-        if: github.event_name == 'workflow_dispatch'
-        # This condition ensures this step only runs for workflow_dispatch events.
+build-docs: $(DOCS_PDF) $(DOCS_HTML)
+
+vpath %.adoc $(SRC_DIR)
+
+%.pdf: %.adoc
+	$(DOCKER_CMD) $(DOCKER_QUOTE) $(ASCIIDOCTOR_PDF) $(OPTIONS) $(REQUIRES) $< $(DOCKER_QUOTE)
+
+%.html: %.adoc
+	$(DOCKER_CMD) $(DOCKER_QUOTE) $(ASCIIDOCTOR_HTML) $(OPTIONS) $(REQUIRES) $< $(DOCKER_QUOTE)
+
+build:
+	@echo "Checking if Docker is available..."
+	@if command -v docker >/dev/null 2>&1 ; then \
+		echo "Docker is available, building inside Docker container..."; \
+		$(MAKE) build-container; \
+	else \
+		echo "Docker is not available, building without Docker..."; \
+		$(MAKE) build-no-container; \
+	fi
+
+build-container:
+	@echo "Starting build inside Docker container..."
+	$(MAKE) build-docs
+	@echo "Build completed successfully inside Docker container."
+
+build-no-container:
+	@echo "Starting build..."
+	$(MAKE) SKIP_DOCKER=true build-docs
+	@echo "Build completed successfully."
+
+clean:
+	@echo "Cleaning up generated files..."
+	rm -rf $(BUILD_DIR)
+	@echo "Cleanup completed."
