@@ -60,5 +60,4 @@ Copyright 2024 by RISC-V International.
 [preface]
 include::contributors.adoc[]
 
-include::intro.adoc[]
 include::glossary.adoc[]
