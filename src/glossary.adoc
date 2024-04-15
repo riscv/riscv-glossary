@@ -5,7 +5,6 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 
 [glossary]
 ABI:: Application Binary Interface. Abstractions and interfaces  between applications and the lower networking layers that allows interactions without the need to know the details. For RISC-V, the ABI provides abstractions of S or M modes.
-//(I have edited this to be a more generalized definition and still think that S and M modes operate need explanation).
 
 Address field:: Designated as a memory address or a processor register.
 
@@ -205,6 +204,8 @@ PPO:: Preserved Program Order. A strict sequential consistency that demands that
 // please verify.
 
 PQC:: Post-Quantum Cryptography. This standard is due to replace RSA and ECC in NIST cryptography [PQC] as well as military [NSA].
+
+POSIX:: Portable Operating System Interface.
 
 PRI:: Page Request Interface. A PCIe protocol that enables devices to request OS memory manager services to make pages resident.
 
