@@ -77,6 +77,8 @@ eDRAM:: Embedded DRAM.
 
 ELEN:: Element length.
 
+ELF:: Executable and Linkable Format.
+
 ES:: Entropy Source. An input or a measured characteristic that supplies random bits for an I/O device on a computer, usually used to supply bits that an attacker cannot know, as part of security.
 
 Flip-flop:: Electronic circuitry with two stable states for storing binary data. Data that is stored in a flip-flop is changed by applying specific inputs. Both flip-flops and latches are building blocks that are used in digital computing.
@@ -107,6 +109,10 @@ Hypervisor:: A software entity that controls virtualization.
 
 IC:: Integrated Circuit.
 
+ICF:: Indentical Code Folding. ICF is an optimization to reduce output size by merging read-only sections by not only their names but by their contents. If two read-only sections happen to have the same metadata, actual contents and relocations, they are merged by ICF. It is known as an effective technique, and it usually reduces C++ program's size by a few percent or more.
+
+ICF:: Identical COMDAT Folding. See 
+
 ID:: Identifier.
 
 ID Synchronization:: The mechanisms by which code generated on a core (e.g., by a JIT compiler) is made visible to other cores.
@@ -114,6 +120,8 @@ ID Synchronization:: The mechanisms by which code generated on a core (e.g., by 
 IEEE 754:: A technical standard for floating-point arithmetic established in 1985 by the Institute of Electrical and Electronics Engineers.
 
 IIRC:: The International Integrated Reporting Council, previously the International Integrated Reporting Committee), was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.
+
+Image base:: An image base is the fixed address that Windows executables or DLLs  are linked against. Default image bases are 0x140000000 for executables and 0x18000000 for DLLs. For example, a executable is created, it is loaded at address 0x140000000 by the loader.
 
 IMSIC:: International Mobile Subscriber Identity Code.
 
@@ -244,6 +252,8 @@ RO:: Read-only. Register bits are read-only and cannot be altered by software. W
 Rocket:: Parameterized SoC generator written in Chisel, designed to helps tune the design under different performance, power, area constraints, and diverse technology nodes.
 
 RV:: Reliability Verification. A category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
+
+RVA:: Relative Virtual Address. Windows executables or DLLs are not position-independent; they are linked against a fixed address called an image base. RVAs are offsets from an image base.
 
 RVWMO:: RISC-V Weak Memory Ordering--Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).
 
