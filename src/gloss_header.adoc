@@ -57,7 +57,4 @@ https://creativecommons.org/licenses/by/4.0/.
 
 Copyright 2024 by RISC-V International.
 
-[preface]
-include::contributors.adoc[]
-
 include::glossary.adoc[]
