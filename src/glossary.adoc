@@ -52,7 +52,15 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 
 [[CAS]]CAS:: Compare-and-swap.
 
+[[CBCFE]]CBCFE:: Cache Block Clean and Flush instruction Enable.
+
+[[CBIE]]CBIE:: Cache Block Invalidate instruction Enable.
+
 [[CBO]]CBO:: Cache-block operation.
+
+[[CBZE]]CBZE:: Cache Block Zero instruction Enable.
+
+[[CDE]]CDE:: Counter Delegation Enable.
 
 [[CMO]]CMO:: Cache-management operation.
 
@@ -71,13 +79,11 @@ embedded targets, although ELF is normally chosen.
 
 [[ChemicalVD]]Chemical Vapor Deposition:: A chemical deposition process in which the wafer is exposed to one or more volatile precursors, which react and/or decompose on the substrate surface to produce the final film.
 
-[[CAS]]CAS:: Compare-and-swap.
-
 [[consistencymodel]]Consistency Model:: A computing system supports a specific consistency model if operations on memory follow specific rules. For example, high level languages such as C++ and Java, partially maintain the contract by translating memory operations into low-level operations while preserving memory semantics. To hold to the contract, compilers might reorder some memory instructions, and library calls such as `pthread_mutex_lock()`, that encapsulates the required synchronization.
 
 [[coprocessor]]Coprocessor:: A unit that is attached to a RISC-V core and is  sequenced by an instruction stream. It contains additional architectural state and instruction-set extensions, and possibly some limited autonomy relative to the primary RISC-V instruction stream.
 
-[[CSR]]CSR:: Control and State Register. CSRs are registers that store information. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs, according to privilege level.
+[[CSR]]CSR:: Control and Status Register. CSRs are registers that store information. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs, according to privilege level.
 
 [[customextension]]Custom extensions:: Custom encodings are not used for standard extensions and are made available for vendor-specific non-standard extensions. See 1.3. RISC-V ISA Overview in Unprivileged.
 
@@ -165,6 +171,8 @@ unique device identifier to locate the Device Context structure.
 
 [[HPM]]HPM:: Hardware Performance Monitor.
 
+[[HRET]]HRET:: Hypervisor Return from Trap.
+
 [[HRNG]]HRNG:: Hardware Random Number Generator. See TRNG.
 
 [[hstatus]]hstatus:: Hypervisor Status register.
@@ -249,6 +257,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[marchid]]marchid:: Machine Architecture ID register.
 
+[[MBE]]MBE:: Machine Big Endian.
+
 [[mcause]]mcause:: Machine Cause register.
 
 [[mconfigptr]]mconfigptr:: Machine Configuration Pointer register.
@@ -289,6 +299,10 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[MPDA]]MPDA:: Memory Proximity Domain Attributes.
 
+[[MPRV]]MPRV:: Modify PRiVilege.
+
+[[MRET]]MRET:: Machine Return from Trap.
+
 [[mscratch]]mscratch:: Machine Scratch register.
 
 [[MSCI]]MSCI:: Memory Side Cache Information.
@@ -311,6 +325,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[MXL]]MXL:: Machine XLEN field. A field in `misa` to set MXLEN.
 
+[[MXR]]MXR:: Make eXecutable Readable.
+
 [[NaN]]NaN:: Not a number.
 
 [[NAPOT]]NAPOT:: Naturally aligned power-of-2.
@@ -320,6 +336,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 [[NMI]]:: Non-maskable interrupts.
 
 [[nonISA]]Non-ISA:: Non-Standard Extension. Non-standard extensions are either custom extensions that use only custom encodings or non-conforming extensions that use any standard or reserved encoding. See 1.3. RISC-V ISA Overview in Unprivileged.
+
+[[NOP]]NOP:: No operation.
 
 [[NTL]]NTL:: Non-Temporal Locality.
 
@@ -344,6 +362,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 [[PASID]]PASID:: Process Address Space Identifier. Identifies the address space of a process. The PASID value is provided in the PASID TLP prefix of the request.
 
 [[PBMT]]PBMT:: Page-Based Memory Types.
+
+[[PBMTE]]PBMTE:: Page Based Memory Types Extension.
 
 [[PCIeATS]]PCIe ATS:: Peripheral Component Interconnect Express Address Translation Services. A PCIe protocol to support DevATC. Also called ATS.
 
@@ -422,6 +442,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[rocket]]Rocket:: Parameterized SoC generator written in Chisel, designed to helps tune the design under different performance, power, area constraints, and diverse technology nodes.
 
+[[RTC]]RTC:: Real-time clock.
+
 [[RV]]RV:: Reliability Verification. A category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
 
 [[RVA]]RVA:: Relative Virtual Address. Windows executables or DLLs are not position-independent; they are linked against a fixed address called an image base. RVAs are offsets from an image base.
@@ -444,6 +466,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 on a per-address-space basis, and the MODE field, which selects the current address-translation scheme.
 
 [[SBBR]]SBBR:: Server Base Boot Requirements.
+
+[[SBE]]SBE:: Supervisor Big Endian.
 
 [[SysBI]]SBI:: System Binary Interface. SBI abstracts the interfaces that are required to run operating systems.
 
@@ -499,11 +523,15 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[SRAM]]SRAM:: Static Random Access Memory.
 
+[[SRET]]SRET:: Supervisor Return from Trap.
+
 [[srmcfg]]srmcfg:  Supervisor Resource Management Configuration register.
 
 [[sscratch]]sscratch:: Supervisor Scratch register.
 
 [[sstatus]]sstatus:: Supervisor status register.
+
+[[STCE]]STCE:: Supervisor TimeCmp Extension.
 
 [[STD]]STD:: Standard.
 
@@ -512,6 +540,8 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 [[stval]]stval:: Supervisor Trap Value register.
 
 [[stvec]]stvec:: Supervisor trap vector base register. This register contains trap vector configuration, base address, and mode.
+
+[[SUM]]SUM:: Supervisor User Memory access
 
 [[symbol]]Symbol:: A symbol is a name and an address. Each object file and executable has a list of symbols, often referred to as the symbol table. In addition, the symbol table contains additional information, such as the symbol type. Typically every global function and variable in a C program includes an associated symbol.
 
@@ -523,9 +553,17 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[TRNG]]TRNG:: True Random Number Generator. Also known as HRNG, or Hardware Random Number Generator. A device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 
+[[TVM]]TVM:: Trap Virtual Memory.
+
+[[TW]]TW:: Timeout Wait bit.
+
 [[U]]U:: User mode. The boot mode that runs the application code. Part of Unprivileged. Also called U-mode. See 1.2. Privilege Levels.
 
+[[UBE]]UBE:: User Big Endian.
+
 [[unprivileged]]Unpriveleged:: Unprivileged instructions are those that are generally usable in all privilege modes in all privileged architectures, though behavior can vary, depending on the specific privilege mode and privilege architecture.
+
+[[URET]]URET:: User Return from Trap.
 
 [[userlevelsb]]User level sandboxing:: A form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within the user mode and the sandboxed code was checked by the runtime to be unable to change pointer masks.
 
