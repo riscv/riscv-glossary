@@ -1,9 +1,9 @@
 = RISC-V Glossary
-Authors: Author 1, Author 2
+Authors: Kersten Richter, Bill Traynor
 :docgroup: RISC-V Task Group
 :description: RISC-V Example Specification Document (Zexmpl)
 :company: RISC-V.org
-:revdate: 1/2023
+:revdate: 4/2024
 :revnumber: 1.0
 :revremark: This document is under development. Expect potential changes. Visit http://riscv.org/spec-state for further details.
 :revinfo:
