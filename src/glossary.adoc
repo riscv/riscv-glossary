@@ -151,7 +151,13 @@ unique device identifier to locate the Device Context structure.
 
 [[HBI]]HBI:: Hypervisor Binary Interface. An interface for hypervisors to connect the HEE, isolating the hypervisor from details ofthe hardware platform. See 1.1. RISC-V Privileged Software Stack Terminology.
 
+[[hcounteren]]hcounteren:: Hypervisor Counter-enable register.
+
+[[hedeleg]]hedeleg:: Hypervisor Trap Delegation register. Also `hideleg`.
+
 [[HEE]]HEE:: Hypervisor execution environment. The environment that runs the hypervisor. See 1.1. RISC-V Privileged Software Stack Terminology.
+
+[[hgatp]]hgatp:: Hypervisor Guest Address Translation and Protection register.
 
 [[horizontaltrap]]Horizontal trap:: A trap that stays at the current priviledge mode when triggered.
 
@@ -160,6 +166,16 @@ unique device identifier to locate the Device Context structure.
 [[HPM]]HPM:: Hardware Performance Monitor.
 
 [[HRNG]]HRNG:: Hardware Random Number Generator. See TRNG.
+
+[[hstatus]]hstatus:: Hypervisor Status register.
+
+[[htimedelta]]htimedelta:: Hypervisor Time Delta register.
+
+[[htinst]]htinst:: Hypervisor Trap Instruction register.
+
+[[htval]]:: Hypervisor Trap Value register.
+
+[[hvip]]hvip:: Hypervisor Interrupt register. Also `hip` and `hie`.
 
 [[hypervisor]]Hypervisor:: A software entity that controls virtualization.
 
@@ -231,35 +247,37 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[M]]M:: Machine Mode. A boot mode that allows access to the most trusted code. This mode is required in all RISC-V implementations. Also called M-mode. See 1.2. Privilege Levels.
 
-[[MARCHID]]MARCHID:: Machine Architecture ID.
+[[marchid]]marchid:: Machine Architecture ID register.
 
-[[MCAUSE]]MCAUSE:: Machine Cause.
+[[mcause]]mcause:: Machine Cause register.
 
-[[MCONFIGPTR]]MCONFIGPTR:: Machine Configuration Pointer.
+[[mconfigptr]]mconfigptr:: Machine Configuration Pointer register.
 
-[[MCOUNTEREN]]MCOUNTEREN:: Machine Counter-enable.
+[[mcounteren]]mcounteren:: Machine Counter-enable register.
 
-[[MCOUNTINHIBIT]]MCOUNTINHIBIT:: Machine Counter-inhibit.
+[[mcountinhibit]]mvountinhibit:: Machine Counter-inhibit register.
 
-[[MEDELEG]]MEDELEG:: Machine Trap Delegation. Also MIDELEG.
+[[medeleg]]medeleg:: Machine Trap Delegation register. Also MIDELEG.
 
-[[MENVCFG]]MENVCFG:: Machine Environment Configuration.
+[[menvcfg]]menvcfg:: Machine Environment Configuration register.
 
-[[MEPC]]MEPC:: Machine Exception Program.
+[[mepc]]mepc:: Machine Exception Program register.
 
-[[MIP]]MIP:: Machine Interrupt. Also MIE.
+[[mip]]mip:: Machine Interrupt register. Also MIE.
 
-[[MISA]]MISA:: Machine ID.
+[[misa]]misa:: Machine ID register.
 
 [[MOP]]MOPs:: May-be-operations.
 
 [[MCM]]MCM:: Multi-Chip Module.
 
-[[MHARTID]]MHARTID:: Hart ID.
+[[mcyclecfg]]mcyclecfg:: Machine Counter Configuration register. Also `minstretcfg`.
 
-[[MIMPID]]MIMPID:: Machine Implementation ID.
+[[mhartid]]mhartid:: Hart ID register.
 
-[[MIP]]MIP: Machine Interrupt. Also MIE.
+[[mimpid]]mimpid:: Machine Implementation ID register.
+
+[[mip]]mip: Machine Interrupt register. Also MIE.
 
 [[MIPS]]MIPS:: Microprocessor without Interlocked Pipelined Stages. A reduced instruction set computer (RISC) instruction set architecture developed by MIPS Computer Systems, now MIPS Technologies, based in the United States, that influenced later RISC architectures.
 
@@ -271,27 +289,27 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[MPDA]]MPDA:: Memory Proximity Domain Attributes.
 
-[[MSCRATCH]]MSCRATCH:: Machine Scratch.
+[[mscratch]]mscratch:: Machine Scratch register.
 
 [[MSCI]]MSCI:: Memory Side Cache Information.
 
-[[MSECCFG]]MSECCFG:: Machine Security Configuration.
+[[mseccfg]]mseccfg:: Machine Security Configuration register.
 
 [[MSI]]MSI:: Message Signal Interrupt.
 
-[[MSTATUS]]MSTATUS:: Machine Status. Also MSTATUSH.
+[[mstatus]]mstatus:: Machine Status register. Also `mstatush`.
 
-[[MTIME]]MTIME:: Machine Timer.Also MTIMECMP.
+[[mtime]]mtime:: Machine Timer register. Also `mtimecmp`.
 
-[[MTVAL]]MTVAL:: Machine Trap Value.
+[[mtval]]mtval:: Machine Trap Value register.
 
-[[MTVEC]]MTVEC:: Machine Trap-Vector Base-Address.
+[[mtvec]]mtvec:: Machine Trap-Vector Base-Address register.
 
-[[MVENDORID]]MVENDORID:: Machine vendor ID.
+[[mvendorid]]mvendorid:: Machine vendor ID register.
 
 [[MXLEN]]MXLEN:: Machine XLEN. A native integer width in bits.
 
-[[MXL]]MXL:: Machine XLEN field. A field in misa to set MXLEN.
+[[MXL]]MXL:: Machine XLEN field. A field in `misa` to set MXLEN.
 
 [[NaN]]NaN:: Not a number.
 
@@ -435,9 +453,11 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[scala]]Scala:: A statically-typed, general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, Scala's design aims to address criticisms of Java, and it provides language interoperability with Java so that libraries written in either language can be referenced directly in both Scala and Java code. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM).
 
-[[scause]]scause:: Supervisor Cause.
+[[scause]]scause:: Supervisor Cause register.
 
-[[scounteren]]scounteren:: Supervisor Counter-enable.
+[[scounteren]]scounteren:: Supervisor Counter-enable register.
+
+[[scountinhibit]]scountinhibit:: Supervisor Counter Inhibit register.
 
 [[section]]Section:: Sections make up object files and executables and contain optional data and relocation information.
 
@@ -445,9 +465,9 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[segfault]]Segmentation fault:: A failure condition caused by a memory access violation in hardware operating with memory protection. The fault process notifies the operating system (OS) that software has attempted to access a restricted area of memory.
 
-[[senvcfg]]senvcfg:: Supervisor Environment Configuration.
+[[senvcfg]]senvcfg:: Supervisor Environment Configuration register.
 
-[[sepc]]sepc:: Supervisor Exception Program Counter.
+[[sepc]]sepc:: Supervisor Exception Program Counter register.
 
 [[SEW]]SEW:: Selected Element Width.
 
@@ -457,7 +477,7 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[sharedlibrary]]Shared library:: A library of functions that can be used by many executables without requiring a link into each executable. There are several different implementations of shared libraries, each having slightly different features.
 
-[[sip]]sip:: Supervisor Interrupt. Also sie.
+[[sip]]sip:: Supervisor Interrupt register. Also sie.
 
 [[SLLBI]]SLLBI:: System Locality Latency and Bandwidth Information.
 
@@ -467,7 +487,7 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[SMEP]]SMEP:: Supervisor Memory Execution Prevention.
 
-[[smrnmi]]smrnmi:: Supervisor Resumable Non-Maskable Interrupts
+[[smrnmi]]smrnmi:: Supervisor Resumable Non-Maskable Interrupts register.
 
 [[SOC]]SoC:: System on Chip.
 
@@ -475,19 +495,21 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[SP]]SP:: Stack pointer.
 
-[[SPA]]SPA:: Supervisor Physical Address: Physical address used to to access memory and memory-mapped resources.
+[[SPA]]SPA:: Supervisor Physical Address. Physical address used to to access memory and memory-mapped resources.
 
 [[SRAM]]SRAM:: Static Random Access Memory.
 
-[[sscratch]]sscratch:: Supervisor Scratch.
+[[srmcfg]]srmcfg:  Supervisor Resource Management Configuration register.
 
-[[sstatus]]sstatus:: Supervisor status.
+[[sscratch]]sscratch:: Supervisor Scratch register.
+
+[[sstatus]]sstatus:: Supervisor status register.
 
 [[STD]]STD:: Standard.
 
 [[standardextension]]Standard Extension:: A category of extensions that use only standard encodings, and do not conflict with each other in their uses of these encodings. See 1.3. RISC-V ISA Overview in Unprivileged.
 
-[[stval]]stval:: Supervisor Trap Value.
+[[stval]]stval:: Supervisor Trap Value register.
 
 [[stvec]]stvec:: Supervisor trap vector base register. This register contains trap vector configuration, base address, and mode.
 
@@ -509,7 +531,15 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[VA]]VA:: Virtual Address.
 
+[[vcsr]]vcsr:: Vector Control and Status register.
+
+[[vill]]vill:: Virtual Type Illegal.
+
 [[virtualtraps]]Virtical traps:: A trap that increases privilege mode when triggered. For example, increasing from U to S.
+
+[[vl]]vl:: Vector Length register.
+
+[[vlenb]]vlenb:: Vector Byte Length.
 
 [[VM]]VM:: Virtual Machine. An efficient, isolated duplicate of a physical computer system.
 
@@ -521,7 +551,35 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[VS]]VS:: Virtual Supervisor. Supervisor privilege in virtualization mode.
 
+[[vsatp]]vsatp:: Virtual Supervisor Address Translation and Protection register.
+
+[[vscause]]vscause:: Virtual Supervisor Cause register.
+
+[[vsepc]]vsepc:: Virtual Supervisor Exception Program Counter register.
+
+[[vsew]]vsew:: Vector Selected Element Width.
+
+[[vstart]]vstart:: Vector Start Index register.
+
+[[vstatus]]vstatus:: Virtual Supervisor Status register. Also `vsstatus`.
+
+[[vsip]]vsip:: Virtual Supervisor Interrupt register. Also `vsie`.
+
+[[vsscratch]]vsscratch:: Virtual Supervisor Scratch register.
+
+[[vstimecmp]]vstimecmp:: Virtual Supervisor Timer register.
+
+[[vstval]]vstval:: Virtual Supervisor Trap Value register.
+
+[[vstvec]]vstvec:: Virtual Supervisor Trap Vector Base Address register.
+
+[[vtype]]vtype:: Vector Type register.
+
+[[vxrm]]vxrm:: Vector Fixed-Point Rounding Mode register.
+
 [[WeightedARL]]WARL:: Weighted Average Run Length.
+
+[[WFI]]WFI:: Wait for Interrupt instruction.
 
 [[WriteARL]]WARL:: Write Any Read Legal. Attribute of a register field that is defined for only a subset of bit encodings, but allows any value to be written while guaranteeing to return a legal value whenever read.
 
