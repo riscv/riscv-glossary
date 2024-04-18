@@ -4,17 +4,25 @@
 This glossary includes definitions of terms specific to RISC-V as well as terms that are useful in understanding the architectures and technologies in use by RISC-V contributors and users.
 
 [glossary]
-[[ABI]]ABI:: Application Binary Interface. Abstractions and interfaces  between applications and the lower networking layers that allows interactions without the need to know the details. For RISC-V, the ABI provides abstractions of S or M modes.
+[[ABI]]ABI:: Application Binary Interface. Abstractions and interfaces between applications and the AEE that control interactions. See 1.1. RISC-V Privileged Software Stack Terminology.
+
+[[accelerator]]Accelerator:: Either a non-programmable fixed-function unit or a core that can operate autonomously, but is specialized for certain tasks.
+
+[[ACPI]]ACPI:: Advanced Configuration and Power Interface.
 
 [[Addressfield]]Address field:: Designated as a memory address or a processor register.
 
-[[AEE]]AEE:: Application Execution Environment. The environment where the application runs, from bare metal to full operating system.
+[[ASID]]ASID:: Address space identifier.
+
+[[AEE]]AEE:: Application Execution Environment. The environment where the application runs, from bare metal to full operating system. See 1.1. RISC-V Privileged Software Stack Terminology.
 
 [[AIA]]AIA:: RISC-V Advanced Interrupt Architecture. This specification builds upon the interrupt-handling functionality of the basic RISC-V ISA. See https://drive.google.com/file/d/16life2Y5u7Plebbl4v1fFM1-NK-KHw0Y/view[RISC-V Advanced Interrupt Architecture].
 
 [[AIS31]]AIS 31:: Information Security service for Europe and the global finance industry (for bank cards), written by BSI.
 
 [[ALU]]ALU:: Arithmetic Logical Unit.
+
+[[AMO]]AMO:: Atomic Memory Operation.
 
 [[AP]]AP:: Application Processor.
 
@@ -34,11 +42,19 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 
 [[ATX]]ATX:: Advanced Technology eXtended.
 
+[[AUIPC]]AUIPC:: Add Upper Immediate to PC. 
+
 [[BF]]BF:: Refers to Brain Float or Brain Floating Point, used in BFLOAT16.
 
 [[BFLOAT16]]BFLOAT16:: Brain floating point 16 bit--a vector (V) extension representing a wide dynamic range of numeric values by using a floating radix point.  See https://en.wikipedia.org/wiki/Bfloat16_floating-point_format.
 
 [[BSI]]BSI:: German Federal Information Security service.
+
+[[CAS]]CAS:: Compare-and-swap.
+
+[[CBO]]CBO:: Cache-block operation.
+
+[[CMO]]CMO:: Cache-management operation.
 
 [[CLIC]]CLIC:: Core-Local Interrupt Controller. A low-latency, vectored, preemptive interrupt controller for RISC-V systems.
 
@@ -55,9 +71,15 @@ embedded targets, although ELF is normally chosen.
 
 [[ChemicalVD]]Chemical Vapor Deposition:: A chemical deposition process in which the wafer is exposed to one or more volatile precursors, which react and/or decompose on the substrate surface to produce the final film.
 
+[[CAS]]CAS:: Compare-and-swap.
+
 [[consistencymodel]]Consistency Model:: A computing system supports a specific consistency model if operations on memory follow specific rules. For example, high level languages such as C++ and Java, partially maintain the contract by translating memory operations into low-level operations while preserving memory semantics. To hold to the contract, compilers might reorder some memory instructions, and library calls such as `pthread_mutex_lock()`, that encapsulates the required synchronization.
 
-[[CSR]]CSR:: Control and State Register. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs, according to privilege level.
+[[coprocessor]]Coprocessor:: A unit that is attached to a RISC-V core and is  sequenced by an instruction stream. It contains additional architectural state and instruction-set extensions, and possibly some limited autonomy relative to the primary RISC-V instruction stream.
+
+[[CSR]]CSR:: Control and State Register. CSRs are registers that store information. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs, according to privilege level.
+
+[[customextension]]Custom extensions:: Custom encodings are not used for standard extensions and are made available for vendor-specific non-standard extensions. See 1.3. RISC-V ISA Overview in Unprivileged.
 
 [[CXL]]CXL:: Compute Express Link bus standard.
 
@@ -78,14 +100,22 @@ unique device identifier to locate the Device Context structure.
 
 [[DMS]]DMA:: Direct Memory Access.
 
+[[DOM]]DOM:: Domain.
+
 [[DRAM]]DRAM:: Dynamic Random Access Memory.
 
-[[eDRAM]]eDRAM:: Embedded DRAM.
+[[DT]]DT:: Device Tree.
 
 [[dynamicobject]]Dynamic object:: Another name for an ELF shared library.
 
+[[eDRAM]]eDRAM:: Embedded Dynamic Random Access Memory (DRAM).
+
 [[ECOFF]]ECOFF:: Extended Common Object File Format. Used on Alpha Digital Unix
 (formerly OSF/1), as well as Ultrix and Irix 4. A variant of COFF.
+
+[[EEI]]:: Execution Environment Interface.
+
+[[EEW]]EEW:: Effective Element Width.
 
 [[ELEN]]ELEN:: Element length.
 
@@ -93,12 +123,21 @@ unique device identifier to locate the Device Context structure.
 
 [[ES]]ES:: Entropy Source. An input or a measured characteristic that supplies random bits for an I/O device on a computer, usually used to supply bits that an attacker cannot know, as part of security.
 
-[[executable]Executable:: A program, with instructions and symbols, and perhaps dynamic linking
-information. Normally produced by a linker.
+[[executable]Executable:: A program, with instructions and symbols, and perhaps dynamic linking information. Normally produced by a linker.
+
+[[extension]]Extension:: An instructon set that adds customization and specialization to each base integer ISA. An extension is categorized as Standard, Custom, or Non-conforming. 
+
+[[FIOM]]FIOM:: Fence of I/O implies Memory.
 
 [[flipflop]]Flip-flop:: Electronic circuitry with two stable states for storing binary data. Data that is stored in a flip-flop is changed by applying specific inputs. Both flip-flops and latches are building blocks that are used in digital computing.
 
+[[FPCSR]]FPCSR:: Floating-point control and status register.
+
 [[FLOPS]]FLOPS:: Floating Point Operations per Second.
+
+[[FMA]]FMA:: Fused multiply-add.
+
+[[GAS]]GAS:: Generic Address Structure.
 
 [[GE]]GE:: Gate Equivalent.
 
@@ -110,17 +149,24 @@ information. Normally produced by a linker.
 
 [[HART]]HART:: Hardware Thread. At machine-mode level, each hart is a real hardware thread, either one hart per core without hardware multithreading, or multiple harts per core with hardware multithreading, and 'hart' represents the hardware resource. It is possible to emulate harts in software; for example, privileged execution environments can multiplex lesser-privileged harts onto physical hardware using timer interrupts. Note that co-operative multithreading within the same privilege level is not a compliant implementation, however. Across all implementation choices, the concept of a hart is defined as a resource abstraction representing an independently advancing RISC-V execution context within a RISC-V execution environment.
 
-[[HBI]]HBI:: Hypervisor Binary Interface. An interface abstraction for hypervisors to run.
+[[HBI]]HBI:: Hypervisor Binary Interface. An interface for hypervisors to connect the HEE, isolating the hypervisor from details ofthe hardware platform. See 1.1. RISC-V Privileged Software Stack Terminology.
 
-[[HEE]]HEE:: Hypervisor execution environment--the environment in which a hypervisor runs.
+[[HEE]]HEE:: Hypervisor execution environment. The environment that runs the hypervisor. See 1.1. RISC-V Privileged Software Stack Terminology.
 
-[[horizontaltrap,Horizontaltrap]]Horizontal trap:: A trap that stays at the current priviledge mode when triggered.
+[[horizontaltrap]]Horizontal trap:: A trap that stays at the current priviledge mode when triggered.
+
+[[HPET]]HPET:: High Precision Event Timer.
 
 [[HPM]]HPM:: Hardware Performance Monitor.
 
 [[HRNG]]HRNG:: Hardware Random Number Generator. See TRNG.
 
-[[hypervisor,Hypervisor]]Hypervisor:: A software entity that controls virtualization.
+[[hypervisor]]Hypervisor:: A software entity that controls virtualization.
+
+[[IALIGN]]IALIGN:: Refer to the instruction-address alignment constraint
+the implementation enforces. Measured in bits.
+
+[[IBFD]]IBFD:: I2c Bus Frequency Divider.
 
 [[IC]]IC:: Integrated Circuit.
 
@@ -138,11 +184,16 @@ information. Normally produced by a linker.
 
 [[IIRC]]IIRC:: The International Integrated Reporting Council, previously the International Integrated Reporting Committee), was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.
 
+[[ILEN]]ILEN:: Refers to the maximum instruction length supported by an
+implementation. ILEN is a multiple of IALIGN and measured in bits.
+
 [[imagebase]]Image base:: An image base is the fixed address that Windows executables or DLLs  are linked against. Default image bases are 0x140000000 for executables and 0x18000000 for DLLs. For example, a executable is created, it is loaded at address 0x140000000 by the loader.
 
 [[IMSICode]]IMSIC:: International Mobile Subscriber Identity Code.
 
 [[IMSIController]]IMSIC:: Incoming Message-signaled Interrupt Controller.
+
+[[instructionencodingspace]]Instruction encoding space:: A number of instruction bits within which a base ISA or ISA extension is encoded. Divided into three separate spaces: Standard, Reserved, and Custom.
 
 [[IOATC]]IOATC:: IOMMU Address Translation Cache. A cache in IOMMU that caches data structures that are used for address translations.
 
@@ -154,32 +205,61 @@ information. Normally produced by a linker.
 
 [[IRC]]IRC:: Internet Relay Chat. A protocol is for use with text based conferencing; the simplest client being any socket program capable of connecting to the server. See https://tools.ietf.org/html/rfc2812[Internet Relay Chat].
 
-[[ISA]]ISA:: Instruction set architecture. Programmer visible state and operations on that state, the boundary between hardware and software.
+[[ISA]]ISA:: Instruction set architecture. Programmer visible state that represence the boundary between hardware and software. Includes operations on that state.
 
-[[instructionset]]Instruction Set:: A group of commands for a CPU in machine language that can refer to all possible instructions for a CPU, or a subset of instructions to enhance its performance in specific situations, and includes the following commands.
-* Instruction length: Variable length of instructions.
-* Opcodes: The command to be carried out.
-* Operands: What the commands will operate on.
-* Registers: Internal locations that are limited in number and ability while quick to access.
-* Memory: External storage that is larger and more versatile in number of locations, but is slower to access.
+[[instructionset]]Instruction Set:: A group of commands for a CPU in machine language that refers to all possible instructions for a CPU, or a subset of instructions to enhance its performance in specific situations.
 
-[[jextension]]J Extension:: A RISC-V extension that provides a form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within user mode and the sandboxed code has been checked by the runtime to be unable to change pointer masks.
+[[JAL]]JAL:: Jump And Link instruction.
 
-[[latch]]Latch:: A circuit that has two stable states that is used to store state information, known as a bi-stable multivibrator.
+[[JALR]]JALR:: Jump And Link Register.
+
+[[latch]]Latch:: A circuit with two stable states that is used to store state information, known as a bi-stable multivibrator.
+
+[[LCOFI]]LCOFI:: Local counter overflow interrupt.
 
 [[LLSC]]LL/SC:: Load Link/Store Conditional or Load Locked/Store conditional. See LR/SC.
 
-[[LMA]]LMA:: Load Memory Address. This is the address where a section is
-loaded. Compare with VMA.
+[[LMA]]LMA:: Load Memory Address. The address of a section when the section is loaded. Compare with VMA.
 
+[[LPI]]LPI:: Low Power Idle.
 
 [[LRSR]]LR/SC:: Load Reserve/Store Conditional, also LL/SC. A pair of instructions that is used in multithreading to achieve synchronization. Load-link returns the current value of a memory location, while a subsequent store-conditional to the same memory location stores a new value only if updates did not occur to that location since the load-link. Together, these implement a lock-free atomic read-modify-write operation.
 
 [[LSA]]LSA:: Load–Store Architecture. A design that is architecturally neutral and that uses bit patterns in IEEE 754 floating-point to speed sign extension in ways that simplify the multiplexers in a CPU, by placing most-significant bits at a fixed location.
 
-[[M]]M:: Machine Mode. A mode to which machines boot that allows programmer access to everything. This mode is required in all RISC-V implementations.
+[[LUI]]LUI:: Load Upper Immediate.
+
+[[M]]M:: Machine Mode. A boot mode that allows access to the most trusted code. This mode is required in all RISC-V implementations. Also called M-mode. See 1.2. Privilege Levels.
+
+[[MARCHID]]MARCHID:: Machine Architecture ID.
+
+[[MCAUSE]]MCAUSE:: Machine Cause.
+
+[[MCONFIGPTR]]MCONFIGPTR:: Machine Configuration Pointer.
+
+[[MCOUNTEREN]]MCOUNTEREN:: Machine Counter-enable.
+
+[[MCOUNTINHIBIT]]MCOUNTINHIBIT:: Machine Counter-inhibit.
+
+[[MEDELEG]]MEDELEG:: Machine Trap Delegation. Also MIDELEG.
+
+[[MENVCFG]]MENVCFG:: Machine Environment Configuration.
+
+[[MEPC]]MEPC:: Machine Exception Program.
+
+[[MIP]]MIP:: Machine Interrupt. Also MIE.
+
+[[MISA]]MISA:: Machine ID.
+
+[[MOP]]MOPs:: May-be-operations.
 
 [[MCM]]MCM:: Multi-Chip Module.
+
+[[MHARTID]]MHARTID:: Hart ID.
+
+[[MIMPID]]MIMPID:: Machine Implementation ID.
+
+[[MIP]]MIP: Machine Interrupt. Also MIE.
 
 [[MIPS]]MIPS:: Microprocessor without Interlocked Pipelined Stages. A reduced instruction set computer (RISC) instruction set architecture developed by MIPS Computer Systems, now MIPS Technologies, based in the United States, that influenced later RISC architectures.
 
@@ -187,43 +267,79 @@ loaded. Compare with VMA.
 
 [[MMWP]]MMWP:: Machine-Mode When-no-PMP-match Policy.
 
-[[MODE,mode]]MODE::  A field within an instruction or instruction set that specifies the way the operand or the effective address is determined.
+[[MODE]]MODE:: A field within an instruction or instruction set that specifies the way the operand or the effective address is determined.
+
+[[MPDA]]MPDA:: Memory Proximity Domain Attributes.
+
+[[MSCRATCH]]MSCRATCH:: Machine Scratch.
+
+[[MSCI]]MSCI:: Memory Side Cache Information.
+
+[[MSECCFG]]MSECCFG:: Machine Security Configuration.
 
 [[MSI]]MSI:: Message Signal Interrupt.
+
+[[MSTATUS]]MSTATUS:: Machine Status. Also MSTATUSH.
+
+[[MTIME]]MTIME:: Machine Timer.Also MTIMECMP.
+
+[[MTVAL]]MTVAL:: Machine Trap Value.
+
+[[MTVEC]]MTVEC:: Machine Trap-Vector Base-Address.
+
+[[MVENDORID]]MVENDORID:: Machine vendor ID.
 
 [[MXLEN]]MXLEN:: Machine XLEN. A native integer width in bits.
 
 [[MXL]]MXL:: Machine XLEN field. A field in misa to set MXLEN.
 
-[[NAND]]NAND:: Not-and.
+[[NaN]]NaN:: Not a number.
+
+[[NAPOT]]NAPOT:: Naturally aligned power-of-2.
 
 [[NIST]]NIST:: National Institute of STandards. This institute maintains a set of time and measurement, and cryptographic standards for the USA, including inch.
 
-[[nonISA]]Non-ISA:: Non-Standard Extension. A primarily programmer-visible set of software conventions that ensures interoperability. This set also includes HW external debug protocols that are not directly visible to programs.
+[[NMI]]:: Non-maskable interrupts.
 
-[[NOR]]NOR:: Logical NOR. Also known as Pierce's Equivalent, Quine's Dagger, the ampcheck (from the Greek for "cutting both ways"), joint denial, or neither-nor. NOR operates on two logical values, typically from two propositions, that produces a value of true if and only if both operands are false. In other words, it produces a value of false if and only if at least one operand is true.
+[[nonISA]]Non-ISA:: Non-Standard Extension. Non-standard extensions are either custom extensions that use only custom encodings or non-conforming extensions that use any standard or reserved encoding. See 1.3. RISC-V ISA Overview in Unprivileged.
+
+[[NTL]]NTL:: Non-Temporal Locality.
+
+[[NUMA]]NUMA:: Non-uniform Memory Access.
+
+[[OBJ]]OBJ:: Object.
+
+[[objectfile]]Object file:: A binary file including machine instructions, symbols, and relocation information. Normally produced by an assembler.
+
+[[objectfileformat]]Object file format:: The format of an object file.  Typically object files and executables for a specific system are in the same format, although executables do not contain any relocation information.
 
 [[OCF]]OCF:: Operation Code Feild. Specifies the operation to be performed.
 
+[[opcode]]Opcode:: Operation code. Machine language instruction that specifies the operation to be performed.
+
 [[OS]]OS:: Operating System.
 
-[[oslevelsb]]OS-level Sandboxing:: A form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore the sandbox does not allow modifying pointer masks in user mode.
+[[oslevelsb]]OS-level Sandboxing:: A form of sandboxing implemented by the pointer masking proposal. There is no guarantee that sandboxed code cannot modify the pointer mask and therefore, the sandbox does not allow modifying pointer masks in user mode.
 
 [[pagefault]]Page fault:: A type of exception raised by computer hardware when a running program accesses a memory page that is not currently mapped by the memory management unit (MMU) into the virtual address space of a process.
 
-[[PASID]]PASID:: Process Address Space Identifier. Identifies the address space of a
-process. The PASID value is provided in the PASID TLP prefix of the
-request.
+[[PASID]]PASID:: Process Address Space Identifier. Identifies the address space of a process. The PASID value is provided in the PASID TLP prefix of the request.
 
 [[PBMT]]PBMT:: Page-Based Memory Types.
 
 [[PCIeATS]]PCIe ATS:: Peripheral Component Interconnect Express Address Translation Services. A PCIe protocol to support DevATC. Also called ATS.
+
+[[PE]]PE:: The Portable Executable format. PE is the object file format used for Windows (specifically, Win32) object files. It is based closely on COFF, but has a few significant differences.
+
+[[PEI]]PEI:: The Portable Executable Image format. PEI is the object file format used for Windows (specifically, Win32) executables. It is very similar to PE, but includes additional header information.
 
 [[photolithography]]Photolithography:: In microprocessor manufacturing, a process of using light to transfer a geometric pattern from a photomask (also called an optical mask) pattern parts to a photosensitive substrate on a thin film (substrate or wafer). The process can also make use of chemical photoresist on the substrate.
 
 [[platform]]Platform:: A System Platform is a set of features users can depend on working together that includes things such as ISA Profiles, software components, hardware system components, standardized hardware/software interfaces, and other features. Currently RISC-V has defined two Platform types: OS/A and M (naming TBD).
 
 [[PLIC]]PLIC:: Progressive Lossless Image Coding.
+
+[[PMA]]PMA:: Physical Memory Attributes.
 
 [[PMP]]PMP:: Physical Memory Protection.
 
@@ -236,9 +352,11 @@ request.
 
 [[POSIX]]POSIX:: Portable Operating System Interface.
 
+[[PPO]]PPO:: Preserved program order. A subset of the program order that must be respected by the global memory order.
+
 [[PRI]]PRI:: Page Request Interface. A PCIe protocol that enables devices to requeprist OS memory manager services to make pages resident.
 
-[[privileged]]Privileged:: Provides security isolation and reduces code defects because code does not have to check for illegal values. Privileged contains state, is used primarily to run applications and can be used to debug implementations. It defines CSR address space and content  trap when taken increases privilege mode (say from U to S) trap when taken stays at the current privilege mode access more than even M mode. Its addresses reserved in ISA. address includes highest mode that access the CSR and if it is `r/w/rw/none` preserve bits already there when you change a field.
+[[privileged]]Privileged:: Includes machine and supervisor mode. Privileged provides security isolation and reduces code defects because code does not have to check for illegal values. Privileged contains state, is used primarily to run applications and can be used to debug implementations. It defines CSR address space and content trap when taken increases privilege mode (say from U to S) trap when taken stays at the current privilege mode access more than even M mode. Its addresses reserved in ISA. address includes highest mode that access the CSR and if it is `r/w/rw/none` preserve bits already there when you change a field.
 
 [[processID]]Process ID:: An identification number that is up to 20-bits to identify a process. context. For PCIe devices this is the PASID.
 
@@ -260,15 +378,29 @@ request.
 
 [[QEMU]]QEMU:: Quick EMUlator. QEMU is a free and open-source emulator and virtualizer that can perform hardware virtualization.
 
+[[RAS]]RAS:: Return-Address Stack.
+
+[[RD]]RD:: Resource Data.
+
+[[RDS]]RDS:: Resource Data Small.
+
+[[RDL]]RDL:: Resource Data Large.
+
 [[register]]Register:: A group of flip-flops with each flip-flop capable of storing one bit of information. The simplest register is one that consists of only flip-flops with no external gates.
+
+[[relocation]]Relocations:: Information used by the linker to adjust section contents. Also called relocs.
+
+[[relocs]]:: See Relocations.
 
 [[reserved]]Reserved:: A register or data structure field that is reserved for future use. Reserved fields in data structures must be set to 0 by software. Software must ignore reserved fields in registers and preserve the value held in these fields when writing values to other fields in the same register.
 
 [[RID]]RID:: PCIe routing identifier. Also called PCIe RID.
 
-[[RISC]]RISC:: Reduced Instruction Set Computer architecture. Information processing using any of a family of microprocessors that are designed to execute computing tasks with the simplest instructions in the shortest amount of time possible. RISC-based machines execute one instruction per clock cycle as opposed to CISC (Complex Instruction Set Computer) machines that can have special instructions as well as instructions that take more than one cycle to execute.
+[[RISC]]RISC:: Reduced Instruction Set Computer architecture. Information processing that uses any of a family of microprocessors that are designed to execute computing tasks with the simplest instructions in the shortest amount of time. RISC-based machines execute one instruction per clock cycle as opposed to CISC (Complex Instruction Set Computer) machines that can have special instructions as well as instructions that take more than one cycle to execute.
 
 [[RO]]RO:: Read-only. Register bits are read-only and cannot be altered by software. Where explicitly defined, these bits are used to reflect a changing hardware state, and bit values can be observed to change at run time. If the optional feature that sets the bits is not implemented, the bits must be hardwired to zero (0).
+
+[[RNMI]]RNMI:: Resumable Non-Maskable Interrupts.
 
 [[rocket]]Rocket:: Parameterized SoC generator written in Chisel, designed to helps tune the design under different performance, power, area constraints, and diverse technology nodes.
 
@@ -276,7 +408,9 @@ request.
 
 [[RVA]]RVA:: Relative Virtual Address. Windows executables or DLLs are not position-independent; they are linked against a fixed address called an image base. RVAs are offsets from an image base.
 
-[[RVWMO]]RVWMO:: RISC-V Weak Memory Ordering--Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).
+[[RVWMO]]RVWMO:: RISC-V Weak Memory Ordering. Default memory ordering model that loads return value written by latest store to the address of the later of in-program and memory order (see specifications for list of axiomatic and operational rules).
+
+[[RVC]]RVC:: RISC-V compression.
 
 [[RW]]RW:: Read-Write. Register bits are read-write and are permitted to be either set or cleared by software to the desired state. If the optional feature that is associated with the bits is not implemented, the bits are permitted to be hardwired to zero (0).
 
@@ -284,42 +418,82 @@ request.
 
 [[RW1S]]RW1S:: Read-Write-1-to-set. Register bits that indicate status when read. The bit can be set by writing 1b. Writing a 0b to RW1S bits has no effect. If the optional feature that introduces the bit is not implemented, the bit must be read-only and hardwired to zero (0).
 
-[[S]]S:: Supervisor mode.
+[[S]]S:: Supervisor mode. The boot mode that provides support for operating systems, such as Linux. Also called S-mode. See 1.2. Privilege Levels.
 
-[[SATP]]SATP:: Supervisor Address Translation and Protection. XLEN-bit read/write register that controls supervisor-mode address translation and protection and holds the physical page number (PPN) of the root page table--an address space identifer (ASID) that facilitates address-translation fences
+[[SAR]]SAR:: Sample At Reset.
+
+[[satp]]satp:: Supervisor Address Translation and Protection. XLEN-bit read/write register that controls supervisor-mode address translation and protection and holds the physical page number (PPN) of the root page table--an address space identifer (ASID) that facilitates address-translation fences
 on a per-address-space basis, and the MODE field, which selects the current address-translation scheme.
+
+[[SBBR]]SBBR:: Server Base Boot Requirements.
 
 [[SysBI]]SBI:: System Binary Interface. SBI abstracts the interfaces that are required to run operating systems.
 
-[[SuperBI]]SBI:: Supervisor Binary Interface. See https://drive.google.com/file/d/1U2kwjqxXgDONXk_-ZDTYzvsV-F_8ylEH/view[RISC-V Supervisor Binary Interface Specification].
+[[SuperBI]]SBI:: Supervisor Binary Interface. The interface that connects the operating system with the supervisor execution environment (SEE). See 1.1. RISC-V Privileged Software Stack Terminology.
+
+[[SBSA]]SBSA:: Server Base System Architecture.
 
 [[scala]]Scala:: A statically-typed, general-purpose programming language that supports both object-oriented programming and functional programming. Designed to be concise, Scala's design aims to address criticisms of Java, and it provides language interoperability with Java so that libraries written in either language can be referenced directly in both Scala and Java code. Scala source code can be compiled to Java bytecode and run on a Java virtual machine (JVM).
 
-[[SEE]]SEE:: Supervisor Execution Environment. An environment where the operating systems run, which can, but is not required to be BIOS style interfaces.
+[[scause]]scause:: Supervisor Cause.
+
+[[scounteren]]scounteren:: Supervisor Counter-enable.
+
+[[section]]Section:: Sections make up object files and executables and contain optional data and relocation information.
+
+[[SEE]]SEE:: Supervisor Execution Environment. An environment where the operating systems run, which can be BIOS style interfaces, although it is not required. See 1.1. RISC-V Privileged Software Stack Terminology.
 
 [[segfault]]Segmentation fault:: A failure condition caused by a memory access violation in hardware operating with memory protection. The fault process notifies the operating system (OS) that software has attempted to access a restricted area of memory.
 
-[[SFENCE]]SFENCE:: Orders processor execution relative to all memory stores prior to the SFENCE instruction. The processor ensures that every store prior to SFENCE is globally visible before any store after SFENCE becomes globally visible. The SFENCE instruction is ordered with respect to memory stores, other SFENCE instructions, MFENCE instructions, and any serializing instructions (such as CPUID instructions), and it is not ordered with respect to either memory loads or the LFENCE instruction.
+[[senvcfg]]senvcfg:: Supervisor Environment Configuration.
 
-[[SFENCEVMA]]SFENCE.VMA:: (instruction wrapper?)
+[[sepc]]sepc:: Supervisor Exception Program Counter.
+
+[[SEW]]SEW:: Selected Element Width.
+
+[[SFENCE]]SFENCE:: Store fence. A store fence orders the processor execution, releative to all memory stores. See 10.2.1 Supervisor Memory-Management Fence Instruction in the Priv ISA manual.
 
 [[SHA]]SHA:: Secure Hash Algorithms. A family of cryptographic hash functions published by the National Institute of Standards and Technology as a U.S. Federal Information Processing Standard that started with what is now known as SHA-0, a retronym used for the original (1993) 160-bit hash function published under the name "SHA".
 
+[[sharedlibrary]]Shared library:: A library of functions that can be used by many executables without requiring a link into each executable. There are several different implementations of shared libraries, each having slightly different features.
+
+[[sip]]sip:: Supervisor Interrupt. Also sie.
+
+[[SLLBI]]SLLBI:: System Locality Latency and Bandwidth Information.
+
 [[SMAP]]SMAP:: Supervisor Memory Access Prevention.
 
+[[SMBIOS]]SMBIOS:: System Management BIOS.
+
 [[SMEP]]SMEP:: Supervisor Memory Execution Prevention.
+
+[[smrnmi]]smrnmi:: Supervisor Resumable Non-Maskable Interrupts
 
 [[SOC]]SoC:: System on Chip.
 
 [[SP800900]]SP 800 90B:: Used in military and US government random security evaluations, written by NIST.
 
+[[SP]]SP:: Stack pointer.
+
 [[SPA]]SPA:: Supervisor Physical Address: Physical address used to to access memory and memory-mapped resources.
 
 [[SRAM]]SRAM:: Static Random Access Memory.
 
-[[standardextension]]Standard Extension:: for RISC-V, ...
+[[sscratch]]sscratch:: Supervisor Scratch.
 
-[[STVEC]]STVEC:: Supervisor trap vector base register. This register contains trap vector configuration, base address, and mode.
+[[sstatus]]sstatus:: Supervisor status.
+
+[[STD]]STD:: Standard.
+
+[[standardextension]]Standard Extension:: A category of extensions that use only standard encodings, and do not conflict with each other in their uses of these encodings. See 1.3. RISC-V ISA Overview in Unprivileged.
+
+[[stval]]stval:: Supervisor Trap Value.
+
+[[stvec]]stvec:: Supervisor trap vector base register. This register contains trap vector configuration, base address, and mode.
+
+[[symbol]]Symbol:: A symbol is a name and an address. Each object file and executable has a list of symbols, often referred to as the symbol table. In addition, the symbol table contains additional information, such as the symbol type. Typically every global function and variable in a C program includes an associated symbol.
+
+[[targetvector]]Target vector:: A set of functions which implement support for a particular object file format.
 
 [[TLB]]TLB:: Translation Lookaside Buffer. A memory buffer that enhances speed in retrieving a value by storing a memory address.
 
@@ -327,9 +501,9 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[TRNG]]TRNG:: True Random Number Generator. Also known as HRNG, or Hardware Random Number Generator. A device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 
-[[U]]U:: User mode.
+[[U]]U:: User mode. The boot mode that runs the application code. Part of Unprivileged. Also called U-mode. See 1.2. Privilege Levels.
 
-[[unpriveleged]]Unpriveleged:: (User-space--describes...)
+[[unprivileged]]Unpriveleged:: Unprivileged instructions are those that are generally usable in all privilege modes in all privileged architectures, though behavior can vary, depending on the specific privilege mode and privilege architecture.
 
 [[userlevelsb]]User level sandboxing:: A form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within the user mode and the sandboxed code was checked by the runtime to be unable to change pointer masks.
 
@@ -339,14 +513,15 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[VM]]VM:: Virtual Machine. An efficient, isolated duplicate of a physical computer system.
 
-[[VMA]]VMA:: Virtual Memory Allocation.
+[[VMA]]VMA:: Virtual Memory Allocation. 
+
+[[VMAdd]Virtual Memory Address. The address of a section when an executable is run. See also LMA.
 
 [[VMN]]VMN:: Virtual Machine Monitor. Also referred to as hypervisor.
 
 [[VS]]VS:: Virtual Supervisor. Supervisor privilege in virtualization mode.
 
 [[WeightedARL]]WARL:: Weighted Average Run Length.
-//Need a summary statement about pertinence to performance metrics for RISC-V?
 
 [[WriteARL]]WARL:: Write Any Read Legal. Attribute of a register field that is defined for only a subset of bit encodings, but allows any value to be written while guaranteeing to return a legal value whenever read.
 
@@ -354,9 +529,13 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[WPRI]]WPRI:: Write Preserve Read Ignore. Attribute of a register field that is reserved for future use.
 
-[[XLEN]]XLEN:: Register width. The word is a reference to mathematical `X` and anabbreviation of the word "length."
+[[WRS]]WRS:: Wait-on-Reservation-Set.
 
-[[ZBT]]ZBT:: Zero Bus Turnaround
+[[XCOFF]]:: The eXtended Common Object File Format that is used on AIX operating systems. XCOFF is variant of COFF, with a completely different symbol table implementation.
+
+[[XLEN]]XLEN:: Register width. The word is a reference to mathematical `X` and an abbreviation of the word "length."
+
+[[ZBT]]ZBT:: Zero Bus Turnaround.
 
 
 
