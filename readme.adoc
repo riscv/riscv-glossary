@@ -6,8 +6,8 @@ This repo contains the RISC-V glossary. The glossary includes RISC-V specific te
 
 You can add a term, definition, or acronym to the RISC-V glossary in the following ways.
 
-1. Create a PR against the [glossary.adoc](https://github.com/riscv/riscv-glossary/blob/main/src/glossary.adoc) file with your proposed changes.
-2. Open an issue against the RISC-V glossary repo from the [Issues](https://github.com/riscv/riscv-glossary/issues) tab. Click New Issue and then select the Glossary term requested template by clicking Get Started.
-3. Posting in the [Sig Documentation](https://lists.riscv.org/g/sig-documentation) mailing list.
+1. Create a PR against the https://github.com/riscv/riscv-glossary/blob/main/src/glossary.adoc[glossary.adoc] file with your proposed changes.
+2. Open an issue against the RISC-V glossary repo from the https://github.com/riscv/riscv-glossary/issues[Issues] tab. Click New Issue and then select the Glossary term requested template by clicking Get Started.
+3. Posting in the https://lists.riscv.org/g/sig-documentation[Sig Documentation] mailing list.
 
 The Doc Sig work group will respond to your request. 
