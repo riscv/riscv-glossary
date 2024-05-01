@@ -1,7 +1,13 @@
 # riscv-glossary
 
-This contains an initial draft of a RISC-V glossary.
+This repo contains the RISC-V glossary. The glossary includes RISC-V specific terms, definitions, and acronyms as well as some commonly used computer architecture definitions. 
 
-Over time, this glossary can become a resource for both contributors and for people who are learning about RISC-V and related technologies.
+## How can I add or edit a term, defintion, or acronym?
 
-Please feel free to suggest additions and modifications by creating issues.
+You can add a term, definition, or acronym to the RISC-V glossary in the following ways.
+
+1. Create a PR against the [glossary.adoc](https://github.com/riscv/riscv-glossary/blob/main/src/glossary.adoc) file with your proposed changes.
+2. Open an issue against the RISC-V glossary repo from the [Issues](https://github.com/riscv/riscv-glossary/issues) tab. Click New Issue and then select the Glossary term requested template by clicking Get Started.
+3. Posting in the [Sig Documentation](https://lists.riscv.org/g/sig-documentation) mailing list.
+
+The Doc Sig work group will respond to your request. 
