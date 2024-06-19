@@ -181,7 +181,7 @@ unique device identifier to locate the Device Context structure.
 
 [[guest]]Guest:: Software in a virtual machine.
 
-[[HART]]HART:: Hardware Thread. At machine-mode level, each hart is a real hardware thread, either one hart per core without hardware multithreading, or multiple harts per core with hardware multithreading, and 'hart' represents the hardware resource. It is possible to emulate harts in software; for example, privileged execution environments can multiplex lesser-privileged harts onto physical hardware using timer interrupts. Note that co-operative multithreading within the same privilege level is not a compliant implementation, however. Across all implementation choices, the concept of a hart is defined as a resource abstraction representing an independently advancing RISC-V execution context within a RISC-V execution environment.
+[[HART]]HART:: An abstraction of a hardware thread that captures the important aspects of a real hardware thread for the purposes of defining the RISC-V specifications. In particular, a hart is the agent that executes instructions within an execution context.
 
 [[HBI]]HBI:: Hypervisor Binary Interface. An interface for hypervisors to connect the HEE, isolating the hypervisor from details ofthe hardware platform. See 1.1. RISC-V Privileged Software Stack Terminology.
 
