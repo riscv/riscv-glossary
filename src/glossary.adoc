@@ -28,7 +28,7 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 
 [[AMO]]AMO:: Atomic Memory Operation.
 
-[[AP]]AP:: Application Processor.
+[[AP]]AP:: Application Processor. Application processors can support commodity operating systems, hypervisors/VMMs and applications software workloads. The AP subsystem may contain several processing units, on-chip caches, and other controllers for interfacing with memory, accelerators, and other fixed-function logic. Multiple APs may be used within a logical system.
 
 [[ASIC]]ASIC:: Application-Specific Integrated Circuit.
 
@@ -43,6 +43,8 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 [[AtomicLD]]Atomic Layer Deposition:: A layer-by-layer process that results in the deposition of thin films one atomic layer at a time in a highly controlled manner.
 
 [[ATS]]ATS:: Address Translation Services. A PCIe protocol to support DevATC. Also called PCIe ATS.
+
+[[Attestation]]Attestation:: The process by which a relying party can assess the security posture of the confidential workload based on verifying a set of HW-rooted cryptographically-protected evidence.
 
 [[ATX]]ATX:: Advanced Technology eXtended.
 
@@ -72,6 +74,8 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 
 [[CDE]]CDE:: Counter Delegation Enable.
 
+[[CDI]]CDI:: Compound device identifier. A CDI is the value that represents the hardware, software and firmware combination measured by the TCB elements transitively. A CDI is the output of a DICE [R2] and is passed to the entity, which is measured by the previous TCB layer. The CDI is a secret that can be certified to use for attestation protocols.
+
 [[CE]]CE:: Corrected Error.
 
 [[CMO]]CMO:: Cache-management operation.
@@ -80,6 +84,8 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 
 [[COFF]]COFF:: The Common Object File Format. Used on Unix SVR3 and by some
 embedded targets, although ELF is normally chosen.
+
+[[Confidentail computing]]:: A computing paradigm that protects data in use by performing computation in a hardware-based, attested Trusted Execution Environment (TEE).
 
 [[CPL]]CPL:: Cost Per Load.
 
@@ -94,6 +100,8 @@ embedded targets, although ELF is normally chosen.
 [[consistencymodel]]Consistency Model:: A computing system supports a specific consistency model if operations on memory follow specific rules. For example, high level languages such as C++ and Java, partially maintain the contract by translating memory operations into low-level operations while preserving memory semantics. To hold to the contract, compilers might reorder some memory instructions, and library calls such as `pthread_mutex_lock()`, that encapsulates the required synchronization.
 
 [[coprocessor]]Coprocessor:: A unit that is attached to a RISC-V core and is  sequenced by an instruction stream. It contains additional architectural state and instruction-set extensions, and possibly some limited autonomy relative to the primary RISC-V instruction stream.
+
+[[CoVE]]CoVE]]:: Confidential VM extension
 
 [[CSR]]CSR:: Control and Status Register. CSRs are registers that store information. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs, according to privilege level.
 
