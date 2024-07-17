@@ -97,11 +97,19 @@ embedded targets, although ELF is normally chosen.
 
 [[ChemicalVD]]Chemical Vapor Deposition:: A chemical deposition process in which the wafer is exposed to one or more volatile precursors, which react and/or decompose on the substrate surface to produce the final film.
 
+[[conapp]]Confidential application:: A user-mode application or library instantiation in a TVM. The user-mode application may be supported via a trusted runtime. The user-mode library may be hosted by a surrogate process runtime.
+
+[[conlib]]Confidentail library:: See <<conapp>>.
+
+[[conmem]]Confidential memory:: Memory that is subject to access-control, confidentiality and integrity mechanisms per the threat model for use in the CoVE system. Confidential memory may also be used by nonTCB/ hosting software with appropriate TCB controls on the configuration, e.g., a separate key used for TCB and non-TCB elements.
+
+[[convm]]Confidential VM:: A VM instantiation of a confidential workload. Also called TEE VM (TVM).
+
 [[consistencymodel]]Consistency Model:: A computing system supports a specific consistency model if operations on memory follow specific rules. For example, high level languages such as C++ and Java, partially maintain the contract by translating memory operations into low-level operations while preserving memory semantics. To hold to the contract, compilers might reorder some memory instructions, and library calls such as `pthread_mutex_lock()`, that encapsulates the required synchronization.
 
 [[coprocessor]]Coprocessor:: A unit that is attached to a RISC-V core and is  sequenced by an instruction stream. It contains additional architectural state and instruction-set extensions, and possibly some limited autonomy relative to the primary RISC-V instruction stream.
 
-[[CoVE]]CoVE]]:: Confidential VM extension
+[[CoVE]]CoVE:: Confidential VM extension
 
 [[CSR]]CSR:: Control and Status Register. CSRs are registers that store information. The standard RISC-V ISA sets aside a 12-bit encoding space (csr[11:0]) for up to 4,096 CSRs. By convention, the upper 4 bits of the CSR address (csr[11:8]) are used to encode the read and write accessibility of the CSRs, according to privilege level.
 
@@ -206,6 +214,8 @@ unique device identifier to locate the Device Context structure.
 [[horizontaltrap]]Horizontal trap:: A trap that stays at the current priviledge mode when triggered.
 
 [[hostbridge]]Host Bridge:: Part of a SoC that connects host CPUs and memory to PCIe root ports, RCiEP, and non-PCIe devices integrated in the SoC. The host bridge is placed between the device(s) and the platform interconnect to process DMA transactions. IO Devices may perform DMA transactions using IO Virtual Addresses (VA, GVA or GPA). The host bridge invokes the associated IOMMU to translate the IOVA to Supervisor Physical Addresses (SPA). Also called IO Bridge.
+
+[[hostsoft]]Host Software:: All software elements including type-1 or type-2 HS-mode VMM and OS; U-mode user-space VMM tools; ordinary VMs hosted by the VMM that emulate devices. The hosting platform is typically a multi-tenant platform that hosts multiple mutually distrusting software owned by different tenants
 
 [[HPC]]HPC:: High-performance Computing. HPC refers to the use of parallel processing techniques to solve complex computational problems. It enables faster data processing and simulation by leveraging multiple processors or servers. 
 
@@ -337,7 +347,11 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[MIPS]]MIPS:: Microprocessor without Interlocked Pipelined Stages. A reduced instruction set computer (RISC) instruction set architecture developed by MIPS Computer Systems, now MIPS Technologies, based in the United States, that influenced later RISC architectures.
 
+[[MMIO]]MMIO:: Memory mapped I/O.
+
 [[MMU]]MMU:: Memory Management Unit.
+
+[[MMT]]MMT:: Memory Tracking Table.
 
 [[MMWP]]MMWP:: Machine-Mode When-no-PMP-match Policy.
 
@@ -489,6 +503,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[RCEC]]RCEC:: Root Complex Event Collector. A block for collecting errors and PME messages in a standard way from various internal peripherals. Follows PCI Express.
 
+[[relyparty]]Relying party:: An entity that depends on the validity of information about another entity, typically for purposes of authorization 
+
 [[RERI]]RERI:: Reliability, Availability, and Serviceability (RAS) error record register interface.
 
 [[RID]]RID:: Requester ID. Follows PCI Express. An identifier that uniquely identifies the requester within a PCIe Hierarchy. Needs to be extended with a Hierarchy ID to ensure it is unique across the platform.
@@ -513,13 +529,13 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[RISC]]RISC:: Reduced Instruction Set Computer architecture. Information processing that uses any of a family of microprocessors that are designed to execute computing tasks with the simplest instructions in the shortest amount of time. RISC-based machines execute one instruction per clock cycle as opposed to CISC (Complex Instruction Set Computer) machines that can have special instructions as well as instructions that take more than one cycle to execute.
 
-[[RO]]RO:: Read-only. Register bits are read-only and cannot be altered by software. Where explicitly defined, these bits are used to reflect a changing hardware state, and bit values can be observed to change at run time. If the optional feature that sets the bits is not implemented, the bits must be hardwired to zero (0).
-
 [[RNMI]]RNMI:: Resumable Non-Maskable Interrupts.
 
 [[RO]]RO:: Read-only. Register bits are read-only and cannot be altered by software. Where explicitly defined, these bits are used to reflect changing hardware state, and as a result bit values can be observed to change at run time. If the optional feature that would Set the bits is not implemented, the bits must be hardwired to Zero
 
 [[rocket]]Rocket:: Parameterized SoC generator written in Chisel, designed to helps tune the design under different performance, power, area constraints, and diverse technology nodes.
+
+[[RoT]]RoT:: Root of trust (RoT) is the isolated hardware or software subsystem with an immutable ROM firmware and isolated compute and memory elements that form the Trusted Compute Base (TCB) of a TEE system. The RoT manages cryptographic keys and other security critical functions such as system lifecycle and debug authorization. The RoT provides trusted services to other software on the platform such as verified boot, key provisioning, and management, security lifecycle management, sealed storage, device management, crypto services, attestation etc. The RoT may be an integrated or discrete element
 
 [[RP]]RP:: Root Port. Follows PCI Express. A PCIe port in a Root Complex used to map a Hierarchy Domain using a PCI-PCI bridge.
 
@@ -632,9 +648,20 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[SUM]]SUM:: Supervisor User Memory access
 
+[[SVN]]SVN:: Security version number. SVN is the meta-data about the Trusted Compute Base (TCB) components that conveys the security posture of the TCB. 
+
 [[symbol]]Symbol:: A symbol is a name and an address. Each object file and executable has a list of symbols, often referred to as the symbol table. In addition, the symbol table contains additional information, such as the symbol type. Typically every global function and variable in a C program includes an associated symbol.
 
 [[targetvector]]Target vector:: A set of functions which implement support for a particular object file format.
+
+[[TAP]]TAP:: TVM attestation payload. TAP is a block of memory in a VM that TSM uses to perform local attestation as part of promoting a VM to a TVM.
+
+[[TCB]]TCB:: Trusted Compute Base. TCB is the hardware, software, and firmware elements that are trustedby a relying party to protect the confidentiality and integrity of the relying parties' workload data and execution against a defined adversary model. In a system with separate processing elements within a package on a socket, the TCB boundary is the package. In a multi-socket system the Hardware TCB extends across the socket-tosocket interface, and is managed as one system TCB. The software TCB may also extends across multiple sockets.
+
+[[TEE]]TEE:: Trusted Execution Environment. TEE is a set of hardware and software mechanisms that allow attestable creation and isolated execution
+environment.
+
+[[tenantsoft]]Tenant software:: All software elements owned and deployed by a tenant in a multi-tenant hosting environment. These elements include VS-mode guest kernel and VU-mode guest user-space software.
 
 [[TLB]]TLB:: Translation Lookaside Buffer. A memory buffer that enhances speed in retrieving a value by storing a memory address.
 
@@ -642,7 +669,11 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[TRNG]]TRNG:: True Random Number Generator. Also known as HRNG, or Hardware Random Number Generator. A device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 
+[[TSM]]TSM:: TEE security manager. TSM is a software module that enforces TEE security guarantees on a platform. It acts as the trusted intermediary between the VMM and the TVM.
+
 [[TVM]]TVM:: Trap Virtual Memory.
+
+[[TVM2]]TVM:: TEE VM. See <<convm>>.
 
 [[TW]]TW:: Timeout Wait bit.
 
@@ -682,7 +713,7 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[VMAdd]]Virtual Memory Address. The address of a section when an executable is run. See also LMA.
 
-[[VMN]]VMN:: Virtual Machine Monitor. Also referred to as hypervisor.
+[[VMM]]VMM:: Virtual Machine Monitor. Also referred to as hypervisor.
 
 [[VS]]VS:: Virtual Supervisor. Supervisor privilege in virtualization mode.
 
