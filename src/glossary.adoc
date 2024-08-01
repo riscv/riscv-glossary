@@ -209,7 +209,7 @@ unique device identifier to locate the Device Context structure.
 
 [[hgatp]]hgatp:: Hypervisor Guest Address Translation and Protection register.
 
-[[heirarchyid]]{{Hierarchy ID:: An identifier of a PCIe Hierarchy within which the Requester IDs are unique. Follows PCI Express. Also called Segment ID.
+[[heirarchyid]]Hierarchy ID:: An identifier of a PCIe Hierarchy within which the Requester IDs are unique. Follows PCI Express. Also called Segment ID.
 
 [[horizontaltrap]]Horizontal trap:: A trap that stays at the current priviledge mode when triggered.
 
