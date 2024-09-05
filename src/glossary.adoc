@@ -85,7 +85,7 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 [[COFF]]COFF:: The Common Object File Format. Used on Unix SVR3 and by some
 embedded targets, although ELF is normally chosen.
 
-[[Confidentail computing]]:: A computing paradigm that protects data in use by performing computation in a hardware-based, attested Trusted Execution Environment (TEE).
+[[confidentialComputing]]Confidentail computing:: A computing paradigm that protects data in use by performing computation in a hardware-based, attested Trusted Execution Environment (TEE).
 
 [[CPL]]CPL:: Cost Per Load.
 
