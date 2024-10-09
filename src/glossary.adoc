@@ -175,6 +175,8 @@ unique device identifier to locate the Device Context structure.
 
 [[extension]]Extension:: An instructon set that adds customization and specialization to each base integer ISA. An extension is categorized as Standard, Custom, or Non-conforming. 
 
+[[FFH]]FFH:: Functional Fixed Hardware, as it pertains to ACPI.
+
 [[FIOM]]FIOM:: Fence of I/O implies Memory.
 
 [[flipflop]]Flip-flop:: Electronic circuitry with two stable states for storing binary data. Data that is stored in a flip-flop is changed by applying specific inputs. Both flip-flops and latches are building blocks that are used in digital computing.
