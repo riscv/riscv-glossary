@@ -3,6 +3,8 @@
 
 This glossary includes definitions of terms specific to RISC-V as well as terms that are useful in understanding the architectures and technologies in use by RISC-V contributors and users.
 
+csr
+
 [glossary]
 [[ABI]]ABI:: Application Binary Interface. Abstractions and interfaces between applications and the AEE that control interactions. See 1.1. RISC-V Privileged Software Stack Terminology.
 
