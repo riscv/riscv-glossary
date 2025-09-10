@@ -1,0 +1,597 @@
+[[gloss-acro]]
+== RISC-V acronyms and abbreviations
+
+[[ABI]]ABI:: Application Binary Interface. 
+
+[[ACPI]]ACPI:: Advanced Configuration and Power Interface.
+
+[[ACS]]ACS:: Access Control Services.
+
+[[ASID]]ASID:: Address space identifier.
+
+[[AEE]]AEE:: Application Execution Environment.
+
+[[AER]]AER:: Advanced Error Reporting.
+
+[[ALU]]ALU:: Arithmetic Logical Unit.
+
+[[AMO]]AMO:: Atomic Memory Operation.
+
+[[AP]]AP:: Application Processor.
+
+[[ASIC]]ASIC:: Application-Specific Integrated Circuit.
+
+[[AT]]AT:: Advanced Technology.
+
+[[ATA]]ATA:: Advanced Technology Attachment.
+
+[[ATM]]ATM:: Asynchronous Transfer Mode.
+
+[[ATS]]ATS:: Address Translation Services.
+
+[[ATX]]ATX:: Advanced Technology eXtended.
+
+[[AUIPC]]AUIPC:: Add Upper Immediate to PC.
+
+[[BAR]]BAR:: Base Address Register.
+
+[[BF]]BF:: Brain Float or Brain Floating Point.
+
+[[BMC]]BMC:: Baseboard Management Controller.
+
+[[BRS]]BRS:: Boot and Runtime Services.
+
+[[BSI]]BSI:: German Federal Information Security service.
+
+[[CAS]]CAS:: Compare-and-swap.
+
+[[CBCFE]]CBCFE:: Cache Block Clean and Flush instruction Enable.
+
+[[CBIE]]CBIE:: Cache Block Invalidate instruction Enable.
+
+[[CBO]]CBO:: Cache-block operation.
+
+[[CBZE]]CBZE:: Cache Block Zero instruction Enable.
+
+[[CDE]]CDE:: Counter Delegation Enable.
+
+[[CDI]]CDI:: Compound device identifier.
+
+[[CE]]CE:: Corrected Error.
+
+[[CMO]]CMO:: Cache-management operation.
+
+[[CLIC]]CLIC:: Core-Local Interrupt Controller.
+
+[[COFF]]COFF:: The Common Object File Format.
+
+[[CPL]]CPL:: Cost Per Load.
+
+[[CM]]CM:: Configuration Manager.
+
+[[CMOS]]CMOS:: Complementary Metal Oxide Semiconductor.
+
+[[CoVE]]CoVE:: Confidential VM extension
+
+[[CSR]]CSR:: Control and Status Register.
+
+[[CXL]]CXL:: Compute Express Link bus standard.
+
+[[D]]D:: Debug mode.
+
+[[DC]]DC:: Device Context.
+
+[[DDI]]DDI:: Device Directory Index.
+
+[[DDT]]DDT:: Device Directory Table.
+
+[[DevATC]]DevATC:: Device Address Translation Cache.
+
+[[DIMM]]DIMM:: Dual-In-line Memory Module.
+
+[[DM]]DM:: Debug Module.
+
+[[DMA]]DMA:: Direct Memory Access.
+
+[[DMTF]]DMTF:: Distributed Management Task Force.
+
+[[DOM]]DOM:: Domain.
+
+[[DRAM]]DRAM:: Dynamic Random Access Memory.
+
+[[DT]]DT:: Device Tree.
+
+[[EBBR]]EBBR:: Embedded Base Boot Requirements.
+
+[[ECAM]]ECAM:: Enhanced Configuration Access Method.
+
+[[ECC]]ECC:: Error Correcting Code.
+
+[[eDRAM]]eDRAM:: Embedded Dynamic Random Access Memory (DRAM).
+
+[[ECOFF]]ECOFF:: Extended Common Object File Format.
+
+[[EEI]]:: Execution Environment Interface.
+
+[[EEW]]EEW:: Effective Element Width.
+
+[[ELEN]]ELEN:: Element length.
+
+[[ELF]]ELF:: Executable and Linkable Format.
+
+[[EP]]EP:: Error/poisoned.
+
+[[ES]]ES:: Entropy Source.
+
+[[FFH]]FFH:: Functional Fixed Hardware.
+
+[[FIOM]]FIOM:: Fence of I/O implies Memory.
+
+[[FPCSR]]FPCSR:: Floating-point control and status register.
+
+[[FLOPS]]FLOPS:: Floating Point Operations per Second.
+
+[[FMA]]FMA:: Fused multiply-add.
+
+[[FSM]]FSM:: Finite-State Machine.
+
+[[GAS]]GAS:: Generic Address Structure.
+
+[[GE]]GE:: Gate Equivalent.
+
+[[GPA]]GPA:: Guest Physical Address.
+
+[[GSCID]]GSCID:: Guest soft-context identifier.
+
+[[HBI]]HBI:: Hypervisor Binary Interface.
+
+[[hcounteren]]hcounteren:: Hypervisor Counter-enable register.
+
+[[hedeleg]]hedeleg:: Hypervisor Trap Delegation register. Also `hideleg`.
+
+[[HEE]]HEE:: Hypervisor execution environment.
+
+[[hideleg]]hideleg:: Hypervisor Trap Delegation register. Also `hedeleg`.
+
+[[HPC]]HPC:: High-performance Computing.
+
+[[HPET]]HPET:: High Precision Event Timer.
+
+[[HPM]]HPM:: Hardware Performance Monitor.
+
+[[HRET]]HRET:: Hypervisor Return from Trap.
+
+[[HRNG]]HRNG:: Hardware Random Number Generator. See TRNG.
+
+[[hstatus]]hstatus:: Hypervisor Status register.
+
+[[htimedelta]]htimedelta:: Hypervisor Time Delta register.
+
+[[htinst]]htinst:: Hypervisor Trap Instruction register.
+
+[[htval]]htval:: Hypervisor Trap Value register.
+
+[[hvip]]hvip:: Hypervisor Interrupt register. Also `hip` and `hie`.
+
+[[IBFD]]IBFD:: I2c Bus Frequency Divider.
+
+[[IC]]IC:: Integrated Circuit.
+
+[[ICF]]ICF:: Indentical Code Folding.
+
+[[IComdatF]]ICF:: Identical COMDAT Folding.
+
+[[ICU]]ICU:: Interrupt Consolidation Unit.
+
+[[ID]]ID:: Identifier.
+
+[[IIRC]]IIRC:: The International Integrated Reporting Council.
+
+[[IMSICode]]IMSIC:: International Mobile Subscriber Identity Code.
+
+[[IMSIController]]IMSIC:: Incoming Message-signaled Interrupt Controller.
+
+[[IOATC]]IOATC:: IOMMU Address Translation Cache.
+
+[[IOPMP]]IOPMP:: Input/Output Physical Memory Protection.
+
+[[IOVA]]IOVA:: I/O Virtual Address.
+
+[[IRC]]IRC:: Internet Relay Chat.
+
+[[ISA]]ISA:: Instruction set architecture.
+
+[[JAL]]JAL:: Jump And Link instruction.
+
+[[JALR]]JALR:: Jump And Link Register.
+
+[[LCOFI]]LCOFI:: Local counter overflow interrupt.
+
+[[LLSC]]LL/SC:: Load Link/Store Conditional or Load Locked/Store conditional. See LR/SC.
+
+[[LMA]]LMA:: Load Memory Address.
+
+[[LPI]]LPI:: Low Power Idle.
+
+[[LRSR]]LR/SC:: Load Reserve/Store Conditional,
+
+[[LSA]]LSA:: Load Store Architecture.
+
+[[LUI]]LUI:: Load Upper Immediate.
+
+[[M]]M:: Machine Mode.
+
+[[marchid]]marchid:: Machine Architecture ID register.
+
+[[MBE]]MBE:: Machine Big Endian.
+
+[[mcause]]mcause:: Machine Cause register.
+
+[[mconfigptr]]mconfigptr:: Machine Configuration Pointer register.
+
+[[mcounteren]]mcounteren:: Machine Counter-enable register.
+
+[[mcountinhibit]]mvountinhibit:: Machine Counter-inhibit register.
+
+[[MCTP]]MCTP:: Management Component Transport Protocol
+
+[[medeleg]]medeleg:: Machine Trap Delegation register. Also MIDELEG.
+
+[[menvcfg]]menvcfg:: Machine Environment Configuration register.
+
+[[mepc]]mepc:: Machine Exception Program register.
+
+[[mie]]mie:: Machine Interrupt register. Also MIP.
+
+[[misa]]misa:: Machine ID register.
+
+[[MOP]]MOPs:: May-be-operations.
+
+[[MCM]]MCM:: Multi-Chip Module.
+
+[[mcyclecfg]]mcyclecfg:: Machine Counter Configuration register. Also `minstretcfg`.
+
+[[mhartid]]mhartid:: Hart ID register.
+
+[[mimpid]]mimpid:: Machine Implementation ID register.
+
+[[mip]]mip:: Machine Interrupt register. Also MIE.
+
+[[MIPS]]MIPS:: Microprocessor without Interlocked Pipelined Stages.
+
+[[MMIO]]MMIO:: Memory mapped I/O.
+
+[[MMU]]MMU:: Memory Management Unit.
+
+[[MMT]]MMT:: Memory Tracking Table.
+
+[[MMWP]]MMWP:: Machine-Mode When-no-PMP-match Policy.
+
+[[MPDA]]MPDA:: Memory Proximity Domain Attributes.
+
+[[MPRV]]MPRV:: Modify PRiVilege.
+
+[[MRET]]MRET:: Machine Return from Trap.
+
+[[mscratch]]mscratch:: Machine Scratch register.
+
+[[MSCI]]MSCI:: Memory Side Cache Information.
+
+[[mseccfg]]mseccfg:: Machine Security Configuration register.
+
+[[MSI]]MSI:: Message Signal Interrupt.
+
+[[mstatus]]mstatus:: Machine Status register. Also `mstatush`.
+
+[[mtime]]mtime:: Machine Timer register. Also `mtimecmp`.
+
+[[mtval]]mtval:: Machine Trap Value register.
+
+[[mtvec]]mtvec:: Machine Trap-Vector Base-Address register.
+
+[[mvendorid]]mvendorid:: Machine vendor ID register.
+
+[[MXLEN]]MXLEN:: Machine XLEN. A native integer width in bits.
+
+[[MXL]]MXL:: Machine XLEN field. A field in `misa` to set MXLEN.
+
+[[MXR]]MXR:: Make eXecutable Readable.
+
+[[NaN]]NaN:: Not a number.
+
+[[NAPOT]]NAPOT:: Naturally aligned power-of-2.
+
+[[NIST]]NIST:: National Institute of STandards.
+
+[[NMI]]NMI:: Non-maskable interrupts.
+
+[[nonISA]]Non-ISA:: Non-Standard Extension.
+
+[[NOP]]NOP:: No operation.
+
+[[NTL]]NTL:: Non-Temporal Locality.
+
+[[NUMA]]NUMA:: Non-uniform Memory Access.
+
+[[OBJ]]OBJ:: Object.
+
+[[OCF]]OCF:: Operation Code Field.
+
+[[opcode]]Opcode:: Operation code.
+
+[[OS]]OS:: Operating System.
+
+[[OSV]]OSV:: Operating System Vendor.
+
+[[P2P]]P2P:: Peer-to-peer.
+
+[[PASID]]PASID:: Process Address Space Identifier.
+
+[[PBMT]]PBMT:: Page-Based Memory Types.
+
+[[PBMTE]]PBMTE:: Page Based Memory Types Extension.
+
+[[PC]]PC:: Process Control.
+
+[[PCIeATS]]PCIe ATS:: Peripheral Component Interconnect Express Address Translation Services.
+
+[[PDI]]PDI:: Process-directory-index.
+
+[[PDT]]PDT:: Process-directory-table.
+
+[[PE]]PE:: The Portable Executable format.
+
+[[PEI]]PEI:: The Portable Executable Image format.
+
+[[PLDM]]PLDM:: Platform Level Data Model. Follows DMTF standard.
+
+[[PLIC]]PLIC:: Progressive Lossless Image Coding.
+
+[[PLL]]PLL:: Phase-Locked Loop.
+
+[[PMA]]PMA:: Physical Memory Attributes.
+
+[[PMP]]PMP:: Physical Memory Protection.
+
+[[PPN]]PPN:: Physical Page Number.
+
+[[PPO]]PPO:: Preserved Program Order.
+
+[[PQC]]PQC:: Post-Quantum Cryptography.
+
+[[POSIX]]POSIX:: Portable Operating System Interface.
+
+[[PRI]]PRI:: Page Request Interface.
+
+[[PSCID]]PSCID:: Process soft-context identifier.
+
+[[PT]]PT:: Page Table.
+
+[[PTE]]PTE:: Page Table Entry.
+
+[[PTEP]]PTEP:: Parallel Telemetry Processor.
+
+[[PUD]]PUD:: Patch Update.
+
+[[QEMU]]QEMU:: Quick EMUlator.
+
+[[QOS]]QOS:: Quality of Service.
+
+[[RAS]]RAS:: Return-Address Stack.
+
+[[RelAvSe]]RAS:: Reliability, Availability, and Serviceability.
+
+[[RCiEP]]RCiEP:: Root Complex Integrated Endpoint.
+
+[[RCEC]]RCEC:: Root Complex Event Collector.
+
+[[RERI]]RERI:: Reliability, Availability, and Serviceability (RAS) error record register interface.
+
+[[RID]]RID:: Requester ID.
+
+[[RC]]RC:: Root Comple.
+
+[[RD]]RD:: Resource Data.
+
+[[RDS]]RDS:: Resource Data Small.
+
+[[RDL]]RDL:: Resource Data Large.
+
+[[RID2]]RID:: PCIe routing identifier. Also called PCIe RID.
+
+[[RISC]]RISC:: Reduced Instruction Set Computer architecture.
+
+[[RNMI]]RNMI:: Resumable Non-Maskable Interrupts.
+
+[[RO]]RO:: Read-only.
+
+[[RoT]]RoT:: Root of trust.
+
+[[RP]]RP:: Root Port.
+
+[[RTC]]RTC:: Real-time clock.
+
+[[RV]]RV:: Reliability Verification.
+
+[[RVA]]RVA:: Relative Virtual Address.
+
+[[RVWMO]]RVWMO:: RISC-V Weak Memory Ordering.
+
+[[RVC]]RVC:: RISC-V compression.
+
+[[RW]]RW:: Read-Write.
+
+[[RW1C]]RW1C:: Read-Write-1-to-clear status.
+
+[[RW1S]]RW1S:: Read-Write-1-to-set.
+
+[[S]]S:: Supervisor mode.
+
+[[SAR]]SAR:: Sample At Reset.
+
+[[satp]]satp:: Supervisor Address Translation and Protection.
+
+[[SBBR]]SBBR:: Server Base Boot Requirements.
+
+[[SBE]]SBE:: Supervisor Big Endian.
+
+[[SysBI]]SBI:: System Binary Interface.
+
+[[SuperBI]]SBI:: Supervisor Binary Interface.
+
+[[SBSA]]SBSA:: Server Base System Architecture.
+
+[[scause]]scause:: Supervisor Cause register.
+
+[[scounteren]]scounteren:: Supervisor Counter-enable register.
+
+[[scountinhibit]]scountinhibit:: Supervisor Counter Inhibit register.
+
+[[SDE]]SDE:: Silent Data Error.
+
+[[SEE]]SEE:: Supervisor Execution Environment.
+
+[[senvcfg]]senvcfg:: Supervisor Environment Configuration register.
+
+[[sepc]]sepc:: Supervisor Exception Program Counter register.
+
+[[SEW]]SEW:: Selected Element Width.
+
+[[SFENCE]]SFENCE:: Store fence.
+
+[[SHA]]SHA:: Secure Hash Algorithms.
+
+[[sip]]sip:: Supervisor Interrupt register. Also sie.
+
+[[SLLBI]]SLLBI:: System Locality Latency and Bandwidth Information.
+
+[[SMAP]]SMAP:: Supervisor Memory Access Prevention.
+
+[[SMBIOS]]SMBIOS:: System Management BIOS.
+
+[[SMEP]]SMEP:: Supervisor Memory Execution Prevention.
+
+[[smrnmi]]smrnmi:: Supervisor Resumable Non-Maskable Interrupts register.
+
+[[SOC]]SoC:: System on Chip. Also referred as system-on-a-chip and system-on-chip.
+
+[[SP]]SP:: Stack pointer.
+
+[[SPA]]SPA:: Supervisor Physical Address.
+
+[[SPDM]]SPDM:: Security Protocols and Data Models.
+
+[[SRAM]]SRAM:: Static Random Access Memory.
+
+[[SRET]]SRET:: Supervisor Return from Trap.
+
+[[SRIOV]]SR-IOV:: Single-Root I/O Virtualization. Follows PCI Express.
+
+[[sscratch]]sscratch:: Supervisor Scratch register.
+
+[[sstatus]]sstatus:: Supervisor status register.
+
+[[STCE]]STCE:: Supervisor TimeCmp Extension.
+
+[[STD]]STD:: Standard.
+
+[[stval]]stval:: Supervisor Trap Value register.
+
+[[stvec]]stvec:: Supervisor trap vector base register.
+
+[[SUM]]SUM:: Supervisor User Memory access
+
+[[SVN]]SVN:: Security version number.
+
+[[TAP]]TAP:: TVM attestation payload.
+
+[[TCB]]TCB:: Trusted Compute Base.
+
+[[TEE]]TEE:: Trusted Execution Environment.
+
+[[TLB]]TLB:: Translation Lookaside Buffer.
+
+[[TLP]]TLP:: Transaction Layer Packet.
+
+[[TSM]]TSM:: TEE security manager.
+
+[[TVM]]TVM:: Trap Virtual Memory.
+
+[[TVM2]]TVM:: TEE VM. See <<convm>>.
+
+[[TW]]TW:: Timeout Wait bit.
+
+[[U]]U:: User mode.
+
+[[UEC]]UEC:: Uncorrected Error Critical.
+
+[[UED]]UED:: Uncorrected Error Deferred.
+
+[[UBE]]UBE:: User Big Endian.
+
+[[UEIF]]UEIF:: Unified Extensible Firmware Interface.
+
+[[URET]]URET:: User Return from Trap.
+
+[[VA]]VA:: Virtual Address.
+
+[[vcsr]]vcsr:: Vector Control and Status register.
+
+[[vill]]vill:: Virtual Type Illegal.
+
+[[vl]]vl:: Vector Length register.
+
+[[vlenb]]vlenb:: Vector Byte Length.
+
+[[VM]]VM:: Virtual Machine.
+
+[[VMA]]VMA:: Virtual Memory Allocation. 
+
+[[VMAdd]]Virtual Memory Address.
+
+[[VMM]]VMM:: Virtual Machine Monitor.
+
+[[VS]]VS:: Virtual Supervisor.
+
+[[vsatp]]vsatp:: Virtual Supervisor Address Translation and Protection register.
+
+[[vscause]]vscause:: Virtual Supervisor Cause register.
+
+[[vsepc]]vsepc:: Virtual Supervisor Exception Program Counter register.
+
+[[vsew]]vsew:: Vector Selected Element Width.
+
+[[vstart]]vstart:: Vector Start Index register.
+
+[[vstatus]]vstatus:: Virtual Supervisor Status register. Also `vsstatus`.
+
+[[vsip]]vsip:: Virtual Supervisor Interrupt register. Also `vsie`.
+
+[[vsscratch]]vsscratch:: Virtual Supervisor Scratch register.
+
+[[vstimecmp]]vstimecmp:: Virtual Supervisor Timer register.
+
+[[vstval]]vstval:: Virtual Supervisor Trap Value register.
+
+[[vstvec]]vstvec:: Virtual Supervisor Trap Vector Base Address register.
+
+[[vtype]]vtype:: Vector Type register.
+
+[[vxrm]]vxrm:: Vector Fixed-Point Rounding Mode register.
+
+[[WeightedARL]]WARL:: Weighted Average Run Length.
+
+[[WriteARL]]WARL:: Write Any Read Legal.
+
+[[WFI]]WFI:: Wait for Interrupt instruction.
+
+[[WLRL]]WLRL:: Write Legal Read Legal.
+
+[[WPRI]]WPRI:: Write Preserve Read Ignore.
+
+[[WRS]]WRS:: Wait-on-Reservation-Set.
+
+[[XCOFF]]XCOFF:: The eXtended Common Object File Format.
+
+[[ZBT]]ZBT:: Zero Bus Turnaround.
+
