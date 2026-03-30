@@ -275,9 +275,9 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[RP]]RP:: Root Port. Follows PCI Express. A PCIe port in a Root Complex used to map a Hierarchy Domain using a PCI-PCI bridge.
 
-[[RV_RISCV]]RV:: RISC-V (commonly abbreviated as RV). May also refer to "Reduced Vector" in other contexts.
-
-[[RV]]RV:: Reliability Verification. A category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
+[[RV]]RV:: May refer to:
+* RISC-V (commonly abbreviated as RV). May also refer to "Reduced Vector" in other contexts.
+* Reliability Verification: A category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
 
 [[RVA]]RVA:: Relative Virtual Address. Windows executables or DLLs are not position-independent; they are linked against a fixed address called an image base. RVAs are offsets from an image base.
 
