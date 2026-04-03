@@ -145,6 +145,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[imagebase]]Image base:: An image base is the fixed address that Windows executables or DLLs  are linked against. Default image bases are 0x140000000 for executables and 0x18000000 for DLLs. For example, a executable is created, it is loaded at address 0x140000000 by the loader.
 
+[[IMSIC]]IMSIC:: Incoming Message-Signaled Interrupt Controller (AIA extension). Other meanings may exist outside RISC-V context.
+
 [[instructionencodingspace]]Instruction encoding space:: A number of instruction bits within which a base ISA or ISA extension is encoded. Divided into three separate spaces: Standard, Reserved, and Custom.
 
 [[IOATC]]IOATC:: IOMMU Address Translation Cache. A cache in IOMMU that caches data structures that are used for address translations.
@@ -213,6 +215,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[PLL]]PLL:: Phase-Locked Loop. A control system that generates anoutput signal whose phase is related to the phase of an input signal. PLLs are commonly used to perform clock synthesis.
 
+[[PLIC]]PLIC:: Platform-Level Interrupt Controller. Used for handling global interrupts in RISC-V systems.
+
 [[PPO]]PPO:: Preserved Program Order. A strict sequential consistency that demands that operations be seen in the order in which they were issued.
 
 [[PQC]]PQC:: Post-Quantum Cryptography. This standard is due to replace RSA and ECC in NIST cryptography [PQC] as well as military [NSA].
@@ -271,7 +275,9 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[RP]]RP:: Root Port. Follows PCI Express. A PCIe port in a Root Complex used to map a Hierarchy Domain using a PCI-PCI bridge.
 
-[[RV]]RV:: Reliability Verification. A category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
+[[RV]]RV:: May refer to:
+* RISC-V (commonly abbreviated as RV). May also refer to "Reduced Vector" in other contexts.
+* Reliability Verification: A category of physical verification that helps ensure the robustness of a design by considering the context of schematic and layout information to perform user-definable checks against various electrical and physical design rules that reduce susceptibility to premature or catastrophic electrical failures, usually over time.
 
 [[RVA]]RVA:: Relative Virtual Address. Windows executables or DLLs are not position-independent; they are linked against a fixed address called an image base. RVAs are offsets from an image base.
 
