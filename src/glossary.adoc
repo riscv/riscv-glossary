@@ -13,9 +13,9 @@ This glossary includes definitions of terms specific to RISC-V as well as terms 
 [[Addressfield]]Address field:: Designated as a memory address or a processor register.
 
 
-[[AEE]]AEE:: Application Execution Environment. The environment where the application runs, from bare metal to full operating system. See 1.1. RISC-V Privileged Software Stack Terminology.
+[[AEE]]AEE:: Application Execution Environment. The environment in which an application runs, from bare metal to full operating system. See 1.1. RISC-V Privileged Software Stack Terminology.
 
-[[AER]]AER:: Advanced Error Reporting. A PCIe capability to support advanced error control and reporting.
+[[AER]]AER:: Advanced Error Reporting. A PCI Express (PCI Express) capability to support advanced error control and reporting.
 
 [[AIS31]]AIS 31:: Information Security service for Europe and the global finance industry (for bank cards), written by BSI.
 
