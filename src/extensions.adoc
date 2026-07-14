@@ -1,7 +1,9 @@
 [[extension-names]]
 == RISC-V extension names
 
-This chapter lists RISC-V ISA extension names in their abbreviated form alongside their long form. The list is derived from the https://github.com/riscv/riscv-unified-db[RISC-V Unified Database (UDB)] and covers ratified and in-development standard extensions.
+This chapter lists RISC-V ISA extension names in their abbreviated form alongside their long form. The list is derived from the https://github.com/riscv/riscv-unified-db[RISC-V Unified Database (UDB)] and covers the ratified standard extensions.
+
+For the naming scheme these abbreviations follow, see Appendix C, ISA Extension Naming Conventions, in the Unprivileged ISA manual.
 
 [cols="1,3",options="header",stripes=even]
 |===
@@ -36,7 +38,6 @@ This chapter lists RISC-V ISA extension names in their abbreviated form alongsid
 | Smepmp | PMP Enhancements for memory access and execution prevention on Machine mode
 | Smmpm | Pointer masking for M-mode
 | Smnpm | Pointer masking for next privilege level less than M-mode
-| Smpmpmt | PMP-based Memory Types Extension
 | Smrnmi | Resumable Non-Maskable Interrupts
 | Smstateen | Machine-mode view of the state-enable extension
 | Ssaia | Advanced Interrupt Architecture, S-mode extension
@@ -71,7 +72,6 @@ This chapter lists RISC-V ISA extension names in their abbreviated form alongsid
 | Svnapot | Naturally Aligned Power-of-Two Translation Contiguity
 | Svpbmt | Page-based memory types
 | Svrsw60t59b | PTE Reserved-for-Software Bits 60-59
-| Svukte | Address-Independent Latency of User-Mode Faults to Supervisor Addresses
 | Svvptc | Guarantee visibility of PTE transitions from invalid to valid
 | U | User-mode privilege level
 | V | Vector Operations
