@@ -83,6 +83,8 @@ unique device identifier to locate the Device Context structure.
 
 [[ECOFF]]ECOFF:: Extended Common Object File Format. Used on Alpha Digital Unix (formerly OSF/1), as well as Ultrix and Irix 4. A variant of COFF.
 
+[[effectiveaddress]]Effective address:: A load or store address sent to the memory subsystem, excluding implicit accesses such as page-table walks.
+
 [[EP]]EP:: Error/poisoned. Follows PCI Express. Also called Data Poisoning. EP is an error flag that accompanies data in some PCIe transactions to indicate the data is known to contain an error. Defined in PCI Express Base Specification 6.0 section 2.7.2. Unless otherwise blocked, the poison associated with the data must continue to propagate in the SoC internal interconnect.
 
 [[ES]]ES:: Entropy Source. An input or a measured characteristic that supplies random bits for an I/O device on a computer, usually used to supply bits that an attacker cannot know, as part of security.
@@ -140,6 +142,8 @@ that the implementation enforces. Measured in bits.
 
 [[IIRC]]IIRC:: The International Integrated Reporting Council, previously the International Integrated Reporting Committee), was formed in August 2010 and aims to create a globally accepted framework for a process that results in communications by an organization about value creation over time.
 
+[[ignoretransformation]]Ignore transformation:: A pointer-masking operation that replaces the upper PMLEN bits of an address with the sign-extended value of the most significant retained bit for virtual addresses, or with zeros for physical addresses.
+
 [[ILEN]]ILEN:: Refers to the maximum instruction length supported by an
 implementation. ILEN is a multiple of IALIGN and measured in bits.
 
@@ -172,6 +176,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 [[M]]M:: Machine Mode. A boot mode that allows access to the most trusted code. This mode is required in all RISC-V implementations. Also called M-mode. See 1.2. Privilege Levels.
 
 [[MCTP]]MCTP:: Management Component Transport Protocol used for communication between components of a platform management system. Follows DMTF Standard. 
+
+[[maskedbits]]Masked bits:: The upper PMLEN bits of an address that are subject to pointer masking.
 
 [[MIPS]]MIPS:: Microprocessor without Interlocked Pipelined Stages. A reduced instruction set computer (RISC) instruction set architecture developed by MIPS Computer Systems, now MIPS Technologies, based in the United States, that influenced later RISC architectures.
 
@@ -224,6 +230,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 [[POSIX]]POSIX:: Portable Operating System Interface.
 
 [[prefetch]]Prefetchable:: Follows PCI Express. Defines the property of the memory space used by a device. For details, see the PCIe Base Specification. Broadly, non-prefetchable space covers any locations where reads have side effects or where writes cannot be merged.
+
+[[pointermasking]]Pointer masking:: An arithmetic operation, defined by the pointer-masking extensions (Smmpm, Smnpm, Ssnpm, Sspm, and Supm), that transforms an address by masking a configurable number of its upper bits before the address is used to access memory.
 
 [[PRI]]PRI:: Page Request Interface. A PCIe protocol that enables devices to requeprist OS memory manager services to make pages resident.
 
@@ -342,6 +350,8 @@ environment.
 [[tenantsoft]]Tenant software:: All software elements owned and deployed by a tenant in a multi-tenant hosting environment. These elements include VS-mode guest kernel and VU-mode guest user-space software.
 
 [[TLB]]TLB:: Translation Lookaside Buffer. A memory buffer that enhances speed in retrieving a value by storing a memory address.
+
+[[transformedaddress]]Transformed address:: An effective address after the pointer-masking ignore transformation has been applied.
 
 [[TRNG]]TRNG:: True Random Number Generator. Also known as HRNG, or Hardware Random Number Generator. A device that generates random numbers from a physical process, rather than by means of an algorithm. Such devices are often based on microscopic phenomena that generate low-level, statistically random "noise" signals, like thermal noise, the photoelectric effect involving a beam splitter, and other quantum phenomena.
 

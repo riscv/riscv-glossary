@@ -313,6 +313,8 @@
 
 [[NUMA]]NUMA:: Non-uniform Memory Access.
 
+[[NVBITS]]NVBITS:: Non-effective Virtual Address Bits. Upper bits of a virtual address that have no effect on memory addressing and are used only for address-validity checks. Used by pointer masking.
+
 [[OBJ]]OBJ:: Object.
 
 [[OCF]]OCF:: Operation Code Field.
@@ -349,7 +351,13 @@
 
 [[PLL]]PLL:: Phase-Locked Loop.
 
+[[PM]]PM:: Pointer Masking. An operation that transforms an address by masking a number of its upper bits before the address is used to access memory.
+
 [[PMA]]PMA:: Physical Memory Attributes.
+
+[[PMLEN]]PMLEN:: Pointer Masking Length. The number of upper address bits that are masked by pointer masking.
+
+[[PMM]]PMM:: Pointer Masking Mode. The CSR field that configures pointer-masking behavior.
 
 [[PMP]]PMP:: Physical Memory Protection.
 
@@ -534,6 +542,8 @@
 [[URET]]URET:: User Return from Trap.
 
 [[VA]]VA:: Virtual Address.
+
+[[VBITS]]VBITS:: Virtual Address Bits. The bits within a virtual address that determine which memory is addressed. See <<NVBITS>>.
 
 [[vcsr]]vcsr:: Vector Control and Status register.
 
