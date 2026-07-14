@@ -1,0 +1,174 @@
+[[extension-names]]
+== RISC-V extension names
+
+This chapter lists RISC-V ISA extension names in their abbreviated form alongside their long form. The list is derived from the https://github.com/riscv/riscv-unified-db[RISC-V Unified Database (UDB)] and covers ratified and in-development standard extensions.
+
+[cols="1,3",options="header",stripes=even]
+|===
+| Extension | Long form
+
+| A | Atomic instructions
+| B | Bit Manipulation
+| C | Compressed instructions
+| D | Double-precision floating-point
+| F | Single-precision floating-point
+| H | Hypervisor
+| I | Base integer ISA (RV32I or RV64I)
+| M | Integer multiply and divide
+| Q | Quad-Precision Floating-Point
+| S | Supervisor mode
+| Sdext | Debug
+| Sdtrig | Debug triggers
+| Sha | Augmented hypervisor
+| Shcounterenw | Hypervisor counter enable
+| Shgatpa | SvNNx4 mode supported for all modes supported by Supervisor Address Translation and Protection, as well as Bare
+| Shtvala | Hypervisor Trap Value provides all needed values
+| Shvsatpa | Virtual Supervisor Address Translation and Protection supports all modes supported by Supervisor Address Translation and Protection
+| Shvstvala | Virtual Supervisor Trap Value provides all needed values
+| Shvstvecd | Virtual Supervisor Trap Vector Base Address supports Direct mode
+| Sm | Machine mode
+| Smaia | Advanced Interrupt Architecture, M-mode extension
+| Smcdeleg | Performance counter delegation
+| Smcntrpmf | Cycle and Instret Privilege Mode Filtering
+| Smcsrind | Machine-mode Indirect CSR Access
+| Smctr | Control Transfer Records
+| Smdbltrp | Double trap in M-mode
+| Smepmp | PMP Enhancements for memory access and execution prevention on Machine mode
+| Smmpm | Pointer masking for M-mode
+| Smnpm | Pointer masking for next privilege level less than M-mode
+| Smpmpmt | PMP-based Memory Types Extension
+| Smrnmi | Resumable Non-Maskable Interrupts
+| Smstateen | Machine-mode view of the state-enable extension
+| Ssaia | Advanced Interrupt Architecture, S-mode extension
+| Ssccfg | Supervisor-mode counter configuration
+| Ssccptr | Cacheable and coherent main memory page table reads
+| Sscofpmf | Counter Overflow and Privilege Mode Filtering
+| Sscounterenw | Support writeable enables for any supported counter
+| Sscsrind | Supervisor-mode Indirect CSR Access
+| Ssctr | Control Transfer Records
+| Ssdbltrp | Double trap for supervisor mode
+| Ssnpm | Pointer masking for next privilege level less than S-mode
+| Sspm | Pointer masking available in supervisor mode
+| Ssqosid | Quality-of-Service Identifiers
+| Ssstateen | Supervisor-mode view of the state-enable extension
+| Ssstrict | Unimplemented reserved encodings trap and no non-conforming extensions
+| Sstc | Supervisor-mode timer interrupts
+| Sstvala | Supervisor Trap Value provides all needed values
+| Sstvecd | Direct exception vectoring
+| Sstvecv | Vectored exception handling
+| Ssu32xl | 32-bit UXLEN
+| Ssu64xl | 64-bit UXLEN
+| Ssube | Big-endian User Mode
+| Supm | Pointer masking available in user mode
+| Sv32 | 32-bit virtual address translation (3 level)
+| Sv39 | 39-bit virtual address translation (3 level)
+| Sv48 | 48-bit virtual address translation (4 level)
+| Sv57 | 57-bit virtual address translation (5 level)
+| Svade | Exception on PTE A/D Bits
+| Svadu | Hardware Updating of PTE A/D Bits
+| Svbare | Bare virtual addressing
+| Svinval | Fine-grained address-translation cache invalidation
+| Svnapot | Naturally Aligned Power-of-Two Translation Contiguity
+| Svpbmt | Page-based memory types
+| Svrsw60t59b | PTE Reserved-for-Software Bits 60-59
+| Svukte | Address-Independent Latency of User-Mode Faults to Supervisor Addresses
+| Svvptc | Guarantee visibility of PTE transitions from invalid to valid
+| U | User-mode privilege level
+| V | Vector Operations
+| Za128rs | Reservation set size of at most 128 bytes
+| Za64rs | Reservation set size of at most 64 bytes
+| Zaamo | Load-acquire/Store-release atomic instructions
+| Zabha | Byte and Halfword Atomic Memory Operations
+| Zacas | Atomic Compare-and-Swap (CAS) Instructions
+| Zalasr | Atomic Load-Acquire and Store-Release
+| Zalrsc | Load-Reserved/Store-Conditional Instructions
+| Zama16b | Misaligned load/store/AMO within aligned 16-byte boundaries are atomic
+| Zawrs | Wait-on-Reservation-Set Instructions
+| Zba | Address generation
+| Zbb | Basic bit-manipulation
+| Zbc | Carry-less multiplication
+| Zbkb | Bit-manipulation for Cryptography
+| Zbkc | Carry-less multiplication for Cryptography
+| Zbkx | Crossbar permutations
+| Zbs | Single-bit instructions
+| Zca | C instructions excluding floating-point loads/stores
+| Zcb | Simple code-size saving instructions
+| Zcd | Compressed double-precision floating-point loads/stores
+| Zce | Compressed instructions for microcontrollers
+| Zcf | Compressed single-precision floating-point loads/stores
+| Zclsd | Compressed Load/Store Pair for RV32
+| Zcmop | Compressed May-Be-Operations
+| Zcmp | Complex PUSH/POP and Double Move
+| Zcmt | Table Jump
+| Zdinx | Double-precision floating-point instructions using integer registers
+| Zfa | Additional Floating-Point Instructions
+| Zfbfmin | Scalar BF16 Converts
+| Zfh | Half-precision floating point
+| Zfhmin | Minimal half-precision floating-point
+| Zfinx | Single-precision floating-point instructions using integer registers
+| Zhinx | Half-precision floating-point instructions using integer registers
+| Zhinxmin | Minimal support for half-precision floating-point instructions using integer registers
+| Zic64b | 64-byte cache blocks
+| Zicbom | Cache-block management instructions
+| Zicbop | Cache-block prefetch
+| Zicboz | Cache-block zero instruction
+| Ziccamoa | Main memory supports all atomics in A extension
+| Ziccamoc | Cacheable and coherent PMAs provide `AMOCASQ` level PMA support
+| Ziccif | Main memory supports instruction fetch with atomicity requirement
+| Zicclsm | Main memory supports misaligned loads/stores
+| Ziccrse | Main memory supports forward progress on LR/SC sequences
+| Zicfilp | Landing Pad
+| Zicfiss | Shadow Stack
+| Zicntr | Base Counters and Timers
+| Zicond | Integer Conditional Operations
+| Zicsr | Control and status register instructions
+| Zifencei | Instruction fence
+| Zihintntl | Non-Temporal Locality Hints
+| Zihintpause | Pause Hint
+| Zihpm | Hardware Performance Counters
+| Zilsd | Load/Store Pair for RV32
+| Zimop | May-Be-Operations
+| Zk | Standard Cryptography Extensions
+| Zkn | NIST Algorithm Suite
+| Zknd | NIST Suite: AES Decryption
+| Zkne | NIST Suite: AES Encryption
+| Zknh | NIST Suite: SHA2 Hashing
+| Zkr | Entropy Source
+| Zks | ShangMi Algorithm Suite
+| Zksed | ShangMi Suite: SM4 Block Cipher Instructions
+| Zksh | ShangMi Suite: SM3 Hash Function Instructions
+| Zkt | Data-independent execution latency
+| Zmmul | Integer multiplication
+| Ztso | Total Store Ordering
+| Zvbb | Vector Basic Bit-manipulation
+| Zvbc | Vector Carryless Multiplication
+| Zve32f | Vector Extension for Minimal Single-Precision Embedded Floating-Point
+| Zve32x | Vector Extension for Minimal Vector Register Length of 32 Bits
+| Zve64d | Vector Extension for Minimal Double-Precision Embedded Floating-Point
+| Zve64f | Vector Extension for Minimal Single-Precision Embedded Floating-Point
+| Zve64x | Vector Extension for Minimal Vector Register Length of 64 Bits
+| Zvfbfmin | Vector BF16 Converts
+| Zvfbfwma | Vector BF16 widening mul-add
+| Zvfh | Vector Extension for Half-Precision Floating-Point
+| Zvfhmin | Vector Extension for Minimal Half-Precision Floating-Point
+| Zvkb | Vector Cryptography Bit-manipulation
+| Zvkg | Vector GCM/GMAC
+| Zvkn | NIST Algorithm Suite
+| Zvknc | NIST Algorithm Suite with carryless multiply
+| Zvkned | NIST Suite: Vector AES Block Cipher
+| Zvkng | NIST Algorithm Suite with GCM
+| Zvknha | NIST Suite: Vector SHA-2 Secure Hash (SHA-256)
+| Zvknhb | NIST Suite: Vector SHA-2 Secure Hash (SHA-256 + SHA-512)
+| Zvks | ShangMi Algorithm Suite
+| Zvksc | ShangMi Algorithm Suite with carryless multiplication
+| Zvksed | ShangMi Suite: SM4 Block Cipher
+| Zvksg | ShangMi Algorithm Suite with GCM
+| Zvksh | ShangMi Suite: SM3 Secure Hash
+| Zvkt | Vector Data-Independent Execution Latency
+| Zvl1024b | Vector register length must be at least 1024 bits
+| Zvl128b | Vector register length must be at least 128 bits
+| Zvl256b | Vector register length must be at least 256 bits
+| Zvl32b | Vector register length must be at least 32 bits
+| Zvl512b | Vector register length must be at least 512 bits
+| Zvl64b | Vector register length must be at least 64 bits
+|===
