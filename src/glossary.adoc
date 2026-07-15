@@ -189,6 +189,8 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[nonprefetch]]Non-prefetchable:: Follows PCI Express. Defines the property of the memory space used by a device. For details, see the PCIe Base Specification. Broadly, non-prefetchable space covers any locations where reads have side effects or where writes cannot be merged.
 
+[[NVBITS]]NVBITS:: Non-effective Virtual Address Bits. Upper bits of a virtual address that have no effect on memory addressing and are used only for address-validity checks. Used by pointer masking.
+
 [[objectfile]]Object file:: A binary file including machine instructions, symbols, and relocation information. Normally produced by an assembler.
 
 [[objectfileformat]]Object file format:: The format of an object file.  Typically object files and executables for a specific system are in the same format, although executables do not contain any relocation information.
@@ -230,6 +232,12 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 [[POSIX]]POSIX:: Portable Operating System Interface.
 
 [[prefetch]]Prefetchable:: Follows PCI Express. Defines the property of the memory space used by a device. For details, see the PCIe Base Specification. Broadly, non-prefetchable space covers any locations where reads have side effects or where writes cannot be merged.
+
+[[PM]]PM:: Pointer Masking. An operation that transforms an address by masking a number of its upper bits before the address is used to access memory.
+
+[[PMLEN]]PMLEN:: Pointer Masking Length. The number of upper address bits that are masked by pointer masking.
+
+[[PMM]]PMM:: Pointer Masking Mode. The CSR field that configures pointer-masking behavior.
 
 [[pointermasking]]Pointer masking:: An arithmetic operation, defined by the pointer-masking extensions (Smmpm, Smnpm, Ssnpm, Sspm, and Supm), that transforms an address by masking a configurable number of its upper bits before the address is used to access memory.
 
@@ -364,6 +372,8 @@ environment.
 [[UR]]UR:: Error returns to an access made to a PCIe hierarchy.
 
 [[userlevelsb]]User level sandboxing:: A form of sandboxing that can be implemented by the pointer masking proposal where runtime and sandboxed code all run within the user mode and the sandboxed code was checked by the runtime to be unable to change pointer masks.
+
+[[VBITS]]VBITS:: Virtual Address Bits. The bits within a virtual address that determine which memory is addressed. See <<NVBITS>>.
 
 [[virtualtraps]]Virtical traps:: A trap that increases privilege mode when triggered. For example, increasing from U to S.
 
