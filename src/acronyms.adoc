@@ -318,6 +318,8 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 
 [[NUMA]]NUMA:: Non-uniform Memory Access.
 
+[[NVBITS]]NVBITS:: Non-effective Virtual Address Bits.
+
 [[OBJ]]OBJ:: Object.
 
 [[OCF]]OCF:: Operation Code Field.
@@ -354,7 +356,13 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 
 [[PLL]]PLL:: Phase-Locked Loop.
 
+[[PM]]PM:: Pointer Masking.
+
 [[PMA]]PMA ^RV^:: Physical Memory Attributes.
+
+[[PMLEN]]PMLEN:: Pointer Masking Length.
+
+[[PMM]]PMM:: Pointer Masking Mode.
 
 [[PMP]]PMP ^RV^:: Physical Memory Protection.
 
@@ -539,6 +547,8 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 [[URET]]URET ^RV^:: User Return from Trap.
 
 [[VA]]VA:: Virtual Address.
+
+[[VBITS]]VBITS:: Virtual Address Bits.
 
 [[vcsr]]vcsr ^RV^:: Vector Control and Status register.
 
