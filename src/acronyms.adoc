@@ -1,6 +1,11 @@
 [[gloss-acro]]
 == RISC-V acronyms and abbreviations
 
+[NOTE]
+====
+Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries are general computing terms or acronyms defined by other standards.
+====
+
 [[ABI]]ABI:: Application Binary Interface. 
 
 [[ACPI]]ACPI:: Advanced Configuration and Power Interface.
@@ -9,7 +14,7 @@
 
 [[ASID]]ASID:: Address space identifier.
 
-[[AEE]]AEE:: Application Execution Environment.
+[[AEE]]AEE ^RV^:: Application Execution Environment.
 
 [[AER]]AER:: Advanced Error Reporting.
 
@@ -31,7 +36,7 @@
 
 [[ATX]]ATX:: Advanced Technology eXtended.
 
-[[AUIPC]]AUIPC:: Add Upper Immediate to PC.
+[[AUIPC]]AUIPC ^RV^:: Add Upper Immediate to PC.
 
 [[BAR]]BAR:: Base Address Register.
 
@@ -45,15 +50,15 @@
 
 [[CAS]]CAS:: Compare-and-swap.
 
-[[CBCFE]]CBCFE:: Cache Block Clean and Flush instruction Enable.
+[[CBCFE]]CBCFE ^RV^:: Cache Block Clean and Flush instruction Enable.
 
-[[CBIE]]CBIE:: Cache Block Invalidate instruction Enable.
+[[CBIE]]CBIE ^RV^:: Cache Block Invalidate instruction Enable.
 
 [[CBO]]CBO:: Cache-block operation.
 
-[[CBZE]]CBZE:: Cache Block Zero instruction Enable.
+[[CBZE]]CBZE ^RV^:: Cache Block Zero instruction Enable.
 
-[[CDE]]CDE:: Counter Delegation Enable.
+[[CDE]]CDE ^RV^:: Counter Delegation Enable.
 
 [[CDI]]CDI:: Compound device identifier.
 
@@ -61,7 +66,7 @@
 
 [[CMO]]CMO:: Cache-management operation.
 
-[[CLIC]]CLIC:: Core-Local Interrupt Controller.
+[[CLIC]]CLIC ^RV^:: Core-Local Interrupt Controller.
 
 [[COFF]]COFF:: The Common Object File Format.
 
@@ -71,13 +76,13 @@
 
 [[CMOS]]CMOS:: Complementary Metal Oxide Semiconductor.
 
-[[CoVE]]CoVE:: Confidential VM extension
+[[CoVE]]CoVE ^RV^:: Confidential VM extension
 
 [[CSR]]CSR:: Control and Status Register.
 
 [[CXL]]CXL:: Compute Express Link bus standard.
 
-[[D]]D:: Debug mode.
+[[D]]D ^RV^:: Debug mode.
 
 [[DC]]DC:: Device Context.
 
@@ -113,9 +118,9 @@
 
 [[EEI]]:: Execution Environment Interface.
 
-[[EEW]]EEW:: Effective Element Width.
+[[EEW]]EEW ^RV^:: Effective Element Width.
 
-[[ELEN]]ELEN:: Element length.
+[[ELEN]]ELEN ^RV^:: Element length.
 
 [[ELF]]ELF:: Executable and Linkable Format.
 
@@ -125,9 +130,9 @@
 
 [[FFH]]FFH:: Functional Fixed Hardware.
 
-[[FIOM]]FIOM:: Fence of I/O implies Memory.
+[[FIOM]]FIOM ^RV^:: Fence of I/O implies Memory.
 
-[[FPCSR]]FPCSR:: Floating-point control and status register.
+[[FPCSR]]FPCSR ^RV^:: Floating-point control and status register.
 
 [[FLOPS]]FLOPS:: Floating Point Operations per Second.
 
@@ -141,17 +146,17 @@
 
 [[GPA]]GPA:: Guest Physical Address.
 
-[[GSCID]]GSCID:: Guest soft-context identifier.
+[[GSCID]]GSCID ^RV^:: Guest soft-context identifier.
 
-[[HBI]]HBI:: Hypervisor Binary Interface.
+[[HBI]]HBI ^RV^:: Hypervisor Binary Interface.
 
-[[hcounteren]]hcounteren:: Hypervisor Counter-enable register.
+[[hcounteren]]hcounteren ^RV^:: Hypervisor Counter-enable register.
 
-[[hedeleg]]hedeleg:: Hypervisor Trap Delegation register. Also `hideleg`.
+[[hedeleg]]hedeleg ^RV^:: Hypervisor Trap Delegation register. Also `hideleg`.
 
-[[HEE]]HEE:: Hypervisor execution environment.
+[[HEE]]HEE ^RV^:: Hypervisor execution environment.
 
-[[hideleg]]hideleg:: Hypervisor Trap Delegation register. Also `hedeleg`.
+[[hideleg]]hideleg ^RV^:: Hypervisor Trap Delegation register. Also `hedeleg`.
 
 [[HPC]]HPC:: High-performance Computing.
 
@@ -159,19 +164,19 @@
 
 [[HPM]]HPM:: Hardware Performance Monitor.
 
-[[HRET]]HRET:: Hypervisor Return from Trap.
+[[HRET]]HRET ^RV^:: Hypervisor Return from Trap.
 
 [[HRNG]]HRNG:: Hardware Random Number Generator. See TRNG.
 
-[[hstatus]]hstatus:: Hypervisor Status register.
+[[hstatus]]hstatus ^RV^:: Hypervisor Status register.
 
-[[htimedelta]]htimedelta:: Hypervisor Time Delta register.
+[[htimedelta]]htimedelta ^RV^:: Hypervisor Time Delta register.
 
-[[htinst]]htinst:: Hypervisor Trap Instruction register.
+[[htinst]]htinst ^RV^:: Hypervisor Trap Instruction register.
 
-[[htval]]htval:: Hypervisor Trap Value register.
+[[htval]]htval ^RV^:: Hypervisor Trap Value register.
 
-[[hvip]]hvip:: Hypervisor Interrupt register. Also `hip` and `hie`.
+[[hvip]]hvip ^RV^:: Hypervisor Interrupt register. Also `hip` and `hie`.
 
 [[IBFD]]IBFD:: I2c Bus Frequency Divider.
 
@@ -189,11 +194,11 @@
 
 [[IMSICode]]IMSIC:: International Mobile Subscriber Identity Code.
 
-[[IMSIController]]IMSIC:: Incoming Message-signaled Interrupt Controller.
+[[IMSIController]]IMSIC ^RV^:: Incoming Message-signaled Interrupt Controller.
 
 [[IOATC]]IOATC:: IOMMU Address Translation Cache.
 
-[[IOPMP]]IOPMP:: Input/Output Physical Memory Protection.
+[[IOPMP]]IOPMP ^RV^:: Input/Output Physical Memory Protection.
 
 [[IOVA]]IOVA:: I/O Virtual Address.
 
@@ -201,11 +206,11 @@
 
 [[ISA]]ISA:: Instruction set architecture.
 
-[[JAL]]JAL:: Jump And Link instruction.
+[[JAL]]JAL ^RV^:: Jump And Link instruction.
 
-[[JALR]]JALR:: Jump And Link Register.
+[[JALR]]JALR ^RV^:: Jump And Link Register.
 
-[[LCOFI]]LCOFI:: Local counter overflow interrupt.
+[[LCOFI]]LCOFI ^RV^:: Local counter overflow interrupt.
 
 [[LLSC]]LL/SC:: Load Link/Store Conditional or Load Locked/Store conditional. See LR/SC.
 
@@ -217,45 +222,45 @@
 
 [[LSA]]LSA:: Load Store Architecture.
 
-[[LUI]]LUI:: Load Upper Immediate.
+[[LUI]]LUI ^RV^:: Load Upper Immediate.
 
-[[M]]M:: Machine Mode.
+[[M]]M ^RV^:: Machine Mode.
 
-[[marchid]]marchid:: Machine Architecture ID register.
+[[marchid]]marchid ^RV^:: Machine Architecture ID register.
 
-[[MBE]]MBE:: Machine Big Endian.
+[[MBE]]MBE ^RV^:: Machine Big Endian.
 
-[[mcause]]mcause:: Machine Cause register.
+[[mcause]]mcause ^RV^:: Machine Cause register.
 
-[[mconfigptr]]mconfigptr:: Machine Configuration Pointer register.
+[[mconfigptr]]mconfigptr ^RV^:: Machine Configuration Pointer register.
 
-[[mcounteren]]mcounteren:: Machine Counter-enable register.
+[[mcounteren]]mcounteren ^RV^:: Machine Counter-enable register.
 
-[[mcountinhibit]]mvountinhibit:: Machine Counter-inhibit register.
+[[mcountinhibit]]mvountinhibit ^RV^:: Machine Counter-inhibit register.
 
 [[MCTP]]MCTP:: Management Component Transport Protocol
 
-[[medeleg]]medeleg:: Machine Trap Delegation register. Also MIDELEG.
+[[medeleg]]medeleg ^RV^:: Machine Trap Delegation register. Also MIDELEG.
 
-[[menvcfg]]menvcfg:: Machine Environment Configuration register.
+[[menvcfg]]menvcfg ^RV^:: Machine Environment Configuration register.
 
-[[mepc]]mepc:: Machine Exception Program register.
+[[mepc]]mepc ^RV^:: Machine Exception Program register.
 
-[[mie]]mie:: Machine Interrupt register. Also MIP.
+[[mie]]mie ^RV^:: Machine Interrupt register. Also MIP.
 
-[[misa]]misa:: Machine ID register.
+[[misa]]misa ^RV^:: Machine ID register.
 
-[[MOP]]MOPs:: May-be-operations.
+[[MOP]]MOPs ^RV^:: May-be-operations.
 
 [[MCM]]MCM:: Multi-Chip Module.
 
-[[mcyclecfg]]mcyclecfg:: Machine Counter Configuration register. Also `minstretcfg`.
+[[mcyclecfg]]mcyclecfg ^RV^:: Machine Counter Configuration register. Also `minstretcfg`.
 
-[[mhartid]]mhartid:: Hart ID register.
+[[mhartid]]mhartid ^RV^:: Hart ID register.
 
-[[mimpid]]mimpid:: Machine Implementation ID register.
+[[mimpid]]mimpid ^RV^:: Machine Implementation ID register.
 
-[[mip]]mip:: Machine Interrupt register. Also MIE.
+[[mip]]mip ^RV^:: Machine Interrupt register. Also MIE.
 
 [[MIPS]]MIPS:: Microprocessor without Interlocked Pipelined Stages.
 
@@ -265,47 +270,47 @@
 
 [[MMT]]MMT:: Memory Tracking Table.
 
-[[MMWP]]MMWP:: Machine-Mode When-no-PMP-match Policy.
+[[MMWP]]MMWP ^RV^:: Machine-Mode When-no-PMP-match Policy.
 
 [[MPDA]]MPDA:: Memory Proximity Domain Attributes.
 
-[[MPRV]]MPRV:: Modify PRiVilege.
+[[MPRV]]MPRV ^RV^:: Modify PRiVilege.
 
-[[MRET]]MRET:: Machine Return from Trap.
+[[MRET]]MRET ^RV^:: Machine Return from Trap.
 
-[[mscratch]]mscratch:: Machine Scratch register.
+[[mscratch]]mscratch ^RV^:: Machine Scratch register.
 
 [[MSCI]]MSCI:: Memory Side Cache Information.
 
-[[mseccfg]]mseccfg:: Machine Security Configuration register.
+[[mseccfg]]mseccfg ^RV^:: Machine Security Configuration register.
 
 [[MSI]]MSI:: Message Signal Interrupt.
 
-[[mstatus]]mstatus:: Machine Status register. Also `mstatush`.
+[[mstatus]]mstatus ^RV^:: Machine Status register. Also `mstatush`.
 
-[[mtime]]mtime:: Machine Timer register. Also `mtimecmp`.
+[[mtime]]mtime ^RV^:: Machine Timer register. Also `mtimecmp`.
 
-[[mtval]]mtval:: Machine Trap Value register.
+[[mtval]]mtval ^RV^:: Machine Trap Value register.
 
-[[mtvec]]mtvec:: Machine Trap-Vector Base-Address register.
+[[mtvec]]mtvec ^RV^:: Machine Trap-Vector Base-Address register.
 
-[[mvendorid]]mvendorid:: Machine vendor ID register.
+[[mvendorid]]mvendorid ^RV^:: Machine vendor ID register.
 
-[[MXLEN]]MXLEN:: Machine XLEN. A native integer width in bits.
+[[MXLEN]]MXLEN ^RV^:: Machine XLEN. A native integer width in bits.
 
-[[MXL]]MXL:: Machine XLEN field. A field in `misa` to set MXLEN.
+[[MXL]]MXL ^RV^:: Machine XLEN field. A field in `misa` to set MXLEN.
 
-[[MXR]]MXR:: Make eXecutable Readable.
+[[MXR]]MXR ^RV^:: Make eXecutable Readable.
 
 [[NaN]]NaN:: Not a number.
 
-[[NAPOT]]NAPOT:: Naturally aligned power-of-2.
+[[NAPOT]]NAPOT ^RV^:: Naturally aligned power-of-2.
 
 [[NIST]]NIST:: National Institute of STandards.
 
 [[NMI]]NMI:: Non-maskable interrupts.
 
-[[nonISA]]Non-ISA:: Non-Standard Extension.
+[[nonISA]]Non-ISA ^RV^:: Non-Standard Extension.
 
 [[NOP]]NOP:: No operation.
 
@@ -329,9 +334,9 @@
 
 [[PASID]]PASID:: Process Address Space Identifier.
 
-[[PBMT]]PBMT:: Page-Based Memory Types.
+[[PBMT]]PBMT ^RV^:: Page-Based Memory Types.
 
-[[PBMTE]]PBMTE:: Page Based Memory Types Extension.
+[[PBMTE]]PBMTE ^RV^:: Page Based Memory Types Extension.
 
 [[PC]]PC:: Process Control.
 
@@ -353,17 +358,17 @@
 
 [[PM]]PM:: Pointer Masking.
 
-[[PMA]]PMA:: Physical Memory Attributes.
+[[PMA]]PMA ^RV^:: Physical Memory Attributes.
 
 [[PMLEN]]PMLEN:: Pointer Masking Length.
 
 [[PMM]]PMM:: Pointer Masking Mode.
 
-[[PMP]]PMP:: Physical Memory Protection.
+[[PMP]]PMP ^RV^:: Physical Memory Protection.
 
 [[PPN]]PPN:: Physical Page Number.
 
-[[PPO]]PPO:: Preserved Program Order.
+[[PPO]]PPO ^RV^:: Preserved Program Order.
 
 [[PQC]]PQC:: Post-Quantum Cryptography.
 
@@ -371,7 +376,7 @@
 
 [[PRI]]PRI:: Page Request Interface.
 
-[[PSCID]]PSCID:: Process soft-context identifier.
+[[PSCID]]PSCID ^RV^:: Process soft-context identifier.
 
 [[PT]]PT:: Page Table.
 
@@ -409,7 +414,7 @@
 
 [[RISC]]RISC:: Reduced Instruction Set Computer architecture.
 
-[[RNMI]]RNMI:: Resumable Non-Maskable Interrupts.
+[[RNMI]]RNMI ^RV^:: Resumable Non-Maskable Interrupts.
 
 [[RO]]RO:: Read-only.
 
@@ -423,9 +428,9 @@
 
 [[RVA]]RVA:: Relative Virtual Address.
 
-[[RVWMO]]RVWMO:: RISC-V Weak Memory Ordering.
+[[RVWMO]]RVWMO ^RV^:: RISC-V Weak Memory Ordering.
 
-[[RVC]]RVC:: RISC-V compression.
+[[RVC]]RVC ^RV^:: RISC-V compression.
 
 [[RW]]RW:: Read-Write.
 
@@ -433,43 +438,43 @@
 
 [[RW1S]]RW1S:: Read-Write-1-to-set.
 
-[[S]]S:: Supervisor mode.
+[[S]]S ^RV^:: Supervisor mode.
 
 [[SAR]]SAR:: Sample At Reset.
 
-[[satp]]satp:: Supervisor Address Translation and Protection.
+[[satp]]satp ^RV^:: Supervisor Address Translation and Protection.
 
 [[SBBR]]SBBR:: Server Base Boot Requirements.
 
-[[SBE]]SBE:: Supervisor Big Endian.
+[[SBE]]SBE ^RV^:: Supervisor Big Endian.
 
 [[SysBI]]SBI:: System Binary Interface.
 
-[[SuperBI]]SBI:: Supervisor Binary Interface.
+[[SuperBI]]SBI ^RV^:: Supervisor Binary Interface.
 
 [[SBSA]]SBSA:: Server Base System Architecture.
 
-[[scause]]scause:: Supervisor Cause register.
+[[scause]]scause ^RV^:: Supervisor Cause register.
 
-[[scounteren]]scounteren:: Supervisor Counter-enable register.
+[[scounteren]]scounteren ^RV^:: Supervisor Counter-enable register.
 
-[[scountinhibit]]scountinhibit:: Supervisor Counter Inhibit register.
+[[scountinhibit]]scountinhibit ^RV^:: Supervisor Counter Inhibit register.
 
 [[SDE]]SDE:: Silent Data Error.
 
-[[SEE]]SEE:: Supervisor Execution Environment.
+[[SEE]]SEE ^RV^:: Supervisor Execution Environment.
 
-[[senvcfg]]senvcfg:: Supervisor Environment Configuration register.
+[[senvcfg]]senvcfg ^RV^:: Supervisor Environment Configuration register.
 
-[[sepc]]sepc:: Supervisor Exception Program Counter register.
+[[sepc]]sepc ^RV^:: Supervisor Exception Program Counter register.
 
-[[SEW]]SEW:: Selected Element Width.
+[[SEW]]SEW ^RV^:: Selected Element Width.
 
-[[SFENCE]]SFENCE:: Store fence.
+[[SFENCE]]SFENCE ^RV^:: Store fence.
 
 [[SHA]]SHA:: Secure Hash Algorithms.
 
-[[sip]]sip:: Supervisor Interrupt register. Also sie.
+[[sip]]sip ^RV^:: Supervisor Interrupt register. Also sie.
 
 [[SLLBI]]SLLBI:: System Locality Latency and Bandwidth Information.
 
@@ -479,7 +484,7 @@
 
 [[SMEP]]SMEP:: Supervisor Memory Execution Prevention.
 
-[[smrnmi]]smrnmi:: Supervisor Resumable Non-Maskable Interrupts register.
+[[smrnmi]]smrnmi ^RV^:: Supervisor Resumable Non-Maskable Interrupts register.
 
 [[SOC]]SoC:: System on Chip. Also referred as system-on-a-chip and system-on-chip.
 
@@ -491,23 +496,23 @@
 
 [[SRAM]]SRAM:: Static Random Access Memory.
 
-[[SRET]]SRET:: Supervisor Return from Trap.
+[[SRET]]SRET ^RV^:: Supervisor Return from Trap.
 
 [[SRIOV]]SR-IOV:: Single-Root I/O Virtualization. Follows PCI Express.
 
-[[sscratch]]sscratch:: Supervisor Scratch register.
+[[sscratch]]sscratch ^RV^:: Supervisor Scratch register.
 
-[[sstatus]]sstatus:: Supervisor status register.
+[[sstatus]]sstatus ^RV^:: Supervisor status register.
 
-[[STCE]]STCE:: Supervisor TimeCmp Extension.
+[[STCE]]STCE ^RV^:: Supervisor TimeCmp Extension.
 
 [[STD]]STD:: Standard.
 
-[[stval]]stval:: Supervisor Trap Value register.
+[[stval]]stval ^RV^:: Supervisor Trap Value register.
 
-[[stvec]]stvec:: Supervisor trap vector base register.
+[[stvec]]stvec ^RV^:: Supervisor trap vector base register.
 
-[[SUM]]SUM:: Supervisor User Memory access
+[[SUM]]SUM ^RV^:: Supervisor User Memory access
 
 [[SVN]]SVN:: Security version number.
 
@@ -529,29 +534,29 @@
 
 [[TW]]TW:: Timeout Wait bit.
 
-[[U]]U:: User mode.
+[[U]]U ^RV^:: User mode.
 
 [[UEC]]UEC:: Uncorrected Error Critical.
 
 [[UED]]UED:: Uncorrected Error Deferred.
 
-[[UBE]]UBE:: User Big Endian.
+[[UBE]]UBE ^RV^:: User Big Endian.
 
 [[UEIF]]UEIF:: Unified Extensible Firmware Interface.
 
-[[URET]]URET:: User Return from Trap.
+[[URET]]URET ^RV^:: User Return from Trap.
 
 [[VA]]VA:: Virtual Address.
 
 [[VBITS]]VBITS:: Virtual Address Bits.
 
-[[vcsr]]vcsr:: Vector Control and Status register.
+[[vcsr]]vcsr ^RV^:: Vector Control and Status register.
 
-[[vill]]vill:: Virtual Type Illegal.
+[[vill]]vill ^RV^:: Virtual Type Illegal.
 
-[[vl]]vl:: Vector Length register.
+[[vl]]vl ^RV^:: Vector Length register.
 
-[[vlenb]]vlenb:: Vector Byte Length.
+[[vlenb]]vlenb ^RV^:: Vector Byte Length.
 
 [[VM]]VM:: Virtual Machine.
 
@@ -561,45 +566,45 @@
 
 [[VMM]]VMM:: Virtual Machine Monitor.
 
-[[VS]]VS:: Virtual Supervisor.
+[[VS]]VS ^RV^:: Virtual Supervisor.
 
-[[vsatp]]vsatp:: Virtual Supervisor Address Translation and Protection register.
+[[vsatp]]vsatp ^RV^:: Virtual Supervisor Address Translation and Protection register.
 
-[[vscause]]vscause:: Virtual Supervisor Cause register.
+[[vscause]]vscause ^RV^:: Virtual Supervisor Cause register.
 
-[[vsepc]]vsepc:: Virtual Supervisor Exception Program Counter register.
+[[vsepc]]vsepc ^RV^:: Virtual Supervisor Exception Program Counter register.
 
-[[vsew]]vsew:: Vector Selected Element Width.
+[[vsew]]vsew ^RV^:: Vector Selected Element Width.
 
-[[vstart]]vstart:: Vector Start Index register.
+[[vstart]]vstart ^RV^:: Vector Start Index register.
 
-[[vstatus]]vstatus:: Virtual Supervisor Status register. Also `vsstatus`.
+[[vstatus]]vstatus ^RV^:: Virtual Supervisor Status register. Also `vsstatus`.
 
-[[vsip]]vsip:: Virtual Supervisor Interrupt register. Also `vsie`.
+[[vsip]]vsip ^RV^:: Virtual Supervisor Interrupt register. Also `vsie`.
 
-[[vsscratch]]vsscratch:: Virtual Supervisor Scratch register.
+[[vsscratch]]vsscratch ^RV^:: Virtual Supervisor Scratch register.
 
-[[vstimecmp]]vstimecmp:: Virtual Supervisor Timer register.
+[[vstimecmp]]vstimecmp ^RV^:: Virtual Supervisor Timer register.
 
-[[vstval]]vstval:: Virtual Supervisor Trap Value register.
+[[vstval]]vstval ^RV^:: Virtual Supervisor Trap Value register.
 
-[[vstvec]]vstvec:: Virtual Supervisor Trap Vector Base Address register.
+[[vstvec]]vstvec ^RV^:: Virtual Supervisor Trap Vector Base Address register.
 
-[[vtype]]vtype:: Vector Type register.
+[[vtype]]vtype ^RV^:: Vector Type register.
 
-[[vxrm]]vxrm:: Vector Fixed-Point Rounding Mode register.
+[[vxrm]]vxrm ^RV^:: Vector Fixed-Point Rounding Mode register.
 
 [[WeightedARL]]WARL:: Weighted Average Run Length.
 
-[[WriteARL]]WARL:: Write Any Read Legal.
+[[WriteARL]]WARL ^RV^:: Write Any Read Legal.
 
-[[WFI]]WFI:: Wait for Interrupt instruction.
+[[WFI]]WFI ^RV^:: Wait for Interrupt instruction.
 
-[[WLRL]]WLRL:: Write Legal Read Legal.
+[[WLRL]]WLRL ^RV^:: Write Legal Read Legal.
 
-[[WPRI]]WPRI:: Write Preserve Read Ignore.
+[[WPRI]]WPRI ^RV^:: Write Preserve Read Ignore.
 
-[[WRS]]WRS:: Wait-on-Reservation-Set.
+[[WRS]]WRS ^RV^:: Wait-on-Reservation-Set.
 
 [[XCOFF]]XCOFF:: The eXtended Common Object File Format.
 
