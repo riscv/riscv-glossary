@@ -182,7 +182,7 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 
 [[IC]]IC:: Integrated Circuit.
 
-[[ICF]]ICF:: Indentical Code Folding.
+[[ICF]]ICF:: Identical Code Folding.
 
 [[IComdatF]]ICF:: Identical COMDAT Folding.
 
@@ -402,7 +402,7 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 
 [[RID]]RID:: Requester ID.
 
-[[RC]]RC:: Root Comple.
+[[RC]]RC:: Root Complex.
 
 [[RD]]RD:: Resource Data.
 

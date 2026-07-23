@@ -2,7 +2,7 @@
 
 This repo contains the RISC-V glossary. The glossary includes RISC-V specific terms, definitions, and acronyms as well as some commonly used computer architecture definitions. 
 
-## How can I add or edit a term, defintion, or acronym?
+## How can I add or edit a term, definition, or acronym?
 
 You can add a term, definition, or acronym to the RISC-V glossary in the following ways.
 
