@@ -1,0 +1,5 @@
+* xref:index.adoc[Glossary]
+* xref:glossary.adoc[Terms]
+* xref:acronyms.adoc[Acronyms and abbreviations]
+* xref:extension-naming.adoc[Extension naming conventions]
+
