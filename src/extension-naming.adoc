@@ -1,0 +1,57 @@
+[[extension-naming]]
+== RISC-V extension naming conventions
+
+RISC-V ISA extensions follow a consistent naming schema. This chapter summarizes how the abbreviated names are formed. The authoritative rules are defined in the "ISA Extension Naming Conventions" chapter of the RISC-V ISA manual.
+
+=== Single-letter names
+
+The base integer ISA and the most common standard extensions use a single letter:
+
+* `I` is the base integer ISA; `E` is the reduced base integer ISA for embedded cores, with 16 general-purpose registers.
+* `M`, `A`, `F`, `D`, `Q`, `C`, `B`, `V`, and `H` are standard extensions, for example `M` for integer multiply and divide, `A` for atomics, `F`, `D`, and `Q` for single-, double-, and quad-precision floating point, `C` for compressed instructions, `B` for bit manipulation, `V` for vector operations, and `H` for the hypervisor extension.
+* `G` is a shorthand for the commonly used `IMAFD_Zicsr_Zifencei` combination.
+* `S` and `U` denote supervisor-mode and user-mode support.
+
+=== Multi-letter Z extensions
+
+Additional standard unprivileged extensions have a name that starts with `Z` followed by an alphabetical name. The first letter after `Z` groups the extension with its closest related single-letter category.
+
+[cols="1,2,3",options="header"]
+|===
+| Prefix | Related category | Examples
+
+| Za* | `A` atomics | Zaamo, Zalrsc, Zacas, Zawrs
+| Zb* | `B` bit manipulation | Zba, Zbb, Zbc, Zbs
+| Zc* | `C` compressed instructions | Zca, Zcb, Zcmp, Zcmt
+| Zf*, Zd*, Zh* | `F`, `D` floating point | Zfh, Zfa, Zfinx, Zdinx, Zhinx
+| Zi* | base infrastructure | Zicsr, Zifencei, Zicntr, Zihpm, Zicond
+| Zk* | scalar cryptography | Zk, Zkn, Zks, Zknd, Zkne, Zkr, Zkt
+| Zm* | `M` integer multiply | Zmmul
+| Zt* | memory ordering and timing | Ztso
+| Zv* | `V` vector operations | Zve32x, Zvbb, Zvkn, Zvl128b
+|===
+
+Some `Z` extensions, such as `Zicsr` and `Zifencei`, are not tied to a single-letter extension and are grouped under the base infrastructure category.
+
+=== Privileged S extensions
+
+Extensions that add privileged or supervisor-architecture state use an `S` prefix. The second letter narrows the scope.
+
+[cols="1,2,3",options="header"]
+|===
+| Prefix | Scope | Examples
+
+| Sm* | Machine level | Sm, Smaia, Smstateen, Smepmp, Smrnmi
+| Ss* | Supervisor level | Ssaia, Sscofpmf, Sstc, Ssstateen
+| Sv* | Virtual memory and address translation | Sv32, Sv39, Sv48, Sv57, Svnapot, Svpbmt, Svinval
+| Sh* | Supervisor requirements associated with the hypervisor extension | Sha, Shcounterenw, Shtvala
+| Sd* | Debug | Sdext, Sdtrig
+|===
+
+=== Non-standard X extensions
+
+Names that start with `X` denote non-standard, custom, or vendor-defined extensions. Standard extensions ratified by RISC-V International never use the `X` prefix.
+
+=== Version numbers and ISA strings
+
+Each extension carries a `major.minor` version number, for example `M2.0`. In an ISA name string, single-letter extensions are concatenated, as in `RV64IMAFDC`, while multi-letter extensions are separated by underscores, as in `RV64IMAC_Zicsr_Zba`.
