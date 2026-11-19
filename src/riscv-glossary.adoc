@@ -1,11 +1,13 @@
 = RISC-V Glossary
 Authors: Kersten Richter, Bill Traynor
+// Version and date come from the git tag via the Makefile (-a revnumber,
+// -a revdate); the fallbacks below only apply to a manual asciidoctor run.
+ifndef::revnumber[:revnumber: v0.0]
+ifndef::revdate[:revdate: 1/2023]
+ifndef::spec_short[:spec_short: riscv-glossary]
 :docgroup: RISC-V Task Group
-:description: RISC-V Example Specification Document (Zexmpl)
+:description: RISC-V glossary of terms, acronyms, and extension names
 :company: RISC-V.org
-:revdate: 4/2024
-:revnumber: 1.0
-:revremark: This document is under development. Expect potential changes. Visit http://riscv.org/spec-state for further details.
 :revinfo:
 :url-riscv: http://riscv.org
 :doctype: book
@@ -39,14 +41,6 @@ endif::[]
 :stem: latexmath
 :footnote:
 :xrefstyle: short
-
-[WARNING]
-.This document is in the link:http://riscv.org/spec-state[Development state]
-====
-Expect potential changes. This draft specification is likely to evolve before
-it is accepted as a standard. Implementations based on this draft
-may not conform to the future standard.
-====
 
 [preface]
 == Copyright and license information
