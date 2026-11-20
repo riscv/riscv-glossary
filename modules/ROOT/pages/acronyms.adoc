@@ -6,7 +6,7 @@
 Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries are general computing terms or acronyms defined by other standards.
 ====
 
-[[ABI]]ABI:: Application Binary Interface. 
+[[ABI]]ABI:: Application Binary Interface.
 
 [[ACPI]]ACPI:: Advanced Configuration and Power Interface.
 
@@ -560,7 +560,7 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 
 [[VM]]VM:: Virtual Machine.
 
-[[VMA]]VMA:: Virtual Memory Allocation. 
+[[VMA]]VMA:: Virtual Memory Allocation.
 
 [[VMAdd]]Virtual Memory Address.
 
@@ -609,4 +609,3 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 [[XCOFF]]XCOFF:: The eXtended Common Object File Format.
 
 [[ZBT]]ZBT:: Zero Bus Turnaround.
-

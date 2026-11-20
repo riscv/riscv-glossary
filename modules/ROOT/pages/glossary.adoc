@@ -91,7 +91,7 @@ unique device identifier to locate the Device Context structure.
 
 [[executable]]Executable:: A program, with instructions and symbols, and perhaps dynamic linking information. Normally produced by a linker.
 
-[[extension]]Extension:: An instruction set that adds customization and specialization to each base integer ISA. An extension is categorized as Standard, Custom, or Non-conforming. 
+[[extension]]Extension:: An instruction set that adds customization and specialization to each base integer ISA. An extension is categorized as Standard, Custom, or Non-conforming.
 
 [[FFH]]FFH:: Functional Fixed Hardware, as it pertains to ACPI.
 
@@ -127,7 +127,7 @@ unique device identifier to locate the Device Context structure.
 
 [[hostsoft]]Host Software:: All software elements including type-1 or type-2 HS-mode VMM and OS; U-mode user-space VMM tools; ordinary VMs hosted by the VMM that emulate devices. The hosting platform is typically a multi-tenant platform that hosts multiple mutually distrusting software owned by different tenants
 
-[[HPC]]HPC:: High-performance Computing. HPC refers to the use of parallel processing techniques to solve complex computational problems. It enables faster data processing and simulation by leveraging multiple processors or servers. 
+[[HPC]]HPC:: High-performance Computing. HPC refers to the use of parallel processing techniques to solve complex computational problems. It enables faster data processing and simulation by leveraging multiple processors or servers.
 
 [[hypervisor]]Hypervisor:: A software entity that controls virtualization.
 
@@ -175,7 +175,7 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[M]]M:: Machine Mode. A boot mode that allows access to the most trusted code. This mode is required in all RISC-V implementations. Also called M-mode. See 1.2. Privilege Levels.
 
-[[MCTP]]MCTP:: Management Component Transport Protocol used for communication between components of a platform management system. Follows DMTF Standard. 
+[[MCTP]]MCTP:: Management Component Transport Protocol used for communication between components of a platform management system. Follows DMTF Standard.
 
 [[maskedbits]]Masked bits:: The upper PMLEN bits of an address that are subject to pointer masking.
 
@@ -267,7 +267,7 @@ implementation. ILEN is a multiple of IALIGN and measured in bits.
 
 [[RCEC]]RCEC:: Root Complex Event Collector. A block for collecting errors and PME messages in a standard way from various internal peripherals. Follows PCI Express.
 
-[[relyparty]]Relying party:: An entity that depends on the validity of information about another entity, typically for purposes of authorization 
+[[relyparty]]Relying party:: An entity that depends on the validity of information about another entity, typically for purposes of authorization
 
 [[RID]]RID:: Requester ID. Follows PCI Express. An identifier that uniquely identifies the requester within a PCIe Hierarchy. Needs to be extended with a Hierarchy ID to ensure it is unique across the platform.
 
@@ -342,7 +342,7 @@ on a per-address-space basis, and the MODE field, which selects the current addr
 
 [[stvec]]stvec:: Supervisor trap vector base register. This register contains trap vector configuration, base address, and mode.
 
-[[SVN]]SVN:: Security version number. SVN is the meta-data about the Trusted Compute Base (TCB) components that conveys the security posture of the TCB. 
+[[SVN]]SVN:: Security version number. SVN is the meta-data about the Trusted Compute Base (TCB) components that conveys the security posture of the TCB.
 
 [[symbol]]Symbol:: A symbol is a name and an address. Each object file and executable has a list of symbols, often referred to as the symbol table. In addition, the symbol table contains additional information, such as the symbol type. Typically every global function and variable in a C program includes an associated symbol.
 
@@ -394,8 +394,3 @@ environment.
 [[XCOFF]]XCOFF:: The eXtended Common Object File Format that is used on AIX operating systems. XCOFF is variant of COFF, with a completely different symbol table implementation.
 
 [[XLEN]]XLEN:: Register width. The word is a reference to mathematical `X` and an abbreviation of the word "length."
-
-
-
-
-
