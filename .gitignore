@@ -8,3 +8,5 @@
 _images/
 # Cover logo staged from docs-resources by the preview and Pages builds
 /modules/ROOT/images/risc-v_logo.svg
+# GitHub Pages build artifact (scripts/build-pages-site.sh), regenerated every build
+/antora-pages-playbook.yml
