@@ -51,7 +51,10 @@ https://creativecommons.org/licenses/by/4.0/.
 
 Copyright 2024 by RISC-V International.
 
-include::glossary.adoc[]
-include::acronyms.adoc[]
-include::extensions.adoc[]
-include::extension-naming.adoc[]
+include::../modules/ROOT/pages/glossary.adoc[leveloffset=+1]
+
+include::../modules/ROOT/pages/acronyms.adoc[leveloffset=+1]
+
+include::../modules/ROOT/pages/extensions.adoc[leveloffset=+1]
+
+include::../modules/ROOT/pages/extension-naming.adoc[leveloffset=+1]

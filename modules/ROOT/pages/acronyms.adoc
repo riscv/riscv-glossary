@@ -1,5 +1,5 @@
 [[gloss-acro]]
-== RISC-V acronyms and abbreviations
+= RISC-V acronyms and abbreviations
 
 [NOTE]
 ====
@@ -530,7 +530,7 @@ Entries marked ^RV^ are specific to the RISC-V architecture. Unmarked entries ar
 
 [[TVM]]TVM:: Trap Virtual Memory.
 
-[[TVM2]]TVM:: TEE VM. See <<convm>>.
+[[TVM2]]TVM:: TEE VM. See <<glossary.adoc#convm>>.
 
 [[TW]]TW:: Timeout Wait bit.
 
