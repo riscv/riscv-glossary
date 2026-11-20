@@ -75,7 +75,8 @@ OPTIONS := --trace \
 		       -D build \
            --failure-level=ERROR
 REQUIRES := --require=asciidoctor-diagram \
-            --require=asciidoctor-mathematical
+            --require=asciidoctor-mathematical \
+            --require=./scripts/cross-page-xrefs.rb
 
 .PHONY: all build clean build-container build-no-container build-docs
 
