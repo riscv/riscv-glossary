@@ -78,7 +78,14 @@ REQUIRES := --require=asciidoctor-diagram \
             --require=asciidoctor-mathematical \
             --require=./scripts/cross-page-xrefs.rb
 
-.PHONY: all build clean build-container build-no-container build-docs
+.PHONY: all build clean build-container build-no-container build-docs stamp-antora
+
+# Stamp antora.yml with the current VERSION/DATE so the Antora HTML site version
+# stays in EXACT lockstep with the PDF (both derive from release-info.sh /
+# the git tag). Run at release time -- e.g. `make stamp-antora VERSION=v1.0`.
+# No Docker needed; edits antora.yml in place and must be committed.
+stamp-antora:
+	./scripts/stamp-antora-version.sh "$(VERSION)" "$(DATE)"
 
 all: build
 

@@ -1,1 +1,10 @@
 /build/*
+.DS_Store
+**/.DS_Store
+# Local Antora preview tooling (npm run preview)
+/node_modules/
+/.cache/
+# Generated diagram/math artifacts, regenerated every build
+_images/
+# Cover logo staged from docs-resources by the preview and Pages builds
+/modules/ROOT/images/risc-v_logo.svg
