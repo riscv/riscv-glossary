@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate src/extensions.adoc from the RISC-V Unified Database.
+"""Generate modules/ROOT/pages/extensions.adoc from the RISC-V Unified Database.
 
 Usage:
     gen_extension_names.py <path-to-riscv-unified-db> [output.adoc]
@@ -16,7 +16,7 @@ import sys
 import yaml
 
 HEADER = """[[extension-names]]
-== RISC-V extension names
+= RISC-V extension names
 
 This chapter lists RISC-V ISA extension names in their abbreviated form alongside their long form. The list is derived from the https://github.com/riscv/riscv-unified-db[RISC-V Unified Database (UDB)] and covers the ratified standard extensions.
 
