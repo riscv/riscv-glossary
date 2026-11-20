@@ -1,5 +1,5 @@
 [[gloss-acro]]
-== RISC-V acronyms and abbreviations
+= RISC-V acronyms and abbreviations
 
 [NOTE]
 ====

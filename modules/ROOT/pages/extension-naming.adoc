@@ -1,9 +1,9 @@
 [[extension-naming]]
-== RISC-V extension naming conventions
+= RISC-V extension naming conventions
 
 RISC-V ISA extensions follow a consistent naming schema. This chapter summarizes how the abbreviated names are formed. The authoritative rules are defined in the "ISA Extension Naming Conventions" chapter of the RISC-V ISA manual.
 
-=== Single-letter names
+== Single-letter names
 
 The base integer ISA and the most common standard extensions use a single letter:
 
@@ -12,7 +12,7 @@ The base integer ISA and the most common standard extensions use a single letter
 * `G` is a shorthand for the commonly used `IMAFD_Zicsr_Zifencei` combination.
 * `S` and `U` denote supervisor-mode and user-mode support.
 
-=== Multi-letter Z extensions
+== Multi-letter Z extensions
 
 Additional standard unprivileged extensions have a name that starts with `Z` followed by an alphabetical name. The first letter after `Z` groups the extension with its closest related single-letter category.
 
@@ -33,7 +33,7 @@ Additional standard unprivileged extensions have a name that starts with `Z` fol
 
 Some `Z` extensions, such as `Zicsr` and `Zifencei`, are not tied to a single-letter extension and are grouped under the base infrastructure category.
 
-=== Privileged S extensions
+== Privileged S extensions
 
 Extensions that add privileged or supervisor-architecture state use an `S` prefix. The second letter narrows the scope.
 
@@ -48,10 +48,10 @@ Extensions that add privileged or supervisor-architecture state use an `S` prefi
 | Sd* | Debug | Sdext, Sdtrig
 |===
 
-=== Non-standard X extensions
+== Non-standard X extensions
 
 Names that start with `X` denote non-standard, custom, or vendor-defined extensions. Standard extensions ratified by RISC-V International never use the `X` prefix.
 
-=== Version numbers and ISA strings
+== Version numbers and ISA strings
 
 Each extension carries a `major.minor` version number, for example `M2.0`. In an ISA name string, single-letter extensions are concatenated, as in `RV64IMAFDC`, while multi-letter extensions are separated by underscores, as in `RV64IMAC_Zicsr_Zba`.

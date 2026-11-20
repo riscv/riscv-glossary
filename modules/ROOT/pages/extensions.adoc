@@ -1,5 +1,5 @@
 [[extension-names]]
-== RISC-V extension names
+= RISC-V extension names
 
 This chapter lists RISC-V ISA extension names in their abbreviated form alongside their long form. The list is derived from the https://github.com/riscv/riscv-unified-db[RISC-V Unified Database (UDB)] and covers the ratified standard extensions.
 
